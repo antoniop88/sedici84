@@ -19,18 +19,17 @@ pnpm dev
 
 ## Comandi
 
-| Comando                  | Descrizione                                                         |
-| ------------------------ | ------------------------------------------------------------------- |
-| `pnpm dev`               | Avvia il server di sviluppo                                         |
-| `pnpm build`             | Build di produzione (preset `node-server`)                          |
-| `pnpm preview`           | Anteprima della build                                               |
-| `pnpm test`              | Test unitari e component (Vitest)                                   |
-| `pnpm test:e2e`          | Test end-to-end (Playwright)                                        |
-| `pnpm test:mock-blocked` | Verifica che il mock Fastily sia bloccato con API reale configurata |
-| `pnpm lint`              | Controlla il codice con ESLint                                      |
-| `pnpm lint:fix`          | Corregge automaticamente i problemi ESLint                          |
-| `pnpm format`            | Formatta il codice con Prettier                                     |
-| `pnpm typecheck`         | Verifica i tipi TypeScript                                          |
+| Comando          | Descrizione                                |
+| ---------------- | ------------------------------------------ |
+| `pnpm dev`       | Avvia il server di sviluppo                |
+| `pnpm build`     | Build di produzione (preset `node-server`) |
+| `pnpm preview`   | Anteprima della build                      |
+| `pnpm test`      | Test unitari e component (Vitest)          |
+| `pnpm test:e2e`  | Test end-to-end (Playwright)               |
+| `pnpm lint`      | Controlla il codice con ESLint             |
+| `pnpm lint:fix`  | Corregge automaticamente i problemi ESLint |
+| `pnpm format`    | Formatta il codice con Prettier            |
+| `pnpm typecheck` | Verifica i tipi TypeScript                 |
 
 Dopo la build, l'output portabile è `.output/server/index.mjs` e rispetta `HOST` e `PORT`.
 
@@ -88,7 +87,6 @@ Preset Nitro: `NITRO_PRESET=node-server` (default in [`nuxt.config.ts`](nuxt.con
 7. **Favicon / manifest** — `node scripts/generate-favicons.mjs`
 8. **Revisione legale** — privacy, cookie policy, dati LocalBusiness
 9. **Deploy** — scegli Docker o PM2/Nginx (vedi sopra)
-10. **Nuova collezione** — registry in [`config/collections.ts`](config/collections.ts) (schema, paths, mock opzionale)
 
 ## Configurazione
 
@@ -100,44 +98,6 @@ Preset Nitro: `NITRO_PRESET=node-server` (default in [`nuxt.config.ts`](nuxt.con
 | [`.env.example`](.env.example)           | Documentazione di tutte le variabili d'ambiente      |
 
 Le variabili d'ambiente richieste vengono validate al boot con Zod. Se manca o è errata una variabile obbligatoria, l'avvio fallisce con un messaggio esplicito.
-
-## Collezioni esterne headless (Fase 9)
-
-Il sito legge contenuti da un backend Fastily (repo separata) in sola lettura. Il motore è **generico**: pagine, sitemap, hreflang, cache, BFF e domini immagine si aggiornano automaticamente dal registry.
-
-### Variabili server-only
-
-| Variabile                | Ruolo                                                                             |
-| ------------------------ | --------------------------------------------------------------------------------- |
-| `NUXT_API_BASE_URL`      | Base URL del backend Fastily                                                      |
-| `NUXT_API_KEY`           | API key Fastily (`X-Api-Key`) per le chiamate server-side (mai nel bundle client) |
-| `NUXT_REVALIDATE_SECRET` | Secret condiviso per il webhook di invalidazione cache                            |
-| `NUXT_USE_FASTILY_MOCK`  | `true` (default in dev) — mock HTTP locale se `NUXT_API_BASE_URL` è vuoto         |
-
-### Aggiungere una collezione esterna (es. blog)
-
-1. **Schema Zod** — aggiungi lo schema in [`config/collections/schemas.ts`](config/collections/schemas.ts)
-2. **Registry** — aggiungi la voce in [`config/collections.ts`](config/collections.ts):
-   - `key`, `paths` (segmenti URL per IT/EN)
-   - `schema`, `schemaOrg`, `ogImage`, `filters`, `cacheTtl`, `mediaDomains`
-   - chiavi i18n per titoli e meta
-3. **Template OG** — crea `app/components/OgImage/OgBlog.satori.vue` (o riusa `OgDefault`)
-4. **Mock (opzionale, dev)** — aggiungi fixture in `server/mocks/collections/`
-
-**Automatico** senza toccare il motore: pagine [`app/pages/[collection]/`](app/pages/[collection]/), BFF `/api/collections/:key`, sitemap, hreflang, CSP `img-src`, `@nuxt/image` domains, cache Nitro.
-
-### Webhook invalidazione
-
-```bash
-curl -X POST http://localhost:3000/api/collections/revalidate \
-  -H "Authorization: Bearer $NUXT_REVALIDATE_SECRET" \
-  -H "Content-Type: application/json" \
-  -d '{"collection":"immobili","slug":"attico-brera"}'
-```
-
-### Verifica locale con mock
-
-Senza `NUXT_API_BASE_URL`, il mock Nitro risponde su `/collections/*` con dati bilingui. Visita `/immobili` (IT) e `/en/properties` (EN).
 
 ## Aggiornamenti dipendenze
 

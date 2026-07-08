@@ -21,19 +21,4 @@ test.describe('i18n', () => {
       .click()
     await expect(page).toHaveURL('/')
   })
-
-  test('language switch on an untranslated item goes to the list, not a 404', async ({ page }) => {
-    await page.goto('/immobili/monolocale-porta-romana')
-    await expect(page.locator('html')).toHaveAttribute('lang', /it/)
-
-    const enLink = page
-      .getByRole('navigation', { name: /lingua|language/i })
-      .getByRole('link', { name: 'English' })
-    // Must target the EN collection list, not /en/immobili/<it-slug> (a 404).
-    await expect(enLink).toHaveAttribute('href', '/en/properties')
-
-    await enLink.click()
-    await expect(page).toHaveURL(/\/en\/properties$/)
-    await expect(page.locator('main h1')).toBeVisible()
-  })
 })

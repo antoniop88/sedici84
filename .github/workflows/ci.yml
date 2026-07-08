@@ -13,12 +13,9 @@ jobs:
   ci:
     runs-on: ubuntu-latest
     env:
-      OPENAPI_SPEC_URL: https://raw.githubusercontent.com/antoniop88/node-fastify-starter/main/openapi/openapi.json
       NUXT_PUBLIC_SITE_URL: http://127.0.0.1:3000
       NUXT_PUBLIC_ENV: development
       NUXT_PUBLIC_DEFAULT_LOCALE: it
-      NUXT_REVALIDATE_SECRET: ci-revalidate-secret
-      NUXT_USE_FASTILY_MOCK: 'true'
       NITRO_PRESET: node-server
     steps:
       - name: Checkout
@@ -47,16 +44,8 @@ jobs:
       - name: Unit tests
         run: pnpm test
 
-      - name: Build with canary secret check
-        run: |
-          CANARY_TOKEN="canary_$(openssl rand -hex 16)"
-          export NUXT_API_KEY="$CANARY_TOKEN"
-          pnpm build
-          if grep -rF "$CANARY_TOKEN" .output/public .output/server 2>/dev/null; then
-            echo "Canary secret leaked into build output"
-            exit 1
-          fi
-          echo "Canary secret not found in build output"
+      - name: Build
+        run: pnpm build
 
       - name: Install Playwright browsers
         run: pnpm exec playwright install --with-deps chromium
@@ -70,6 +59,3 @@ jobs:
         run: |
           NUXT_PUBLIC_SITE_URL=http://127.0.0.1:3100 pnpm build
           pnpm test:e2e
-
-      - name: Verify Fastily mock is blocked with API base URL
-        run: pnpm test:mock-blocked

@@ -10,7 +10,7 @@ test.describe('smoke', () => {
   })
 
   test('main pages respond successfully', async ({ page }) => {
-    for (const path of ['/chi-siamo', '/contatti', '/immobili', '/lavori']) {
+    for (const path of ['/chi-siamo', '/contatti', '/lavori']) {
       const response = await page.goto(path)
       expect(response?.status()).toBe(200)
     }

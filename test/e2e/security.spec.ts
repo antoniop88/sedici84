@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test'
 
-const keyPages = ['/', '/immobili/attico-brera', '/contatti']
+const keyPages = ['/', '/chi-siamo', '/contatti']
 
 test.describe('security', () => {
   for (const path of keyPages) {

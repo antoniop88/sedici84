@@ -7,22 +7,20 @@
   },
   "packageManager": "pnpm@11.9.0",
   "scripts": {
-    "build": "pnpm openapi:types && nuxt prepare && nuxt build",
+    "build": "nuxt prepare && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "pnpm openapi:types && nuxt prepare",
+    "postinstall": "nuxt prepare",
     "prepare": "husky",
-    "openapi:types": "tsx scripts/openapi-types.mts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "typecheck": "nuxi typecheck && tsc --noEmit -p tsconfig.openapi-fidelity.json",
+    "typecheck": "nuxi typecheck",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:e2e": "playwright test",
-    "test:mock-blocked": "node scripts/verify-mock-blocked.mjs"
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@nuxt/content": "^3.15.0",
@@ -60,8 +58,6 @@
     "prettier": "^3.9.4",
     "tailwindcss": "^4.3.2",
     "typescript": "^6.0.3",
-    "openapi-typescript": "^7.8.0",
-    "tsx": "^4.23.0",
     "vitest": "^4.0.18",
     "vue-tsc": "^3.3.6"
   },
