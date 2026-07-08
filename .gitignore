@@ -22,10 +22,6 @@ playwright-report
 .DS_Store
 .fleet
 .idea
-
-# Generated OpenAPI types (regenerated via postinstall / prebuild)
-types/openapi.generated.d.ts
-
 # Local env files
 .env
 .env.*
