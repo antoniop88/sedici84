@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": [
+    "types/openapi.generated.d.ts",
+    "config/collections/openapi-types.ts",
+    "config/collections/schemas.ts",
+    "test/openapi-contract-fidelity.test-d.ts"
+  ]
+}

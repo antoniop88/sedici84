@@ -1,0 +1,45 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "schedule": ["before 9am on monday"],
+  "timezone": "Europe/Rome",
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "description": "Group Nuxt framework packages",
+      "matchPackageNames": ["nuxt"],
+      "groupName": "nuxt"
+    },
+    {
+      "description": "Group Nuxt modules",
+      "matchPackagePatterns": ["^@nuxt/", "^@nuxtjs/"],
+      "groupName": "nuxt-modules"
+    },
+    {
+      "description": "Group Playwright",
+      "matchPackageNames": ["@playwright/test"],
+      "groupName": "playwright"
+    },
+    {
+      "description": "Group Vitest",
+      "matchPackageNames": ["vitest", "@nuxt/test-utils", "@vue/test-utils", "happy-dom"],
+      "groupName": "vitest"
+    },
+    {
+      "description": "Group ESLint",
+      "matchPackagePatterns": ["^eslint", "^@eslint", "eslint-config-"],
+      "groupName": "eslint"
+    },
+    {
+      "description": "Group Tailwind",
+      "matchPackagePatterns": ["tailwind", "^@tailwindcss/"],
+      "groupName": "tailwind"
+    },
+    {
+      "description": "Automerge patch devDependencies",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch"],
+      "automerge": true
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+.pnpm-store
+
+# Logs
+logs
+*.log
+
+# Test outputs
+test-results
+playwright-report
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Generated OpenAPI types (regenerated via postinstall / prebuild)
+types/openapi.generated.d.ts
+
+# Local env files
+.env
+.env.*
+!.env.example
+!.env.prod.example

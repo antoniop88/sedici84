@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi siamo",
+    "works": "Lavori",
+    "properties": "Immobili",
+    "contact": "Contatti"
+  },
+  "header": {
+    "logoLabel": "{name} — Home",
+    "mainNavigation": "Navigazione principale",
+    "openMenu": "Apri menu",
+    "closeMenu": "Chiudi menu",
+    "mobileNavigation": "Menu di navigazione"
+  },
+  "footer": {
+    "copyright": "© {year} {name}. Tutti i diritti riservati.",
+    "privacy": "Privacy",
+    "cookies": "Cookie",
+    "terms": "Termini di servizio",
+    "legalNotice": "Note legali",
+    "sections": {
+      "navigation": "Navigazione",
+      "legal": "Legale",
+      "social": "Social"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "x": "X",
+      "facebook": "Facebook"
+    }
+  },
+  "common": {
+    "loading": "Caricamento…",
+    "back": "Indietro",
+    "close": "Chiudi",
+    "skipToContent": "Salta al contenuto",
+    "languageSwitcher": {
+      "label": "Seleziona lingua"
+    },
+    "home": {
+      "title": "Benvenuto",
+      "lead": "Template Nuxt 4 multilingua pronto per la produzione. Questa pagina di prova verifica routing e traduzioni."
+    },
+    "i18nTest": {
+      "title": "Test internazionalizzazione",
+      "lead": "Se cambi lingua, l'URL e i testi si aggiornano mantenendo questa pagina.",
+      "backToHome": "Torna alla home"
+    }
+  },
+  "landing": {
+    "demo": {
+      "title": "Landing demo",
+      "lead": "Layout minimale per pagine a conversione. Header slim, nessuna navigazione completa, footer legale essenziale."
+    }
+  },
+  "contact": {
+    "form": {
+      "heading": "Scrivici un messaggio",
+      "name": "Nome",
+      "email": "Email",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "submit": "Invia",
+      "success": "Messaggio inviato con successo."
+    }
+  },
+  "content": {
+    "fallbackNotice": "Contenuto non disponibile in questa lingua. Stai visualizzando la versione in lingua di default.",
+    "externalLink": "(si apre in una nuova scheda)"
+  },
+  "works": {
+    "title": "I nostri lavori",
+    "lead": "Progetti selezionati di brand, web e digital product.",
+    "metaTitle": "I nostri lavori",
+    "metaDescription": "Progetti selezionati di brand, web e digital product.",
+    "featuredTitle": "Progetti in evidenza",
+    "viewAll": "Vedi tutti i lavori",
+    "backToList": "Torna ai lavori",
+    "client": "Cliente",
+    "date": "Data"
+  },
+  "properties": {
+    "title": "Immobili",
+    "lead": "Selezione di immobili residenziali e commerciali.",
+    "metaTitle": "Immobili in vendita",
+    "metaDescription": "Scopri la nostra selezione di immobili residenziali e commerciali.",
+    "backToList": "Torna agli immobili",
+    "price": "Prezzo",
+    "sqm": "Superficie",
+    "rooms": "locali",
+    "bathrooms": "Bagni",
+    "empty": "Nessun immobile trovato con i filtri selezionati.",
+    "pagination": "Paginazione immobili",
+    "prevPage": "Pagina precedente",
+    "nextPage": "Pagina successiva",
+    "pageOf": "Pagina {page} di {total}",
+    "filters": {
+      "city": "Città",
+      "type": "Tipologia",
+      "minPrice": "Prezzo min.",
+      "maxPrice": "Prezzo max.",
+      "apply": "Applica filtri"
+    }
+  },
+  "errors": {
+    "notFound": "Pagina non trovata.",
+    "generic": "Si è verificato un errore. Riprova più tardi.",
+    "page404": {
+      "title": "Pagina non trovata",
+      "lead": "La pagina che stai cercando non esiste o è stata spostata.",
+      "homeCta": "Torna alla home",
+      "helpTitle": "Link utili"
+    },
+    "page500": {
+      "title": "Errore del server",
+      "lead": "Si è verificato un errore imprevisto. Riprova tra qualche istante.",
+      "homeCta": "Torna alla home"
+    },
+    "validation": {
+      "required": "Campo obbligatorio.",
+      "email": "Inserisci un indirizzo email valido."
+    }
+  },
+  "cta": {
+    "learnMore": "Scopri di più",
+    "contactUs": "Contattaci",
+    "getStarted": "Inizia ora"
+  },
+  "consent": {
+    "banner": {
+      "title": "Preferenze sui cookie",
+      "description": "Utilizziamo cookie tecnici necessari al funzionamento del sito e, previo consenso, strumenti analitici cookieless per migliorare l'esperienza. Puoi accettare tutti, rifiutare o personalizzare le preferenze. Maggiori informazioni nella ",
+      "acceptAll": "Accetta tutti",
+      "rejectAll": "Rifiuta",
+      "preferences": "Preferenze",
+      "savePreferences": "Salva preferenze",
+      "closePreferences": "Annulla",
+      "cookiePolicyLink": "Cookie Policy"
+    },
+    "categories": {
+      "alwaysOn": "Sempre attivi",
+      "necessary": {
+        "title": "Cookie necessari",
+        "description": "Essenziali per lingua, navigazione e funzionalità di base. Non possono essere disabilitati.",
+        "alwaysEnabled": "Sempre abilitati"
+      },
+      "analytics": {
+        "title": "Analitici",
+        "description": "Umami (self-hosted, cookieless) raccoglie statistiche anonime di navigazione solo se acconsenti."
+      }
+    }
+  }
+}

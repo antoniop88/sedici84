@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "works": "Work",
+    "properties": "Properties",
+    "contact": "Contact"
+  },
+  "header": {
+    "logoLabel": "{name} — Home",
+    "mainNavigation": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileNavigation": "Navigation menu"
+  },
+  "footer": {
+    "copyright": "© {year} {name}. All rights reserved.",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "terms": "Terms of service",
+    "legalNotice": "Legal notice",
+    "sections": {
+      "navigation": "Navigation",
+      "legal": "Legal",
+      "social": "Social"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "x": "X",
+      "facebook": "Facebook"
+    }
+  },
+  "common": {
+    "loading": "Loading…",
+    "back": "Back",
+    "close": "Close",
+    "skipToContent": "Skip to content",
+    "languageSwitcher": {
+      "label": "Select language"
+    },
+    "home": {
+      "title": "Welcome",
+      "lead": "Production-ready multilingual Nuxt 4 starter. This test page validates routing and translations."
+    },
+    "i18nTest": {
+      "title": "Internationalization test",
+      "lead": "When you switch language, the URL and text update while staying on this page.",
+      "backToHome": "Back to home"
+    }
+  },
+  "landing": {
+    "demo": {
+      "title": "Landing demo",
+      "lead": "Minimal layout for conversion pages. Slim header, no full navigation, essential legal footer."
+    }
+  },
+  "contact": {
+    "form": {
+      "heading": "Send us a message",
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send",
+      "success": "Message sent successfully."
+    }
+  },
+  "content": {
+    "fallbackNotice": "Content not available in English. You are viewing the default language version.",
+    "externalLink": "(opens in a new tab)"
+  },
+  "works": {
+    "title": "Our work",
+    "lead": "Selected projects in brand, web, and digital product.",
+    "metaTitle": "Our work",
+    "metaDescription": "Selected projects in brand, web, and digital product.",
+    "featuredTitle": "Featured projects",
+    "viewAll": "View all work",
+    "backToList": "Back to work",
+    "client": "Client",
+    "date": "Date"
+  },
+  "properties": {
+    "title": "Properties",
+    "lead": "A selection of residential and commercial properties.",
+    "metaTitle": "Properties for sale",
+    "metaDescription": "Browse our selection of residential and commercial properties.",
+    "backToList": "Back to properties",
+    "price": "Price",
+    "sqm": "Area",
+    "rooms": "rooms",
+    "bathrooms": "Bathrooms",
+    "empty": "No properties found matching your filters.",
+    "pagination": "Properties pagination",
+    "prevPage": "Previous page",
+    "nextPage": "Next page",
+    "pageOf": "Page {page} of {total}",
+    "filters": {
+      "city": "City",
+      "type": "Type",
+      "minPrice": "Min price",
+      "maxPrice": "Max price",
+      "apply": "Apply filters"
+    }
+  },
+  "errors": {
+    "notFound": "Page not found.",
+    "generic": "Something went wrong. Please try again later.",
+    "page404": {
+      "title": "Page not found",
+      "lead": "The page you are looking for does not exist or has been moved.",
+      "homeCta": "Back to home",
+      "helpTitle": "Helpful links"
+    },
+    "page500": {
+      "title": "Server error",
+      "lead": "An unexpected error occurred. Please try again in a moment.",
+      "homeCta": "Back to home"
+    },
+    "validation": {
+      "required": "This field is required.",
+      "email": "Please enter a valid email address."
+    }
+  },
+  "cta": {
+    "learnMore": "Learn more",
+    "contactUs": "Contact us",
+    "getStarted": "Get started"
+  },
+  "consent": {
+    "banner": {
+      "title": "Cookie preferences",
+      "description": "We use essential technical cookies and, with your consent, cookieless analytics to improve the experience. You can accept all, reject, or customize your preferences. Learn more in our ",
+      "acceptAll": "Accept all",
+      "rejectAll": "Reject",
+      "preferences": "Preferences",
+      "savePreferences": "Save preferences",
+      "closePreferences": "Cancel",
+      "cookiePolicyLink": "Cookie Policy"
+    },
+    "categories": {
+      "alwaysOn": "Always on",
+      "necessary": {
+        "title": "Necessary cookies",
+        "description": "Required for language, navigation, and core functionality. They cannot be disabled.",
+        "alwaysEnabled": "Always enabled"
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Umami (self-hosted, cookieless) collects anonymous navigation statistics only if you consent."
+      }
+    }
+  }
+}
