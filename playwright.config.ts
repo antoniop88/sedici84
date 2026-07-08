@@ -36,8 +36,6 @@ export default defineConfig({
       NUXT_PUBLIC_ENV: 'development',
       NUXT_PUBLIC_UMAMI_HOST: 'https://analytics.test.local',
       NUXT_PUBLIC_UMAMI_WEBSITE_ID: 'test-website-id',
-      NUXT_USE_FASTILY_MOCK: 'true',
-      NUXT_REVALIDATE_SECRET: 'ci-revalidate-secret',
     },
   },
 })
