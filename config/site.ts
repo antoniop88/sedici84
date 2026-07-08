@@ -1,5 +1,3 @@
-import type { CollectionKey } from './collections/keys'
-
 export type SiteLocale = {
   code: string
   language: string
@@ -30,7 +28,6 @@ export type SiteNavItem = {
   labelKey: string
   to: string
   external?: boolean
-  collectionKey?: CollectionKey
 }
 
 export type SiteConfig = {
@@ -95,7 +92,6 @@ export const site = {
     { labelKey: 'nav.home', to: '/' },
     { labelKey: 'nav.about', to: '/chi-siamo' },
     { labelKey: 'nav.works', to: '/lavori' },
-    { labelKey: 'nav.properties', to: '/immobili', collectionKey: 'immobili' },
     { labelKey: 'nav.contact', to: '/contatti' },
   ],
   legalLinks: [

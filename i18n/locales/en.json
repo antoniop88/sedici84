@@ -3,7 +3,6 @@
     "home": "Home",
     "about": "About",
     "works": "Work",
-    "properties": "Properties",
     "contact": "Contact"
   },
   "header": {
@@ -81,29 +80,6 @@
     "backToList": "Back to work",
     "client": "Client",
     "date": "Date"
-  },
-  "properties": {
-    "title": "Properties",
-    "lead": "A selection of residential and commercial properties.",
-    "metaTitle": "Properties for sale",
-    "metaDescription": "Browse our selection of residential and commercial properties.",
-    "backToList": "Back to properties",
-    "price": "Price",
-    "sqm": "Area",
-    "rooms": "rooms",
-    "bathrooms": "Bathrooms",
-    "empty": "No properties found matching your filters.",
-    "pagination": "Properties pagination",
-    "prevPage": "Previous page",
-    "nextPage": "Next page",
-    "pageOf": "Page {page} of {total}",
-    "filters": {
-      "city": "City",
-      "type": "Type",
-      "minPrice": "Min price",
-      "maxPrice": "Max price",
-      "apply": "Apply filters"
-    }
   },
   "errors": {
     "notFound": "Page not found.",

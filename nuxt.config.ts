@@ -1,20 +1,15 @@
 import tailwindcss from '@tailwindcss/vite'
-import { getAllMediaDomains } from './config/collections'
 import { legacyRedirects } from './config/redirects'
 import { site } from './config/site'
 import { validateEnv } from './server/utils/env'
 
-const env = validateEnv()
+validateEnv()
 
 const publicEnv = process.env.NUXT_PUBLIC_ENV ?? 'development'
 const isProduction = publicEnv === 'production'
 
 const umamiHost = process.env.NUXT_PUBLIC_UMAMI_HOST ?? ''
 const umamiOrigin = umamiHost ? new URL(umamiHost).origin : null
-
-const apiBaseUrl = process.env.NUXT_API_BASE_URL ?? ''
-const apiOrigin = apiBaseUrl ? new URL(apiBaseUrl).origin : null
-const mediaDomains = getAllMediaDomains()
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -58,13 +53,13 @@ export default defineNuxtConfig({
       xl: 1280,
       xxl: 1536,
     },
-    domains: ['picsum.photos', ...mediaDomains.filter((d) => d !== 'picsum.photos')],
+    domains: ['picsum.photos'],
   },
   robots: {
     disallow: ['/i18n-test', '/ui-preview', '/api/**'],
   },
   sitemap: {
-    sources: ['/api/__sitemap__/content', '/api/__sitemap__/collections'],
+    sources: ['/api/__sitemap__/content'],
     exclude: ['/i18n-test', '/ui-preview'],
   },
   ogImage: {
@@ -130,13 +125,7 @@ export default defineNuxtConfig({
         'font-src': ["'self'", 'data:'],
         'form-action': ["'self'"],
         'frame-ancestors': ["'self'"],
-        'img-src': [
-          "'self'",
-          'data:',
-          'https://picsum.photos',
-          'https://fastly.picsum.photos',
-          ...mediaDomains.map((domain) => `https://${domain}`),
-        ],
+        'img-src': ["'self'", 'data:', 'https://picsum.photos', 'https://fastly.picsum.photos'],
         'object-src': ["'none'"],
         'script-src-attr': ["'none'"],
         'style-src': ["'self'", "'unsafe-inline'"],
@@ -147,11 +136,7 @@ export default defineNuxtConfig({
           "'wasm-unsafe-eval'",
           ...(umamiOrigin ? [umamiOrigin] : []),
         ],
-        'connect-src': [
-          "'self'",
-          ...(umamiOrigin ? [umamiOrigin] : []),
-          ...(apiOrigin ? [apiOrigin] : []),
-        ],
+        'connect-src': ["'self'", ...(umamiOrigin ? [umamiOrigin] : [])],
         'upgrade-insecure-requests': isProduction,
       },
     },
@@ -179,15 +164,6 @@ export default defineNuxtConfig({
     '/apple-touch-icon.png': {
       headers: { 'cache-control': 'public, max-age=604800' },
     },
-    '/api/collections/revalidate': {
-      headers: { 'cache-control': 'private, no-cache' },
-      security: {
-        rateLimiter: {
-          tokensPerInterval: 10,
-          interval: 60_000,
-        },
-      },
-    },
     '/api/**': {
       headers: { 'cache-control': 'private, no-cache' },
       security: {
@@ -209,11 +185,6 @@ export default defineNuxtConfig({
     typeCheck: true,
   },
   runtimeConfig: {
-    apiBaseUrl: env.NUXT_API_BASE_URL,
-    apiKey: env.NUXT_API_KEY,
-    // No hardcoded fallback: the dev default lives only in the env schema, and the runtime
-    // guard (server/plugins/validate-env.ts) refuses to boot in production if it is unchanged.
-    revalidateSecret: env.NUXT_REVALIDATE_SECRET,
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL ?? '',
       siteName: process.env.NUXT_PUBLIC_SITE_NAME ?? site.name,

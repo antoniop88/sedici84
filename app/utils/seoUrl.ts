@@ -1,4 +1,4 @@
-/** Shared SEO URL/locale helpers — single source of truth for usePageSeo and useCollectionSeo. */
+/** Shared SEO URL/locale helpers — single source of truth for usePageSeo. */
 
 export const OG_LOCALE_MAP: Record<string, string> = {
   it: 'it_IT',

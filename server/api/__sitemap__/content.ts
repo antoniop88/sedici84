@@ -31,8 +31,8 @@ export default defineSitemapEventHandler(async (event) => {
   const entries: SitemapEntry[] = []
 
   // Query both locales so the en-US alternate is only advertised when an EN document actually
-  // exists (matching the collections sitemap). Otherwise an untranslated doc would point an
-  // en-US hreflang at a URL that only renders IT content via fallback.
+  // exists. Otherwise an untranslated doc would point an en-US hreflang at a URL that only
+  // renders IT content via fallback.
   const [projectsIt, projectsEn, landingIt, landingEn] = await Promise.all([
     queryCollection(event, 'projects_it').all(),
     queryCollection(event, 'projects_en').all(),

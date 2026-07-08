@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { getCollectionPath, type CollectionKey, type LocaleCode } from '../../../config/collections'
 import type { SiteNavItem } from '../../../config/site'
 
 const props = withDefaults(
@@ -15,16 +14,12 @@ const props = withDefaults(
 
 const route = useRoute()
 const localePath = useLocalePath()
-const { locale } = useI18n()
 const { navigation } = useAppConfig()
 
 const linkClass =
   'rounded-sm px-3 py-2 text-sm transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
 
 function resolveNavPath(item: SiteNavItem): string {
-  if (item.collectionKey) {
-    return getCollectionPath(item.collectionKey as CollectionKey, locale.value as LocaleCode)
-  }
   return item.to
 }
 

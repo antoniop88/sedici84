@@ -3,7 +3,6 @@
     "home": "Home",
     "about": "Chi siamo",
     "works": "Lavori",
-    "properties": "Immobili",
     "contact": "Contatti"
   },
   "header": {
@@ -81,29 +80,6 @@
     "backToList": "Torna ai lavori",
     "client": "Cliente",
     "date": "Data"
-  },
-  "properties": {
-    "title": "Immobili",
-    "lead": "Selezione di immobili residenziali e commerciali.",
-    "metaTitle": "Immobili in vendita",
-    "metaDescription": "Scopri la nostra selezione di immobili residenziali e commerciali.",
-    "backToList": "Torna agli immobili",
-    "price": "Prezzo",
-    "sqm": "Superficie",
-    "rooms": "locali",
-    "bathrooms": "Bagni",
-    "empty": "Nessun immobile trovato con i filtri selezionati.",
-    "pagination": "Paginazione immobili",
-    "prevPage": "Pagina precedente",
-    "nextPage": "Pagina successiva",
-    "pageOf": "Pagina {page} di {total}",
-    "filters": {
-      "city": "Città",
-      "type": "Tipologia",
-      "minPrice": "Prezzo min.",
-      "maxPrice": "Prezzo max.",
-      "apply": "Applica filtri"
-    }
   },
   "errors": {
     "notFound": "Pagina non trovata.",
