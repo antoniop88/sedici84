@@ -3,16 +3,21 @@
 FROM node:24-slim AS deps
 WORKDIR /app
 RUN corepack enable
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-RUN pnpm install --frozen-lockfile
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml .env.example ./
+RUN cp .env.example .env && pnpm install --frozen-lockfile
 
 FROM node:24-slim AS build
 WORKDIR /app
 RUN corepack enable
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN cp .env.example .env
 ARG NITRO_PRESET=node-server
+ARG NUXT_PUBLIC_SITE_URL=http://localhost:3000
+ARG NUXT_PUBLIC_ENV=production
 ENV NITRO_PRESET=${NITRO_PRESET}
+ENV NUXT_PUBLIC_SITE_URL=${NUXT_PUBLIC_SITE_URL}
+ENV NUXT_PUBLIC_ENV=${NUXT_PUBLIC_ENV}
 RUN pnpm build
 
 FROM node:24-slim AS runtime
