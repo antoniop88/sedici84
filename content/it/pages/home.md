@@ -13,7 +13,7 @@ sections:
         subtitle: Dagli anni '60 diamo forma a capi unici, interamente Made in Italy. L'arte del cucito italiano incontra un'anima contemporanea.
       - image: /images/hero/slide-2.jpg
         title: Artigianalità, in ogni dettaglio
-        subtitle: Tessuti pregiati, dettagli curati e vestibilità perfetta: ogni abito nasce intorno alla persona che lo indossa.
+        subtitle: 'Tessuti pregiati, dettagli curati e vestibilità perfetta: ogni abito nasce intorno alla persona che lo indossa.'
       - image: /images/hero/slide-3.jpg
         title: Tradizione sartoriale italiana
         subtitle: Forbici, ago e filo nelle mani esperte del nostro atelier, nel cuore della Valle d'Itria.
@@ -34,9 +34,9 @@ sections:
   - type: stats
     title: La nostra esperienza
     items:
-      - value: "1960s"
+      - value: '1960s'
         label: Le origini della sartoria
-      - value: "100%"
+      - value: '100%'
         label: Made in Italy
       - value: Artigianale
         label: Cura in ogni passaggio

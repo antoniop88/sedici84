@@ -13,7 +13,7 @@ sections:
         subtitle: Since the 1960s we have shaped unique garments, entirely Made in Italy. The art of Italian sewing meets a contemporary soul.
       - image: /images/hero/slide-2.jpg
         title: Craftsmanship in every detail
-        subtitle: Fine fabrics, meticulous details and a perfect fit: every garment is built around the person who wears it.
+        subtitle: 'Fine fabrics, meticulous details and a perfect fit: every garment is built around the person who wears it.'
       - image: /images/hero/slide-3.jpg
         title: Italian tailoring tradition
         subtitle: Scissors, needle and thread in the skilled hands of our atelier, in the heart of the Valle d'Itria.
@@ -34,9 +34,9 @@ sections:
   - type: stats
     title: Our experience
     items:
-      - value: "1960s"
+      - value: '1960s'
         label: The origins of the atelier
-      - value: "100%"
+      - value: '100%'
         label: Made in Italy
       - value: Artisan
         label: Care in every step
