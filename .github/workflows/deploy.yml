@@ -1,67 +1,26 @@
-name: Deploy
+name: Deploy sedici84.it
 
 on:
-  workflow_dispatch:
   push:
-    tags:
-      - 'v*'
+    branches: [main]
 
 jobs:
-  docker:
+  deploy:
     runs-on: ubuntu-latest
-    env:
-      NUXT_PUBLIC_SITE_URL: http://127.0.0.1:3000
-      NUXT_PUBLIC_ENV: development
-      NUXT_PUBLIC_DEFAULT_LOCALE: it
-      NITRO_PRESET: node-server
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1
         with:
-          node-version: '24'
-          cache: pnpm
-
-      - name: Prepare environment
-        run: cp .env.example .env
-
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-
-      - name: Build Docker image
-        run: docker build -t nuxt-starter:latest .
-
-      - name: Push image (configure secrets first)
-        if: false
-        env:
-          REGISTRY_URL: ${{ secrets.REGISTRY_URL }}
-          REGISTRY_USER: ${{ secrets.REGISTRY_USER }}
-          REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
-        run: |
-          echo "$REGISTRY_PASSWORD" | docker login "$REGISTRY_URL" -u "$REGISTRY_USER" --password-stdin
-          docker tag nuxt-starter:latest "$REGISTRY_URL/nuxt-starter:latest"
-          docker push "$REGISTRY_URL/nuxt-starter:latest"
-
-      - name: Deploy via SSH (configure secrets first)
-        if: false
-        uses: appleboy/ssh-action@v1.2.0
-        with:
-          host: ${{ secrets.DEPLOY_HOST }}
-          username: ${{ secrets.DEPLOY_USER }}
-          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ${{ secrets.DEPLOY_PATH }}
-            docker compose pull
-            docker compose up -d
-
-# Optional deploy workflow for Hetzner Docker target.
-# Configure repository secrets before enabling the disabled steps:
-# - REGISTRY_URL, REGISTRY_USER, REGISTRY_PASSWORD
-# - DEPLOY_HOST, DEPLOY_USER, DEPLOY_SSH_KEY, DEPLOY_PATH
-#
-# For client VPS / HestiaCP deployments, use scripts/deploy.sh manually or adapt it.
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+            nvm use 22
+            cd /home/upstudio/web/sedici84.it/app
+            git pull origin main
+            pnpm install --frozen-lockfile
+            pnpm build
+            pm2 restart sedici84
+            pm2 save
