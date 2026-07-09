@@ -67,6 +67,7 @@ export default defineNuxtConfig({
       width: 1200,
       height: 630,
     },
+    fonts: ['Inter:400', 'Inter:600', 'Fraunces:600'],
   },
   i18n: {
     defaultLocale: site.defaultLocale,

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { site } from '../../../config/site'
+import { site, siteImages } from '../../../config/site'
 
-withDefaults(
+const props = withDefaults(
   defineProps<{
     title?: string
     siteName?: string
@@ -11,6 +11,14 @@ withDefaults(
     siteName: site.name,
   },
 )
+
+const siteConfig = useSiteConfig()
+const requestUrl = useRequestURL()
+
+const logoSrc = computed(() => {
+  const base = (siteConfig.url || requestUrl.origin).replace(/\/$/, '')
+  return `${base}${siteImages.logo}`
+})
 </script>
 
 <template>
@@ -18,37 +26,37 @@ withDefaults(
     style="
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      align-items: center;
+      justify-content: center;
       width: 1200px;
       height: 630px;
-      padding: 64px;
-      background: linear-gradient(135deg, #4a5fc1 0%, #3548a0 100%);
-      color: #ffffff;
+      padding: 56px 80px;
+      background: #f2eae0;
+      color: #3b332b;
       font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      text-align: center;
     "
   >
-    <div
-      style="
-        font-size: 28px;
-        font-weight: 700;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        opacity: 0.9;
-      "
-    >
-      {{ siteName }}
-    </div>
+    <img
+      :src="logoSrc"
+      width="300"
+      height="300"
+      :alt="props.siteName"
+      style="width: 300px; height: 300px; object-fit: contain; margin-bottom: 36px"
+    />
+    <div style="width: 64px; height: 2px; background: #b7a48a; margin-bottom: 28px" />
     <h1
       style="
         margin: 0;
-        max-width: 960px;
-        font-size: 72px;
-        font-weight: 800;
-        line-height: 1.05;
-        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        max-width: 920px;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 1.2;
+        font-family: Fraunces, Georgia, serif;
+        letter-spacing: -0.01em;
       "
     >
-      {{ title }}
+      {{ props.title }}
     </h1>
   </div>
 </template>
