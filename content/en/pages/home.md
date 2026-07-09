@@ -12,7 +12,7 @@ sections:
         title: Timeless tailoring elegance
         subtitle: Since the 1960s we have shaped unique garments, entirely Made in Italy. The art of Italian sewing meets a contemporary soul.
       - image: /images/hero/slide-2.jpg
-        title: Made for you alone
+        title: Craftsmanship in every detail
         subtitle: Fine fabrics, meticulous details and a perfect fit: every garment is built around the person who wears it.
       - image: /images/hero/slide-3.jpg
         title: Italian tailoring tradition
@@ -26,9 +26,9 @@ sections:
       - title: Quality materials
         description: Impeccable comfort and fit, with fine fabrics carefully selected for every garment.
       - title: Made in Italy
-        description: Bespoke tailoring and façon service, entirely crafted in Italy.
+        description: Artisan tailoring and façon service, entirely crafted in Italy.
       - title: Unique designs
-        description: We shape made-to-measure garments, designed around your taste and your style.
+        description: We shape handcrafted sartorial garments, designed around your taste and your style.
       - title: Customer care
         description: A genuine dedication to the satisfaction of those who choose us, from first sketch to final fitting.
   - type: stats
@@ -38,12 +38,12 @@ sections:
         label: The origins of the atelier
       - value: "100%"
         label: Made in Italy
-      - value: Bespoke
-        label: Every garment made for you
+      - value: Artisan
+        label: Care in every step
       - value: Façon
         label: For major fashion houses
   - type: cta
-    title: A made-to-measure service, for unique people
+    title: Tailoring craft and care, for unique garments
     description: Tell us your idea. From the first sketch to the final fitting, we guide you every step of the way.
     button:
       label: Get in touch

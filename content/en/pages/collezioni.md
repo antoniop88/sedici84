@@ -38,7 +38,7 @@ gallery:
     alt: Sedici 84 men's fashion
     category: uomo
   - src: /images/collezioni/uomo/uomo10.jpg
-    alt: Men's made-to-measure suit
+    alt: Men's artisan tailored suit
     category: uomo
   - src: /images/collezioni/uomo/uomo11.jpg
     alt: Men's tailoring style
@@ -92,7 +92,7 @@ gallery:
     alt: Women's tailoring style
     category: donna
   - src: /images/collezioni/donna/donna12.jpeg
-    alt: Women's made-to-measure dress
+    alt: Women's artisan tailored dress
     category: donna
   - src: /images/collezioni/donna/donna13.jpeg
     alt: Women's collection

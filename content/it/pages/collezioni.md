@@ -38,7 +38,7 @@ gallery:
     alt: Moda uomo Sedici 84
     category: uomo
   - src: /images/collezioni/uomo/uomo10.jpg
-    alt: Abito su misura uomo
+    alt: Abito sartoriale artigianale uomo
     category: uomo
   - src: /images/collezioni/uomo/uomo11.jpg
     alt: Stile sartoriale uomo
@@ -92,7 +92,7 @@ gallery:
     alt: Stile sartoriale donna
     category: donna
   - src: /images/collezioni/donna/donna12.jpeg
-    alt: Abito donna su misura
+    alt: Abito donna sartoriale artigianale
     category: donna
   - src: /images/collezioni/donna/donna13.jpeg
     alt: Collezione donna

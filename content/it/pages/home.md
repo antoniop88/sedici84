@@ -12,7 +12,7 @@ sections:
         title: Eleganza sartoriale senza tempo
         subtitle: Dagli anni '60 diamo forma a capi unici, interamente Made in Italy. L'arte del cucito italiano incontra un'anima contemporanea.
       - image: /images/hero/slide-2.jpg
-        title: Su misura, come solo tu
+        title: Artigianalità, in ogni dettaglio
         subtitle: Tessuti pregiati, dettagli curati e vestibilità perfetta: ogni abito nasce intorno alla persona che lo indossa.
       - image: /images/hero/slide-3.jpg
         title: Tradizione sartoriale italiana
@@ -28,7 +28,7 @@ sections:
       - title: Made in Italy
         description: Sartoria personalizzata e servizio façon, interamente realizzati in Italia.
       - title: Design unici
-        description: Diamo forma ad abiti su misura, disegnati intorno al tuo gusto e al tuo stile.
+        description: Diamo forma a capi sartoriali, realizzati con cura artigianale intorno al tuo gusto e al tuo stile.
       - title: Cura del cliente
         description: Una dedizione autentica alla soddisfazione di chi ci sceglie, dal primo schizzo alla prova finale.
   - type: stats
@@ -38,12 +38,12 @@ sections:
         label: Le origini della sartoria
       - value: "100%"
         label: Made in Italy
-      - value: Su misura
-        label: Ogni capo intorno a te
+      - value: Artigianale
+        label: Cura in ogni passaggio
       - value: Façon
         label: Per le grandi Maison di moda
   - type: cta
-    title: Un servizio su misura, per persone uniche
+    title: Sartorialità e cura, per capi unici
     description: Raccontaci la tua idea. Dal primo bozzetto alla prova finale, ti accompagniamo in ogni passaggio.
     button:
       label: Contattaci
