@@ -14,23 +14,24 @@ const seoFields = {
   sitemap: defineSitemapSchema(),
 }
 
+const galleryCategorySchema = z.object({
+  key: z.string(),
+  label: z.string(),
+})
+
+const galleryImageSchema = z.object({
+  src: z.string(),
+  alt: z.string(),
+  category: z.string().optional(),
+})
+
 export const pageSchema = z.object({
   title: z.string(),
   description: z.string().optional(),
   type: z.literal('page').default('page'),
   sections: z.array(sectionSchema).optional(),
-  ...seoFields,
-})
-
-export const projectSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  cover: z.string(),
-  date: z.coerce.date(),
-  client: z.string().optional(),
-  tags: z.array(z.string()).default([]),
-  order: z.number().default(0),
-  featured: z.boolean().optional(),
+  categories: z.array(galleryCategorySchema).optional(),
+  gallery: z.array(galleryImageSchema).optional(),
   ...seoFields,
 })
 

@@ -1,31 +1,32 @@
 @import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 @theme {
-  /* Primary scale — oklch, AA contrast on 600+ with white text */
-  --color-primary-50: oklch(0.97 0.02 264);
-  --color-primary-100: oklch(0.93 0.04 264);
-  --color-primary-200: oklch(0.86 0.07 264);
-  --color-primary-300: oklch(0.76 0.11 264);
-  --color-primary-400: oklch(0.66 0.15 264);
-  --color-primary-500: oklch(0.55 0.18 264);
-  --color-primary-600: oklch(0.48 0.18 264);
-  --color-primary-700: oklch(0.42 0.16 264);
-  --color-primary-800: oklch(0.35 0.13 264);
-  --color-primary-900: oklch(0.28 0.1 264);
-  --color-primary-950: oklch(0.2 0.07 264);
+  /* Primary scale — warm taupe/brown (Sedici 84). AA on 700+ with light text */
+  --color-primary-50: #f2eae0;
+  --color-primary-100: #ece6da;
+  --color-primary-200: #ded3c0;
+  --color-primary-300: #c9b89c;
+  --color-primary-400: #b7a48a; /* Taupe oro */
+  --color-primary-500: #9a8467;
+  --color-primary-600: #7a6650;
+  --color-primary-700: #5e4f3e;
+  --color-primary-800: #463b2f;
+  --color-primary-900: #3b332b; /* Testo scuro */
+  --color-primary-950: #2a2420;
 
-  /* Neutral scale */
-  --color-neutral-50: oklch(0.985 0.002 264);
-  --color-neutral-100: oklch(0.96 0.004 264);
-  --color-neutral-200: oklch(0.92 0.006 264);
-  --color-neutral-300: oklch(0.86 0.008 264);
-  --color-neutral-400: oklch(0.7 0.01 264);
-  --color-neutral-500: oklch(0.55 0.012 264);
-  --color-neutral-600: oklch(0.45 0.012 264);
-  --color-neutral-700: oklch(0.37 0.012 264);
-  --color-neutral-800: oklch(0.28 0.01 264);
-  --color-neutral-900: oklch(0.2 0.008 264);
-  --color-neutral-950: oklch(0.14 0.006 264);
+  /* Neutral scale — warm greige */
+  --color-neutral-50: #faf7f1;
+  --color-neutral-100: #f2ede4;
+  --color-neutral-200: #e5ddd0;
+  --color-neutral-300: #d3c8b7;
+  --color-neutral-400: #b3a794;
+  --color-neutral-500: #8c8069;
+  --color-neutral-600: #6e6353;
+  --color-neutral-700: #554c40;
+  --color-neutral-800: #3e372e;
+  --color-neutral-900: #2c2721;
+  --color-neutral-950: #1c1813;
 
   /* Semantic colors */
   --color-success: oklch(0.55 0.15 145);
@@ -38,20 +39,20 @@
   --color-info-foreground: oklch(0.98 0.02 240);
 
   /* Semantic aliases (app.config.ts) */
-  --color-primary: var(--color-primary-600);
+  --color-primary: var(--color-primary-900);
   --color-secondary: var(--color-neutral-600);
   --color-accent: var(--color-primary-400);
-  --color-background: var(--color-neutral-50);
-  --color-foreground: var(--color-neutral-900);
+  --color-background: #f2eae0; /* Avorio caldo — allineato al logo */
+  --color-foreground: var(--color-primary-900); /* Testo scuro */
 
   /* Component foreground tokens */
-  --color-primary-foreground: oklch(0.99 0.005 264);
+  --color-primary-foreground: #fdfbf7;
   --color-secondary-foreground: var(--color-neutral-900);
-  --color-muted: var(--color-neutral-100);
-  --color-muted-foreground: var(--color-neutral-600);
+  --color-muted: var(--color-primary-100);
+  --color-muted-foreground: var(--color-neutral-700);
 
   /* Focus ring */
-  --color-ring: var(--color-primary-500);
+  --color-ring: var(--color-primary-700);
   --color-ring-offset: var(--color-background);
 
   /* Typography */
@@ -133,6 +134,81 @@
 @layer base {
   body {
     @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Brand-tuned long-form typography (Tailwind Typography) */
+  .prose {
+    --tw-prose-body: var(--color-neutral-700);
+    --tw-prose-headings: var(--color-foreground);
+    --tw-prose-lead: var(--color-neutral-700);
+    --tw-prose-bold: var(--color-foreground);
+    --tw-prose-links: var(--color-foreground);
+    --tw-prose-quotes: var(--color-foreground);
+    --tw-prose-quote-borders: var(--color-accent);
+    --tw-prose-bullets: var(--color-accent);
+    --tw-prose-counters: var(--color-accent);
+    --tw-prose-hr: var(--color-neutral-200);
+    line-height: 1.85;
+  }
+
+  .prose p {
+    margin-block: 1.35em;
+  }
+
+  .prose :is(h2, h3) {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .prose h2 {
+    margin-top: 2.4em;
+    margin-bottom: 0.9em;
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  /* Small gold rule above each section heading */
+  .prose h2::before {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    margin-bottom: 1rem;
+    background: var(--color-accent);
+  }
+
+  /* Editorial story: lead-in and drop cap on the opening paragraph */
+  .story .prose p:first-of-type::first-letter {
+    float: left;
+    font-family: var(--font-display);
+    font-size: 3.6em;
+    line-height: 0.72;
+    padding-right: 0.08em;
+    margin-top: 0.06em;
+    color: var(--color-primary-700);
+  }
+
+  /* Pull-quote styling for the manifesto blockquote */
+  .prose blockquote {
+    border-inline-start: none;
+    margin-block: 2.5em;
+    padding: 0;
+    text-align: center;
+    font-style: normal;
+  }
+
+  .prose blockquote p {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    line-height: 1.35;
+    color: var(--color-foreground);
+    quotes: none;
+  }
+
+  .prose blockquote p::before,
+  .prose blockquote p::after {
+    content: '';
   }
 
   @media (prefers-reduced-motion: reduce) {

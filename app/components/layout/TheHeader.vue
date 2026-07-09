@@ -4,6 +4,7 @@ const route = useRoute()
 const { brand } = useAppConfig()
 
 const isMenuOpen = ref(false)
+const hasLogo = ref(true)
 const menuButtonRef = ref<HTMLButtonElement | null>(null)
 const mobileMenuRef = ref<HTMLElement | null>(null)
 
@@ -36,13 +37,25 @@ watch(
 
 <template>
   <header class="border-b border-neutral-200 bg-background">
-    <UiContainer class="flex items-center justify-between gap-4 py-4">
+    <UiContainer class="flex items-center justify-between gap-4 py-3 md:py-4">
       <NuxtLink
         :to="localePath('/')"
-        class="font-display text-lg font-semibold text-foreground transition-colors motion-reduce:transition-none hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+        class="inline-flex items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
         :aria-label="$t('header.logoLabel', { name: brand.name })"
       >
-        {{ brand.name }}
+        <img
+          v-show="hasLogo"
+          :src="brand.logo"
+          :alt="brand.name"
+          class="h-24 w-auto sm:h-28 md:h-32 lg:h-36"
+          @error="hasLogo = false"
+        />
+        <span
+          v-if="!hasLogo"
+          class="font-display text-lg font-semibold tracking-wide text-foreground"
+        >
+          {{ brand.name }}
+        </span>
       </NuxtLink>
 
       <div class="hidden items-center gap-6 md:flex">
@@ -107,7 +120,8 @@ watch(
           class="absolute end-0 top-0 flex h-full w-full max-w-xs flex-col gap-6 bg-background p-6 shadow-lg"
         >
           <div class="flex items-center justify-between">
-            <span class="font-display text-lg font-semibold text-foreground">
+            <img v-if="hasLogo" :src="brand.logo" :alt="brand.name" class="h-20 w-auto" />
+            <span v-else class="font-display text-lg font-semibold tracking-wide text-foreground">
               {{ brand.name }}
             </span>
             <button

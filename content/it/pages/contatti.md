@@ -1,16 +1,9 @@
 ---
 title: Contatti
-description: Scrivici per un preventivo o una consulenza gratuita.
+description: Parliamo del tuo capo su misura. Scrivici per una consulenza o un preventivo.
 type: page
 ---
 
-## Parliamo del tuo progetto
+## Parliamo del tuo capo su misura
 
-Siamo disponibili per call introduttive, brief e preventivi. Compila il form qui sotto oppure scrivici direttamente a [hello@example.com](mailto:hello@example.com).
-
-## Dove siamo
-
-**Acme Studio S.r.l.**  
-Via Example 1, 20100 Milano (IT)
-
-Orari: lun–ven 9:00–18:00
+Raccontaci la tua idea: un abito, una giacca, un capo pensato solo per te. Scrivici su WhatsApp o usa i contatti qui sotto. Ti risponderemo il prima possibile per fissare un incontro in atelier.

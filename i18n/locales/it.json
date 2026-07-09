@@ -2,8 +2,11 @@
   "nav": {
     "home": "Home",
     "about": "Chi siamo",
-    "works": "Lavori",
+    "collections": "Collezioni",
     "contact": "Contatti"
+  },
+  "home": {
+    "introEyebrow": "L'atelier"
   },
   "header": {
     "logoLabel": "{name} — Home",
@@ -36,6 +39,7 @@
     "back": "Indietro",
     "close": "Chiudi",
     "skipToContent": "Salta al contenuto",
+    "backToTop": "Torna su",
     "languageSwitcher": {
       "label": "Seleziona lingua"
     },
@@ -63,23 +67,39 @@
       "subject": "Oggetto",
       "message": "Messaggio",
       "submit": "Invia",
+      "whatsapp": "Scrivici su WhatsApp",
+      "whatsappMessage": "Ciao, vorrei informazioni su Sedici 84.",
       "success": "Messaggio inviato con successo."
+    },
+    "info": {
+      "heading": "Dove trovarci",
+      "address": "Indirizzo",
+      "phone": "Telefono",
+      "email": "Email",
+      "hours": "Orari",
+      "hoursValue": "Su appuntamento",
+      "social": "Seguici"
     }
   },
   "content": {
     "fallbackNotice": "Contenuto non disponibile in questa lingua. Stai visualizzando la versione in lingua di default.",
     "externalLink": "(si apre in una nuova scheda)"
   },
-  "works": {
-    "title": "I nostri lavori",
-    "lead": "Progetti selezionati di brand, web e digital product.",
-    "metaTitle": "I nostri lavori",
-    "metaDescription": "Progetti selezionati di brand, web e digital product.",
-    "featuredTitle": "Progetti in evidenza",
-    "viewAll": "Vedi tutti i lavori",
-    "backToList": "Torna ai lavori",
-    "client": "Cliente",
-    "date": "Data"
+  "collections": {
+    "title": "Collezioni",
+    "lead": "Alcuni stili e lavorazioni della nostra sartoria. Uomo e donna.",
+    "metaTitle": "Collezioni",
+    "metaDescription": "Alcuni stili e lavorazioni della sartoria Sedici 84. Uomo e donna.",
+    "featuredTitle": "Collezioni in evidenza",
+    "viewAll": "Vedi tutte le collezioni"
+  },
+  "gallery": {
+    "open": "Apri immagine",
+    "close": "Chiudi galleria",
+    "prev": "Immagine precedente",
+    "next": "Immagine successiva",
+    "counter": "{current} di {total}",
+    "empty": "Nessuna immagine in questa categoria."
   },
   "errors": {
     "notFound": "Pagina non trovata.",

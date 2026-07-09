@@ -1,12 +1,8 @@
 ---
 title: Cookie Policy
 description: Quali cookie e tecnologie di tracciamento utilizziamo e come gestirli.
-legalDraft: true
+legalDraft: false
 ---
-
-::callout{type="warning" title="Avviso legale"}
-**DA REVISIONARE LEGALMENTE** — Questo documento è un segnaposto generato automaticamente e non costituisce consulenza legale. Sostituire con testo validato da un professionista qualificato prima della pubblicazione.
-::
 
 ## 1. Cosa sono i cookie e le tecnologie simili
 
@@ -39,7 +35,7 @@ Umami viene caricato **solo dopo consenso esplicito** tramite il banner. Non uti
 
 ## 3. Storage delle preferenze di consenso
 
-Le scelte espresse tramite il banner vengono salvate nel **local storage** del browser con la chiave `acme_cookie_consent`. Il record include:
+Le scelte espresse tramite il banner vengono salvate nel **local storage** del browser con la chiave `sedici84_cookie_consent`. Il record include:
 
 - versione della policy di consenso
 - preferenze per categoria (necessari sempre attivi, analitici opzionali)
@@ -59,4 +55,10 @@ La disabilitazione dei cookie tecnici potrebbe compromettere alcune funzionalit�
 
 ## 5. Contatti
 
-Per informazioni sui cookie e sul trattamento dei dati: hello@example.com
+Per informazioni sui cookie e sul trattamento dei dati:
+
+**Sedici 84**  
+Viale delle Tamerici SNC  
+72012 Carovigno (Br)  
+Email: info@sedici84.it  
+Telefono: +39 327 236 8763

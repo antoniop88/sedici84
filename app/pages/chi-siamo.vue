@@ -30,20 +30,15 @@ usePageSeo({
 </script>
 
 <template>
-  <UiContainer v-if="page" class="py-12">
+  <div v-if="page">
     <ContentFallbackNotice :show="isFallback" />
 
-    <header class="mb-8 space-y-3">
-      <h1 class="font-display text-3xl leading-tight text-foreground md:text-4xl">
-        {{ page.title }}
-      </h1>
-      <p v-if="page.description" class="max-w-prose text-lg text-muted-foreground">
-        {{ page.description }}
-      </p>
-    </header>
+    <SectionsSectionRenderer v-if="page.sections?.length" :sections="page.sections" />
 
-    <div class="prose prose-neutral max-w-prose">
-      <ContentRenderer :value="page" />
-    </div>
-  </UiContainer>
+    <UiContainer v-if="page.body" class="story pb-20 md:pb-28">
+      <div class="prose prose-lg mx-auto max-w-4xl">
+        <ContentRenderer :value="page" />
+      </div>
+    </UiContainer>
+  </div>
 </template>

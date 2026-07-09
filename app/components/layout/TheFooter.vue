@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { SiteSocialPlatform } from '../../../config/site'
-
 withDefaults(
   defineProps<{
     variant?: 'full' | 'minimal'
@@ -11,8 +9,7 @@ withDefaults(
 )
 
 const localePath = useLocalePath()
-const { t } = useI18n()
-const { brand, navigation, legalLinks, social } = useAppConfig()
+const { brand, navigation, legalLinks, organization } = useAppConfig()
 const currentYear = new Date().getFullYear()
 
 const linkClass =
@@ -21,18 +18,40 @@ const linkClass =
 const minimalLegalLinks = computed(() =>
   legalLinks.filter((item) => item.to === '/privacy-policy' || item.to === '/cookie-policy'),
 )
-
-function socialLabel(platform: SiteSocialPlatform): string {
-  return t(`footer.social.${platform}`)
-}
 </script>
 
 <template>
-  <footer class="border-t border-neutral-200 bg-neutral-50">
+  <footer class="border-t border-neutral-200 bg-background">
     <UiContainer class="py-10">
       <template v-if="variant === 'full'">
-        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div>
+        <div class="mx-auto grid max-w-4xl grid-cols-1 gap-10 text-center sm:grid-cols-3 sm:gap-12">
+          <div class="flex flex-col items-center sm:items-start">
+            <NuxtLink :to="localePath('/')" class="inline-flex rounded-sm">
+              <img :src="brand.logo" :alt="brand.name" class="h-24 w-auto" />
+            </NuxtLink>
+            <address class="mt-4 space-y-1 text-sm not-italic text-muted-foreground">
+              <p>{{ organization.address.street }}</p>
+              <p>{{ organization.address.postalCode }} {{ organization.address.city }}</p>
+              <p>
+                <a
+                  :href="`mailto:${organization.email}`"
+                  class="transition-colors hover:text-foreground"
+                >
+                  {{ organization.email }}
+                </a>
+              </p>
+              <p>
+                <a
+                  :href="`tel:${organization.phone.replace(/\s+/g, '')}`"
+                  class="transition-colors hover:text-foreground"
+                >
+                  {{ organization.phone }}
+                </a>
+              </p>
+            </address>
+          </div>
+
+          <div class="flex flex-col items-center sm:items-center">
             <h2 class="mb-4 text-sm font-semibold text-foreground">
               {{ $t('footer.sections.navigation') }}
             </h2>
@@ -45,7 +64,7 @@ function socialLabel(platform: SiteSocialPlatform): string {
             </ul>
           </div>
 
-          <div>
+          <div class="flex flex-col items-center sm:items-end">
             <h2 class="mb-4 text-sm font-semibold text-foreground">
               {{ $t('footer.sections.legal') }}
             </h2>
@@ -57,30 +76,25 @@ function socialLabel(platform: SiteSocialPlatform): string {
               </li>
             </ul>
           </div>
-
-          <div v-if="social.length > 0">
-            <h2 class="mb-4 text-sm font-semibold text-foreground">
-              {{ $t('footer.sections.social') }}
-            </h2>
-            <ul class="flex flex-wrap gap-3">
-              <li v-for="item in social" :key="item.platform">
-                <a
-                  :href="item.url"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  :class="linkClass"
-                  :aria-label="socialLabel(item.platform)"
-                >
-                  {{ socialLabel(item.platform) }}
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
 
-        <p class="mt-8 text-sm text-muted-foreground">
-          {{ $t('footer.copyright', { year: currentYear, name: brand.name }) }}
-        </p>
+        <div
+          class="mx-auto mt-10 flex max-w-4xl flex-col items-center gap-3 border-t border-neutral-200 pt-6 text-center sm:flex-row sm:justify-center sm:gap-8"
+        >
+          <p class="text-sm text-muted-foreground">
+            {{ $t('footer.copyright', { year: currentYear, name: brand.name }) }}
+          </p>
+          <p
+            class="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-muted-foreground"
+          >
+            <span class="flex h-3 w-6 overflow-hidden rounded-sm" aria-hidden="true">
+              <span class="flex-1 bg-[#009246]" />
+              <span class="flex-1 bg-white" />
+              <span class="flex-1 bg-[#ce2b37]" />
+            </span>
+            Made in Italy
+          </p>
+        </div>
       </template>
 
       <template v-else>

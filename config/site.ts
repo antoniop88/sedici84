@@ -46,33 +46,29 @@ export type SiteConfig = {
 
 export const defaultLocale = 'it' as const
 
+export const siteImages = {
+  logo: '/images/logo/logo.png',
+} as const
+
 export const site = {
-  name: 'Acme Studio',
-  shortName: 'Acme',
-  description: 'Studio creativo per brand, web e digital product.',
-  themeColor: '#4a5fc1',
-  backgroundColor: '#f8f9fc',
+  name: 'Sedici 84',
+  shortName: 'Sedici 84',
+  description:
+    'Abbigliamento premium e sartoria Made in Italy. Capi unici, materiali pregiati, eleganza senza tempo.',
+  themeColor: '#3B332B',
+  backgroundColor: '#F2EAE0',
   organization: {
-    legalName: 'Acme Studio S.r.l.',
-    email: 'hello@example.com',
-    phone: '+39 02 1234 5678',
+    legalName: 'Sedici 84',
+    email: 'info@sedici84.it',
+    phone: '+39 327 236 8763',
     address: {
-      street: 'Via Example 1',
-      city: 'Milano',
-      postalCode: '20100',
+      street: 'Viale delle Tamerici SNC',
+      city: 'Carovigno (Br)',
+      postalCode: '72012',
       country: 'IT',
     },
   },
-  social: [
-    {
-      platform: 'linkedin',
-      url: 'https://linkedin.com/company/example',
-    },
-    {
-      platform: 'instagram',
-      url: 'https://instagram.com/example',
-    },
-  ],
+  social: [] as SiteSocial[],
   locales: [
     {
       code: 'it',
@@ -91,7 +87,7 @@ export const site = {
   navigation: [
     { labelKey: 'nav.home', to: '/' },
     { labelKey: 'nav.about', to: '/chi-siamo' },
-    { labelKey: 'nav.works', to: '/lavori' },
+    { labelKey: 'nav.collections', to: '/collezioni' },
     { labelKey: 'nav.contact', to: '/contatti' },
   ],
   legalLinks: [

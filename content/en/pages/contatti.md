@@ -1,16 +1,9 @@
 ---
 title: Contact
-description: Write to us for a quote or a free consultation.
+description: Let's talk about your made-to-measure garment. Write to us for a consultation or a quote.
 type: page
 ---
 
-## Let's talk about your project
+## Let's talk about your made-to-measure garment
 
-We are available for intro calls, briefs, and quotes. Fill out the form below or write directly to [hello@example.com](mailto:hello@example.com).
-
-## Where we are
-
-**Acme Studio S.r.l.**  
-Via Example 1, 20100 Milan (IT)
-
-Hours: Mon–Fri 9:00–18:00
+Tell us your idea: a suit, a jacket, a garment designed just for you. Message us on WhatsApp or use the contacts below. We will get back to you as soon as possible to arrange a visit to the atelier.

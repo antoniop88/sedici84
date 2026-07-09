@@ -17,7 +17,7 @@ const localePath = useLocalePath()
 const { navigation } = useAppConfig()
 
 const linkClass =
-  'rounded-sm px-3 py-2 text-sm transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+  'relative rounded-sm px-3 py-2 text-sm uppercase tracking-[0.12em] transition-colors motion-reduce:transition-none after:absolute after:inset-x-3 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:scale-x-100 motion-reduce:after:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
 
 function resolveNavPath(item: SiteNavItem): string {
   return item.to
@@ -63,7 +63,7 @@ function handleKeydown(event: KeyboardEvent, index: number) {
           :class="[
             linkClass,
             isActive(item)
-              ? 'font-medium text-foreground'
+              ? 'text-foreground after:scale-x-100'
               : 'text-muted-foreground hover:text-foreground',
           ]"
           @keydown="handleKeydown($event, index)"

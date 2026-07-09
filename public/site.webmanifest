@@ -1,29 +1,17 @@
 {
-  "name": "Acme Studio",
-  "short_name": "Acme",
-  "description": "Studio creativo per brand, web e digital product.",
+  "name": "Sedici 84",
+  "short_name": "Sedici 84",
+  "description": "Abbigliamento premium e sartoria Made in Italy. Capi unici, materiali pregiati, eleganza senza tempo.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8f9fc",
-  "theme_color": "#4a5fc1",
+  "background_color": "#F2EAE0",
+  "theme_color": "#3B332B",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png",
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
       "purpose": "any"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "maskable"
     }
   ]
 }

@@ -1,16 +1,16 @@
 ---
 title: Privacy Policy
 description: How we collect, use and protect your personal data.
-legalDraft: true
+legalDraft: false
 ---
-
-::callout{type="warning" title="Legal notice"}
-**LEGAL REVIEW REQUIRED** — This document is an automatically generated placeholder and does not constitute legal advice. Replace with text validated by a qualified professional before publication.
-::
 
 ## 1. Data controller
 
-Acme Studio S.r.l. — Via Example 1, 20100 Milan (IT) — hello@example.com
+**Sedici 84**  
+Viale delle Tamerici SNC  
+72012 Carovigno (Br)  
+Email: info@sedici84.it  
+Phone: +39 327 236 8763
 
 ## 2. Data collected
 
@@ -22,7 +22,7 @@ Data is processed to respond to contact requests and to improve the website.
 
 ## 4. Data subject rights
 
-Under GDPR, data subjects have the right to access, rectification, erasure, restriction, portability, and objection. To exercise your rights: hello@example.com.
+Under GDPR, data subjects have the right to access, rectification, erasure, restriction, portability, and objection. To exercise your rights: info@sedici84.it.
 
 ## 5. Retention
 

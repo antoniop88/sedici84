@@ -15,4 +15,5 @@ useSiteSchemaOrg()
     <NuxtPage />
   </NuxtLayout>
   <LayoutTheCookieConsent />
+  <LayoutBackToTop />
 </template>

@@ -1,5 +1,5 @@
 export const CONSENT_POLICY_VERSION = '1.0.0'
-export const CONSENT_STORAGE_KEY = 'acme_cookie_consent'
+export const CONSENT_STORAGE_KEY = 'sedici84_cookie_consent'
 export const CONSENT_MAX_AGE_MS = 365 * 24 * 60 * 60 * 1000
 
 export interface ConsentPreferences {

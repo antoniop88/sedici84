@@ -1,6 +1,6 @@
 import { defineCollection, defineContentConfig } from '@nuxt/content'
 import type { ZodObject, ZodRawShape } from 'zod'
-import { landingSchema, legalSchema, pageSchema, projectSchema } from './content/schemas'
+import { landingSchema, legalSchema, pageSchema } from './content/schemas'
 
 const locales = ['it', 'en'] as const
 
@@ -28,7 +28,6 @@ function defineLocaleCollections<T extends ZodRawShape>(
 export default defineContentConfig({
   collections: {
     ...defineLocaleCollections('pages', 'pages', pageSchema),
-    ...defineLocaleCollections('projects', 'projects', projectSchema),
     ...defineLocaleCollections('legal', 'legal', legalSchema),
     ...defineLocaleCollections('landing', 'landing', landingSchema),
   },

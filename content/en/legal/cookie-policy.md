@@ -1,12 +1,8 @@
 ---
 title: Cookie Policy
 description: Which cookies and tracking technologies we use and how to manage them.
-legalDraft: true
+legalDraft: false
 ---
-
-::callout{type="warning" title="Legal notice"}
-**LEGAL REVIEW REQUIRED** — This document is an automatically generated placeholder and does not constitute legal advice. Replace with text validated by a qualified professional before publication.
-::
 
 ## 1. What are cookies and similar technologies
 
@@ -39,7 +35,7 @@ Umami is loaded **only after explicit consent** via the banner. It does not use 
 
 ## 3. Consent preference storage
 
-Choices made via the banner are saved in browser **local storage** under the key `acme_cookie_consent`. The record includes:
+Choices made via the banner are saved in browser **local storage** under the key `sedici84_cookie_consent`. The record includes:
 
 - consent policy version
 - category preferences (necessary always on, analytics optional)
@@ -59,4 +55,10 @@ Disabling technical cookies may impair some site functionality (e.g. language pr
 
 ## 5. Contact
 
-For cookie and data processing information: hello@example.com
+For cookie and data processing information:
+
+**Sedici 84**  
+Viale delle Tamerici SNC  
+72012 Carovigno (Br)  
+Email: info@sedici84.it  
+Phone: +39 327 236 8763

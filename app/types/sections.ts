@@ -19,12 +19,33 @@ export type TestimonialItem = {
   role?: string
 }
 
+export type HeroSlide = {
+  image: string
+  title?: string
+  subtitle?: string
+}
+
 export type HeroSection = {
   type: 'hero'
+  layout?: 'split' | 'full'
+  eyebrow?: string
   title: string
   subtitle?: string
   cta?: CtaLink
   image?: string
+  images?: string[]
+  slides?: HeroSlide[]
+}
+
+export type StatItem = {
+  value: string
+  label: string
+}
+
+export type StatsSection = {
+  type: 'stats'
+  title?: string
+  items: StatItem[]
 }
 
 export type FeaturesSection = {
@@ -52,4 +73,5 @@ export type TestimonialsSection = {
   items: TestimonialItem[]
 }
 
-export type Section = HeroSection | FeaturesSection | CtaSection | FaqSection | TestimonialsSection
+export type Section =
+  HeroSection | FeaturesSection | StatsSection | CtaSection | FaqSection | TestimonialsSection

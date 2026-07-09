@@ -158,12 +158,6 @@ export default defineNuxtConfig({
     '/favicon.ico': {
       headers: { 'cache-control': 'public, max-age=604800' },
     },
-    '/favicon-*.png': {
-      headers: { 'cache-control': 'public, max-age=604800' },
-    },
-    '/apple-touch-icon.png': {
-      headers: { 'cache-control': 'public, max-age=604800' },
-    },
     '/api/**': {
       headers: { 'cache-control': 'private, no-cache' },
       security: {

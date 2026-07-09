@@ -21,12 +21,33 @@ const testimonialItemSchema = z.object({
   role: z.string().optional(),
 })
 
+const statItemSchema = z.object({
+  value: z.string(),
+  label: z.string(),
+})
+
+const heroSlideSchema = z.object({
+  image: z.string(),
+  title: z.string().optional(),
+  subtitle: z.string().optional(),
+})
+
 export const heroSectionSchema = z.object({
   type: z.literal('hero'),
+  layout: z.enum(['split', 'full']).optional(),
+  eyebrow: z.string().optional(),
   title: z.string(),
   subtitle: z.string().optional(),
   cta: ctaSchema.optional(),
   image: z.string().optional(),
+  images: z.array(z.string()).optional(),
+  slides: z.array(heroSlideSchema).optional(),
+})
+
+export const statsSectionSchema = z.object({
+  type: z.literal('stats'),
+  title: z.string().optional(),
+  items: z.array(statItemSchema).min(1),
 })
 
 export const featuresSectionSchema = z.object({
@@ -57,6 +78,7 @@ export const testimonialsSectionSchema = z.object({
 export const sectionSchema = z.discriminatedUnion('type', [
   heroSectionSchema,
   featuresSectionSchema,
+  statsSectionSchema,
   ctaSectionSchema,
   faqSectionSchema,
   testimonialsSectionSchema,

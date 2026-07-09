@@ -8,7 +8,7 @@ describe('TheNavigation', () => {
 
     const links = wrapper.findAll('a')
     expect(links.length).toBeGreaterThanOrEqual(4)
-    expect(wrapper.text()).toMatch(/Home|Contatti|Lavori/i)
+    expect(wrapper.text()).toMatch(/Home|Contatti|Collezioni/i)
   })
 
   it('marks home as active on root route', async () => {

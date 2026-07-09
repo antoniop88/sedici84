@@ -1,9 +1,10 @@
-import { site } from '../config/site'
+import { site, siteImages } from '../config/site'
 
 export default defineAppConfig({
   brand: {
     name: site.name,
     shortName: site.shortName,
+    logo: siteImages.logo,
   },
   theme: {
     colors: {

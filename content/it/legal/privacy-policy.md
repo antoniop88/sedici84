@@ -1,16 +1,16 @@
 ---
 title: Informativa sulla privacy
 description: Come raccogliamo, usiamo e proteggiamo i tuoi dati personali.
-legalDraft: true
+legalDraft: false
 ---
-
-::callout{type="warning" title="Avviso legale"}
-**DA REVISIONARE LEGALMENTE** — Questo documento è un segnaposto generato automaticamente e non costituisce consulenza legale. Sostituire con testo validato da un professionista qualificato prima della pubblicazione.
-::
 
 ## 1. Titolare del trattamento
 
-Acme Studio S.r.l. — Via Example 1, 20100 Milano (IT) — hello@example.com
+**Sedici 84**  
+Viale delle Tamerici SNC  
+72012 Carovigno (Br)  
+Email: info@sedici84.it  
+Telefono: +39 327 236 8763
 
 ## 2. Dati raccolti
 
@@ -22,7 +22,7 @@ I dati sono trattati per rispondere alle richieste di contatto e per il migliora
 
 ## 4. Diritti dell'interessato
 
-Ai sensi del GDPR, l'interessato ha diritto di accesso, rettifica, cancellazione, limitazione, portabilità e opposizione. Per esercitare i diritti: hello@example.com.
+Ai sensi del GDPR, l'interessato ha diritto di accesso, rettifica, cancellazione, limitazione, portabilità e opposizione. Per esercitare i diritti: info@sedici84.it.
 
 ## 5. Conservazione
 

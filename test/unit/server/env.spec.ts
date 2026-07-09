@@ -7,7 +7,7 @@ import { validateEnv } from '../../../server/utils/env'
 const baseEnv = {
   NUXT_PUBLIC_SITE_URL: 'http://localhost:3000',
   NUXT_PUBLIC_ENV: 'development',
-  NUXT_PUBLIC_SITE_NAME: 'Acme Studio',
+  NUXT_PUBLIC_SITE_NAME: 'Sedici 84',
   NUXT_PUBLIC_DEFAULT_LOCALE: 'it',
 }
 

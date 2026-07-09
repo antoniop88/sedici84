@@ -12,7 +12,7 @@ const isExternal = computed(() => {
 })
 
 const linkClass =
-  'rounded-sm text-primary underline-offset-4 transition-colors motion-reduce:transition-none hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+  'rounded-sm text-sm font-medium uppercase tracking-wide text-foreground underline decoration-accent decoration-1 underline-offset-4 transition-colors motion-reduce:transition-none hover:text-accent hover:decoration-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
 </script>
 
 <template>

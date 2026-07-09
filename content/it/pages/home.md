@@ -1,30 +1,53 @@
 ---
-title: Benvenuto in Acme Studio
-description: Studio creativo per brand, digital product e comunicazione.
+title: Sedici 84 — Eleganza sartoriale senza tempo
+description: Abbigliamento premium e sartoria Made in Italy. Capi unici, materiali pregiati e cura del dettaglio.
 type: page
 sections:
   - type: hero
-    title: Costruiamo esperienze digitali memorabili
-    subtitle: Strategia, design e sviluppo per brand che vogliono crescere online.
-    image: https://picsum.photos/seed/acme-hero/1280/960
+    layout: full
+    eyebrow: Premium Clothing · Made in Italy
+    title: Eleganza sartoriale senza tempo
+    slides:
+      - image: /images/hero/slide-1.jpg
+        title: Eleganza sartoriale senza tempo
+        subtitle: Dagli anni '60 diamo forma a capi unici, interamente Made in Italy. L'arte del cucito italiano incontra un'anima contemporanea.
+      - image: /images/hero/slide-2.jpg
+        title: Su misura, come solo tu
+        subtitle: Tessuti pregiati, dettagli curati e vestibilità perfetta: ogni abito nasce intorno alla persona che lo indossa.
+      - image: /images/hero/slide-3.jpg
+        title: Tradizione sartoriale italiana
+        subtitle: Forbici, ago e filo nelle mani esperte del nostro atelier, nel cuore della Valle d'Itria.
     cta:
-      label: Scopri i nostri lavori
-      to: /lavori
+      label: Scopri le collezioni
+      to: /collezioni
   - type: features
-    title: Cosa facciamo
+    title: Perché sceglierci
     items:
-      - title: Brand identity
-        description: Posizionamento, naming e sistemi visivi coerenti su ogni touchpoint.
-      - title: Siti e app
-        description: Progetti Nuxt SSR performanti, accessibili e pronti per la produzione.
-      - title: Content strategy
-        description: Architetture editoriali multilingua e workflow editoriali scalabili.
+      - title: Materiali di qualità
+        description: Comfort e vestibilità impeccabile, con tessuti pregiati selezionati con cura per ogni capo.
+      - title: Made in Italy
+        description: Sartoria personalizzata e servizio façon, interamente realizzati in Italia.
+      - title: Design unici
+        description: Diamo forma ad abiti su misura, disegnati intorno al tuo gusto e al tuo stile.
+      - title: Cura del cliente
+        description: Una dedizione autentica alla soddisfazione di chi ci sceglie, dal primo schizzo alla prova finale.
+  - type: stats
+    title: La nostra esperienza
+    items:
+      - value: "1960s"
+        label: Le origini della sartoria
+      - value: "100%"
+        label: Made in Italy
+      - value: Su misura
+        label: Ogni capo intorno a te
+      - value: Façon
+        label: Per le grandi Maison di moda
   - type: cta
-    title: Pronti a partire?
-    description: Raccontaci il tuo progetto — rispondiamo entro 2 giorni lavorativi.
+    title: Un servizio su misura, per persone uniche
+    description: Raccontaci la tua idea. Dal primo bozzetto alla prova finale, ti accompagniamo in ogni passaggio.
     button:
       label: Contattaci
       to: /contatti
 ---
 
-Acme Studio è un team multidisciplinare con sede a Milano. Dal 2018 aiutiamo PMI e startup a trasformare idee in prodotti digitali concreti.
+Anni di esperienza nell'arte del cucito e nella creazione di modelli Uomo e Donna ci permettono di realizzare capi unici e personalizzabili, con tessuti, accessori ed inserti selezionati in base alle scelte dei clienti. Il nostro showroom, situato nel cuore della Valle d'Itria, è un punto di ispirazione per compiere il nostro mestiere con la qualità degli artisti del passato e l'originalità delle tecniche sartoriali odierne.
