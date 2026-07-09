@@ -67,7 +67,6 @@ export default defineNuxtConfig({
       width: 1200,
       height: 630,
     },
-    fonts: ['Inter:400', 'Inter:600', 'Fraunces:600'],
   },
   i18n: {
     defaultLocale: site.defaultLocale,
@@ -94,8 +93,8 @@ export default defineNuxtConfig({
       preload: false,
     },
     families: [
-      { name: 'Fraunces', provider: 'google', preload: true },
-      { name: 'Inter', provider: 'google' },
+      { name: 'Fraunces', provider: 'google', weights: [600], preload: true, global: true },
+      { name: 'Inter', provider: 'google', weights: [400, 600], global: true },
     ],
   },
   security: {
