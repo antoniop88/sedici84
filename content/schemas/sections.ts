@@ -35,6 +35,7 @@ const heroSlideSchema = z.object({
 export const heroSectionSchema = z.object({
   type: z.literal('hero'),
   layout: z.enum(['split', 'full']).optional(),
+  imageVariant: z.enum(['photo', 'logo']).optional(),
   eyebrow: z.string().optional(),
   title: z.string(),
   subtitle: z.string().optional(),

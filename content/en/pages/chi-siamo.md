@@ -7,7 +7,8 @@ sections:
     eyebrow: About us
     title: The art of sewing, handed down and reinvented
     subtitle: Years of experience in creating men's and women's models allow us to craft unique, customisable garments, with fabrics, accessories and inserts chosen together with the client.
-    image: /images/collezioni/atelier.svg
+    image: /images/logo/logo.png
+    imageVariant: logo
   - type: features
     title: Our values
     items:

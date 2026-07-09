@@ -25,8 +25,8 @@ const minimalLegalLinks = computed(() =>
     <UiContainer class="py-10">
       <template v-if="variant === 'full'">
         <div class="mx-auto grid max-w-4xl grid-cols-1 gap-10 text-center sm:grid-cols-3 sm:gap-12">
-          <div class="flex flex-col items-center sm:items-start">
-            <NuxtLink :to="localePath('/')" class="inline-flex rounded-sm">
+          <div class="flex flex-col items-center text-center">
+            <NuxtLink :to="localePath('/')" class="inline-flex justify-center rounded-sm">
               <img :src="brand.logo" :alt="brand.name" class="h-24 w-auto" />
             </NuxtLink>
             <address class="mt-4 space-y-1 text-sm not-italic text-muted-foreground">

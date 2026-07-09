@@ -7,7 +7,8 @@ sections:
     eyebrow: Chi siamo
     title: L'arte del cucito, tramandata e reinventata
     subtitle: Anni di esperienza nella creazione di modelli uomo e donna ci permettono di realizzare capi unici e personalizzabili, con tessuti, accessori e inserti scelti insieme al cliente.
-    image: /images/collezioni/atelier.svg
+    image: /images/logo/logo.png
+    imageVariant: logo
   - type: features
     title: I nostri valori
     items:

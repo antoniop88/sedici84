@@ -19,6 +19,7 @@ const { t } = useI18n()
 const isSvg = computed(() => props.image?.toLowerCase().endsWith('.svg') ?? false)
 
 const isFull = computed(() => props.layout === 'full')
+const isLogoImage = computed(() => props.imageVariant === 'logo')
 
 function normalizeSlide(slide: HeroSlide): NormalizedSlide {
   return {
@@ -236,17 +237,25 @@ onUnmounted(() => {
         </div>
         <div
           v-if="props.image"
-          class="overflow-hidden rounded-xl border border-primary-200 bg-muted p-2"
+          :class="
+            isLogoImage
+              ? 'flex items-center justify-center'
+              : 'overflow-hidden rounded-xl border border-primary-200 bg-muted p-2'
+          "
         >
           <img
-            v-if="isSvg"
+            v-if="isSvg || isLogoImage"
             :src="props.image"
             :alt="props.title"
             width="640"
             height="480"
             :loading="props.priority ? 'eager' : 'lazy'"
             decoding="async"
-            class="aspect-[4/3] w-full rounded-lg object-cover"
+            :class="
+              isLogoImage
+                ? 'mx-auto h-auto w-full max-w-xs object-contain sm:max-w-sm md:max-w-md'
+                : 'aspect-[4/3] w-full rounded-lg object-cover'
+            "
           />
           <NuxtPicture
             v-else

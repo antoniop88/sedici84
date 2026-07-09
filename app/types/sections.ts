@@ -28,6 +28,7 @@ export type HeroSlide = {
 export type HeroSection = {
   type: 'hero'
   layout?: 'split' | 'full'
+  imageVariant?: 'photo' | 'logo'
   eyebrow?: string
   title: string
   subtitle?: string
