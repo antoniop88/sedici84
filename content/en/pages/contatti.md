@@ -1,6 +1,6 @@
 ---
 title: Contact
-description: From pattern-making to manufacturing: we support sartorial production projects with artisanal care.
+description: 'From pattern-making to manufacturing: we support sartorial production projects with artisanal care.'
 type: page
 ---
 

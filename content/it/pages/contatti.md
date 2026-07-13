@@ -1,6 +1,6 @@
 ---
 title: Contatti
-description: Dalla modellistica alla manifattura: affianchiamo progetti di produzione sartoriale con cura artigianale.
+description: 'Dalla modellistica alla manifattura: affianchiamo progetti di produzione sartoriale con cura artigianale.'
 type: page
 ---
 
