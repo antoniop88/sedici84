@@ -1,9 +1,7 @@
 ---
 title: Contatti
-description: Parliamo del tuo prossimo capo sartoriale. Scrivici per una consulenza o un preventivo.
+description: Dalla modellistica alla manifattura: affianchiamo progetti di produzione sartoriale con cura artigianale.
 type: page
 ---
 
-## Parliamo del tuo prossimo capo sartoriale
-
-Raccontaci la tua idea: un abito, una giacca, un capo pensato solo per te. Scrivici su WhatsApp o usa i contatti qui sotto. Ti risponderemo il prima possibile per fissare un incontro in atelier.
+Ogni progetto nasce da un'idea concreta. Che si tratti di una collezione, di un capo campione o di una linea da sviluppare, il nostro atelier accompagna la produzione con la cura della sartoria: modellistica, tessuti selezionati, lavorazioni artigianali e vestibilità curata nel dettaglio. Scrivici su WhatsApp o usa i contatti qui sotto: ti risponderemo al più presto.
