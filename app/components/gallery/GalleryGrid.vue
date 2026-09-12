@@ -124,6 +124,7 @@ onUnmounted(() => window.removeEventListener('keydown', onArrowKeys))
       <div
         v-if="isOpen"
         ref="dialogRef"
+        data-no-reveal
         role="dialog"
         aria-modal="true"
         :aria-label="currentImage?.alt"

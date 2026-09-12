@@ -79,6 +79,7 @@ onUnmounted(() => {
   <!-- Full-bleed carousel hero -->
   <section
     v-if="isFull"
+    data-no-reveal
     class="relative flex min-h-[78vh] items-end overflow-hidden bg-primary-950"
     aria-labelledby="hero-title"
     aria-roledescription="carousel"
@@ -207,7 +208,7 @@ onUnmounted(() => {
   </section>
 
   <!-- Split hero (default) -->
-  <section v-else class="py-16 md:py-24" aria-labelledby="hero-title">
+  <section v-else data-no-reveal class="py-16 md:py-24" aria-labelledby="hero-title">
     <UiContainer>
       <div class="grid items-center gap-10 md:grid-cols-2">
         <div class="space-y-6">

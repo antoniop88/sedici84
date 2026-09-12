@@ -2,6 +2,7 @@
 const mainRef = ref<HTMLElement | null>(null)
 
 useRouteMainFocus(mainRef)
+usePageReveal()
 </script>
 
 <template>

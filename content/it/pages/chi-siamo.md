@@ -1,12 +1,12 @@
 ---
 title: Chi siamo
-description: L'arte del cucito italiano, tramandata e reinventata. La storia, i valori e l'atelier di Sedici 84.
+description: Produzione sartoriale, dalle piccole serie alle grandi produzioni. La storia, i valori e l'atelier di Sedici 84.
 type: page
 sections:
   - type: hero
     eyebrow: Chi siamo
     title: L'arte del cucito, tramandata e reinventata
-    subtitle: Anni di esperienza nella creazione di modelli uomo e donna ci permettono di realizzare capi unici e personalizzabili, con tessuti, accessori e inserti scelti insieme al cliente.
+    subtitle: Produzione sartoriale, dalle piccole serie alle grandi produzioni. Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva scalabile, per brand, aziende e maison.
     image: /images/logo/logo.png
     imageVariant: logo
   - type: features
@@ -31,6 +31,8 @@ Trascorsi alcuni anni, caratterizzati da rilevanti e appaganti risultati profess
 Con gli anni e con l'esperienza maturata, le produzioni aumentano, incrementate dall'attività di conto terzi per diverse grandi Maison di moda: da piccolo laboratorio nasce un'azienda a dimensione industriale. Negli anni '90, la seconda generazione entra a far parte del progetto aziendale, divenendo figure di riferimento in ambito produttivo e gestionale, e dà vita alla nuova **Sedici 84**.
 
 ## La produzione
+
+Produzione sartoriale, dalle piccole serie alle grandi produzioni. Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva scalabile, realizzando abbigliamento Made in Italy per piccole serie, medie produzioni e grandi quantitativi. Lavoriamo conto terzi e in private label, affiancando brand, aziende e maison dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche per produzioni importanti.
 
 La produzione si fonda sull'antica tradizione della sartoria italiana; forbici, ago, spillo e ditale sono gli strumenti insostituibili per un lavoro meticoloso e un risultato di valore.
 

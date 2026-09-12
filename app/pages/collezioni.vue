@@ -39,25 +39,31 @@ usePageSeo({
 </script>
 
 <template>
-  <UiContainer v-if="page" class="py-12 md:py-16">
-    <ContentFallbackNotice :show="isFallback" />
+  <div v-if="page">
+    <UiContainer class="pt-12 md:pt-16">
+      <ContentFallbackNotice :show="isFallback" />
 
-    <header class="mb-10 max-w-prose space-y-4">
-      <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent">
-        {{ $t('nav.collections') }}
-      </p>
-      <h1 class="font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
-        {{ page.title }}
-      </h1>
-      <p v-if="page.description" class="text-lg leading-relaxed text-muted-foreground">
-        {{ page.description }}
-      </p>
-    </header>
+      <header class="mb-10 max-w-prose space-y-4">
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent">
+          {{ $t('nav.collections') }}
+        </p>
+        <h1 class="font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
+          {{ page.title }}
+        </h1>
+        <p v-if="page.description" class="text-lg leading-relaxed text-muted-foreground">
+          {{ page.description }}
+        </p>
+      </header>
+    </UiContainer>
 
-    <GalleryGrid :images="gallery" :categories="categories" />
+    <section class="border-y border-neutral-200 bg-white py-12 md:py-16">
+      <UiContainer>
+        <GalleryGrid :images="gallery" :categories="categories" />
 
-    <div v-if="page.body" class="prose prose-neutral mt-12 max-w-prose">
-      <ContentRenderer :value="page" />
-    </div>
-  </UiContainer>
+        <div v-if="page.body" class="prose prose-neutral mt-12 max-w-prose">
+          <ContentRenderer :value="page" />
+        </div>
+      </UiContainer>
+    </section>
+  </div>
 </template>

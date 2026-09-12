@@ -1,12 +1,12 @@
 ---
 title: About us
-description: The art of Italian sewing, handed down and reinvented. The story, values and atelier of Sedici 84.
+description: Tailoring production, from small runs to large-scale manufacturing. The story, values and atelier of Sedici 84.
 type: page
 sections:
   - type: hero
     eyebrow: About us
     title: The art of sewing, handed down and reinvented
-    subtitle: Years of experience in creating men's and women's models allow us to craft unique, customisable garments, with fabrics, accessories and inserts chosen together with the client.
+    subtitle: Tailoring production, from small runs to large-scale manufacturing. Sedici 84 unites the tradition of Italian tailoring with scalable production capacity, for brands, companies and fashion houses.
     image: /images/logo/logo.png
     imageVariant: logo
   - type: features
@@ -31,6 +31,8 @@ After a few years marked by significant and rewarding professional results, a de
 With the years and the experience gained, production grew, boosted by contract work for several major fashion houses: from a small workshop it became a company of industrial scale. In the 1990s the second generation joined the family project, becoming key figures in production and management, and gave life to the new **Sedici 84**.
 
 ## Production
+
+Tailoring production, from small runs to large-scale manufacturing. Sedici 84 unites the tradition of Italian tailoring with scalable production capacity, making Made in Italy clothing for small series, medium runs and large volumes. We work as a contract manufacturer and in private label, supporting brands, companies and fashion houses from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality of materials and attention to finishing even on substantial productions.
 
 Our production is rooted in the ancient tradition of Italian tailoring; scissors, needle, pin and thimble are the irreplaceable tools for meticulous work and a result of true value.
 

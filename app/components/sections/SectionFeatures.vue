@@ -6,7 +6,10 @@ const titleId = useId()
 </script>
 
 <template>
-  <section class="bg-white py-16 md:py-24" :aria-labelledby="props.title ? titleId : undefined">
+  <section
+    class="border-y border-neutral-200 bg-white py-16 md:py-24"
+    :aria-labelledby="props.title ? titleId : undefined"
+  >
     <UiContainer>
       <div v-if="props.title" class="mb-12 text-center">
         <h2 :id="titleId" class="font-display text-2xl leading-tight text-foreground md:text-3xl">

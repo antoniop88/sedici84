@@ -2,11 +2,12 @@
   "nav": {
     "home": "Home",
     "about": "About",
+    "services": "Services",
     "collections": "Collections",
     "contact": "Contact"
   },
   "home": {
-    "introEyebrow": "The atelier"
+    "introEyebrow": "Production"
   },
   "header": {
     "logoLabel": "{name} — Home",
@@ -17,6 +18,7 @@
   },
   "footer": {
     "copyright": "© {year} {name}. All rights reserved.",
+    "credit": "Website by {studio}",
     "privacy": "Privacy",
     "cookies": "Cookies",
     "terms": "Terms of service",
@@ -70,6 +72,9 @@
       "whatsapp": "Message us on WhatsApp",
       "whatsappMessage": "Hello, I'd like information about a production project.",
       "success": "Message sent successfully."
+    },
+    "intro": {
+      "imageAlt": "Sartorial workmanship in the Sedici 84 atelier"
     },
     "info": {
       "heading": "Where to find us",

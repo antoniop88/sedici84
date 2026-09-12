@@ -1,4 +1,13 @@
 <script setup lang="ts">
+withDefaults(
+  defineProps<{
+    tone?: 'light' | 'dark'
+  }>(),
+  {
+    tone: 'light',
+  },
+)
+
 const { locales, locale } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
@@ -15,11 +24,21 @@ const shortLabel: Record<string, string> = { it: 'IT', en: 'EN' }
           :aria-current="locale === entry.code ? 'true' : undefined"
           :aria-label="entry.name"
           :title="entry.name"
-          class="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium tracking-wide transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          class="inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium tracking-wide transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2"
           :class="
-            locale === entry.code
-              ? 'border-primary/25 bg-muted text-foreground'
-              : 'border-transparent text-muted-foreground hover:text-foreground'
+            tone === 'dark'
+              ? [
+                  'focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950',
+                  locale === entry.code
+                    ? 'border-white/20 bg-white/10 text-primary-foreground'
+                    : 'border-transparent text-primary-300 hover:text-primary-foreground',
+                ]
+              : [
+                  'focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background',
+                  locale === entry.code
+                    ? 'border-primary/25 bg-muted text-foreground'
+                    : 'border-transparent text-muted-foreground hover:text-foreground',
+                ]
           "
         >
           <span

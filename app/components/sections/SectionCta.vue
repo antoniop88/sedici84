@@ -9,7 +9,10 @@ const titleId = useId()
 <template>
   <section class="py-16 md:py-20" :aria-labelledby="titleId">
     <UiContainer>
-      <div class="rounded-xl bg-primary px-8 py-12 text-center text-primary-foreground md:px-16">
+      <div
+        class="rounded-xl bg-primary-950 px-8 py-12 text-center text-primary-foreground md:px-16"
+      >
+        <div class="mx-auto mb-6 h-px w-16 bg-accent" aria-hidden="true" />
         <h2 :id="titleId" class="font-display text-2xl leading-tight md:text-3xl">
           {{ props.title }}
         </h2>

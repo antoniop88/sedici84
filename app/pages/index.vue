@@ -55,15 +55,13 @@ usePageSeo({
 
     <SectionsSectionRenderer v-if="heroSections.length" :sections="heroSections" />
 
-    <section v-if="page.body" class="py-20 md:py-28">
+    <section v-if="page.body" class="py-16 md:py-20">
       <UiContainer>
-        <div class="mx-auto max-w-3xl text-center">
-          <p class="mb-6 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+        <div class="mx-auto max-w-5xl">
+          <p class="mb-8 text-center text-xs font-medium uppercase tracking-[0.24em] text-accent">
             {{ $t('home.introEyebrow') }}
           </p>
-          <div
-            class="[&_p]:font-display [&_p]:text-2xl [&_p]:leading-relaxed [&_p]:text-foreground md:[&_p]:text-[1.7rem]"
-          >
+          <div class="home-intro">
             <ContentRenderer :value="page" />
           </div>
         </div>

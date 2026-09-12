@@ -35,7 +35,7 @@ usePageSeo({
 
     <SectionsSectionRenderer v-if="page.sections?.length" :sections="page.sections" />
 
-    <UiContainer v-if="page.body" class="story pb-20 md:pb-28">
+    <UiContainer v-if="page.body" class="story py-16 md:py-24">
       <div class="prose prose-lg mx-auto max-w-4xl">
         <ContentRenderer :value="page" />
       </div>

@@ -178,6 +178,89 @@
     background: var(--color-accent);
   }
 
+  /* Home intro: light editorial copy followed by a concise recap */
+  .home-intro p {
+    max-width: 46rem;
+    margin: 0 auto 1rem;
+    color: var(--color-muted-foreground);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.85;
+    text-align: center;
+  }
+
+  .home-intro p strong {
+    color: var(--color-foreground);
+    font-weight: 600;
+  }
+
+  .home-intro h3 {
+    margin: 3rem 0 1.75rem;
+    color: var(--color-accent);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .home-intro ul {
+    display: grid;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .home-intro li {
+    position: relative;
+    margin: 0;
+    padding-top: 1.25rem;
+    color: var(--color-muted-foreground);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .home-intro li::before {
+    content: '';
+    position: absolute;
+    inset-inline-start: 0;
+    top: 0;
+    width: 2.5rem;
+    height: 1px;
+    background: var(--color-accent);
+  }
+
+  .home-intro li strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    color: var(--color-foreground);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  @media (width >= 768px) {
+    .home-intro ul {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .home-intro li {
+      padding-inline: 2rem;
+    }
+
+    .home-intro li + li {
+      border-inline-start: 1px solid var(--color-neutral-200);
+    }
+
+    .home-intro li::before {
+      inset-inline-start: 2rem;
+    }
+  }
+
   /* Editorial story: lead-in and drop cap on the opening paragraph */
   .story .prose p:first-of-type::first-letter {
     float: left;
@@ -193,22 +276,43 @@
   .prose blockquote {
     border-inline-start: none;
     margin-block: 2.5em;
-    padding: 0;
+    padding: 2rem 1.5rem;
     text-align: center;
     font-style: normal;
+    background: var(--color-primary-950);
+    border-radius: var(--radius-xl);
   }
 
   .prose blockquote p {
     font-family: var(--font-display);
     font-size: 1.6rem;
     line-height: 1.35;
-    color: var(--color-foreground);
+    color: var(--color-primary-foreground);
     quotes: none;
   }
 
   .prose blockquote p::before,
   .prose blockquote p::after {
     content: '';
+  }
+
+  .story .prose blockquote p:first-of-type::first-letter {
+    float: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+  }
+
+  .prose blockquote::before {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 1px;
+    margin: 0 auto 1.25rem;
+    background: var(--color-accent);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -220,5 +324,53 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+
+    .page-enter-from,
+    .page-leave-to,
+    .reveal {
+      opacity: 1 !important;
+      filter: none !important;
+      transform: none !important;
+    }
   }
+}
+
+/* Page route transition — soft fade + blur */
+.page-enter-active,
+.page-leave-active {
+  transition:
+    opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(12px);
+}
+
+.page-enter-to,
+.page-leave-from {
+  opacity: 1;
+  filter: blur(0);
+}
+
+/* Scroll / mount reveal for copy and media */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 1.25rem, 0);
+  filter: blur(8px);
+  transition:
+    opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform, filter;
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0);
+  will-change: auto;
 }

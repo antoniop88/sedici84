@@ -2,11 +2,12 @@
   "nav": {
     "home": "Home",
     "about": "Chi siamo",
+    "services": "Servizi",
     "collections": "Collezioni",
     "contact": "Contatti"
   },
   "home": {
-    "introEyebrow": "L'atelier"
+    "introEyebrow": "La produzione"
   },
   "header": {
     "logoLabel": "{name} — Home",
@@ -17,6 +18,7 @@
   },
   "footer": {
     "copyright": "© {year} {name}. Tutti i diritti riservati.",
+    "credit": "Realizzato da {studio}",
     "privacy": "Privacy",
     "cookies": "Cookie",
     "terms": "Termini di servizio",
@@ -70,6 +72,9 @@
       "whatsapp": "Scrivici su WhatsApp",
       "whatsappMessage": "Ciao, vorrei informazioni su un progetto di produzione.",
       "success": "Messaggio inviato con successo."
+    },
+    "intro": {
+      "imageAlt": "Lavorazione sartoriale nell'atelier Sedici 84"
     },
     "info": {
       "heading": "Dove trovarci",

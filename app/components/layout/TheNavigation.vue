@@ -5,10 +5,12 @@ const props = withDefaults(
   defineProps<{
     orientation?: 'horizontal' | 'vertical'
     ariaLabel?: string
+    tone?: 'light' | 'dark'
   }>(),
   {
     orientation: 'horizontal',
     ariaLabel: undefined,
+    tone: 'light',
   },
 )
 
@@ -16,8 +18,11 @@ const route = useRoute()
 const localePath = useLocalePath()
 const { navigation } = useAppConfig()
 
-const linkClass =
+const horizontalLinkClass =
   'relative rounded-sm px-3 py-2 text-sm uppercase tracking-[0.12em] transition-colors motion-reduce:transition-none after:absolute after:inset-x-3 after:-bottom-0.5 after:h-px after:origin-left after:scale-x-0 after:bg-accent after:transition-transform after:duration-300 hover:after:scale-x-100 motion-reduce:after:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+
+const verticalLinkClass =
+  'group flex items-baseline gap-4 border-b border-white/10 py-4 font-display text-2xl transition-colors motion-reduce:transition-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent'
 
 function resolveNavPath(item: SiteNavItem): string {
   return item.to
@@ -61,14 +66,25 @@ function handleKeydown(event: KeyboardEvent, index: number) {
           :to="localePath(resolveNavPath(item))"
           :aria-current="isActive(item) ? 'page' : undefined"
           :class="[
-            linkClass,
-            isActive(item)
-              ? 'text-foreground after:scale-x-100'
-              : 'text-muted-foreground hover:text-foreground',
+            orientation === 'horizontal' ? horizontalLinkClass : verticalLinkClass,
+            tone === 'dark'
+              ? isActive(item)
+                ? 'text-primary-foreground'
+                : 'text-primary-200 hover:text-primary-foreground'
+              : isActive(item)
+                ? 'text-foreground after:scale-x-100'
+                : 'text-muted-foreground hover:text-foreground',
           ]"
           @keydown="handleKeydown($event, index)"
         >
-          {{ $t(item.labelKey) }}
+          <span
+            v-if="orientation === 'vertical'"
+            class="font-sans text-xs tracking-[0.2em] text-accent"
+            aria-hidden="true"
+          >
+            {{ String(index + 1).padStart(2, '0') }}
+          </span>
+          <span>{{ $t(item.labelKey) }}</span>
         </NuxtLink>
       </li>
     </ul>

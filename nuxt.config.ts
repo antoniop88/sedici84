@@ -20,6 +20,9 @@ export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',

@@ -54,7 +54,7 @@ export const site = {
   name: 'Sedici 84',
   shortName: 'Sedici 84',
   description:
-    'Abbigliamento premium e sartoria Made in Italy. Capi unici, materiali pregiati, eleganza senza tempo.',
+    'Produzione sartoriale, dalle piccole serie alle grandi produzioni. Abbigliamento Made in Italy conto terzi e private label.',
   themeColor: '#3B332B',
   backgroundColor: '#F2EAE0',
   organization: {
@@ -87,6 +87,7 @@ export const site = {
   navigation: [
     { labelKey: 'nav.home', to: '/' },
     { labelKey: 'nav.about', to: '/chi-siamo' },
+    { labelKey: 'nav.services', to: '/servizi' },
     { labelKey: 'nav.collections', to: '/collezioni' },
     { labelKey: 'nav.contact', to: '/contatti' },
   ],
