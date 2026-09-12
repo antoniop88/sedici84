@@ -1,12 +1,12 @@
 ---
 title: Chi siamo
-description: Produzione sartoriale, dalle piccole serie alle grandi produzioni. La storia, i valori e l'atelier di Sedici 84.
+description: Cura sartoriale e capacità produttiva. La storia, i valori e l'atelier Made in Italy di Sedici 84.
 type: page
 sections:
   - type: hero
     eyebrow: Chi siamo
     title: L'arte del cucito, tramandata e reinventata
-    subtitle: Produzione sartoriale, dalle piccole serie alle grandi produzioni. Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva scalabile, per brand, aziende e maison.
+    subtitle: Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva flessibile e scalabile, per brand, aziende e maison.
     image: /images/logo/logo.png
     imageVariant: logo
   - type: features
@@ -28,11 +28,11 @@ La nostra storia nasce da una tradizione sartoriale di famiglia. Alla fine degli
 
 Trascorsi alcuni anni, caratterizzati da rilevanti e appaganti risultati professionali, il profondo legame con la terra d'origine riconduce in Puglia, dove nasce una piccola bottega artigiana dedita alla manifattura di capi sartoriali realizzati interamente a mano. Nel tempo, e con ammirevole devozione, si affina l'arte sartoriale e si conquista uno spazio nel mondo dell'alta moda italiana.
 
-Con gli anni e con l'esperienza maturata, le produzioni aumentano, incrementate dall'attività di conto terzi per diverse grandi Maison di moda: da piccolo laboratorio nasce un'azienda a dimensione industriale. Negli anni '90, la seconda generazione entra a far parte del progetto aziendale, divenendo figure di riferimento in ambito produttivo e gestionale, e dà vita alla nuova **Sedici 84**.
+Con gli anni e con l'esperienza maturata, le produzioni aumentano grazie alle collaborazioni con diverse grandi Maison di moda: da piccolo laboratorio nasce un'azienda a dimensione industriale. Negli anni '90, la seconda generazione entra a far parte del progetto aziendale, divenendo figure di riferimento in ambito produttivo e gestionale, e dà vita alla nuova **Sedici 84**.
 
 ## La produzione
 
-Produzione sartoriale, dalle piccole serie alle grandi produzioni. Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva scalabile, realizzando abbigliamento Made in Italy per piccole serie, medie produzioni e grandi quantitativi. Lavoriamo conto terzi e in private label, affiancando brand, aziende e maison dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche per produzioni importanti.
+Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva flessibile e scalabile, realizzando abbigliamento Made in Italy dalle capsule collection alle produzioni strutturate. Collaboriamo con brand, aziende e maison, anche per progetti private label, affiancandoli dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche per produzioni importanti.
 
 La produzione si fonda sull'antica tradizione della sartoria italiana; forbici, ago, spillo e ditale sono gli strumenti insostituibili per un lavoro meticoloso e un risultato di valore.
 

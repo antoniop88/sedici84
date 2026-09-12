@@ -1,16 +1,16 @@
 ---
 title: Sedici 84 — Produzione sartoriale Made in Italy
-description: Produzione sartoriale, dalle piccole serie alle grandi produzioni. Abbigliamento Made in Italy conto terzi e private label, dalla modellistica al capo finito.
+description: Manifattura sartoriale Made in Italy, flessibile e scalabile. Dalla modellistica al capo finito.
 type: page
 sections:
   - type: hero
     layout: full
-    eyebrow: Made in Italy · Conto terzi e private label
-    title: Piccole serie e grandi quantitativi
+    eyebrow: Made in Italy · Sartoria e manifattura
+    title: Cura sartoriale, capacità produttiva
     slides:
       - image: /images/hero/slide-1.jpg
-        title: Piccole serie e grandi quantitativi
-        subtitle: Produzione sartoriale Made in Italy, conto terzi e private label.
+        title: Cura sartoriale, capacità produttiva
+        subtitle: Produzione Made in Italy, dalle capsule collection alle produzioni strutturate, per brand, aziende e maison.
       - image: /images/hero/slide-2.jpg
         title: Artigianalità, in ogni dettaglio
         subtitle: 'Tessuti pregiati, dettagli curati e vestibilità perfetta: ogni abito nasce intorno alla persona che lo indossa.'
@@ -23,12 +23,12 @@ sections:
   - type: features
     title: Perché sceglierci
     items:
-      - title: Piccole serie e grandi quantitativi
-        description: Realizziamo abbigliamento Made in Italy per piccole serie, medie produzioni e grandi quantitativi, con la stessa cura sartoriale.
+      - title: Produzione flessibile e scalabile
+        description: Realizziamo abbigliamento Made in Italy, dalle capsule collection alle produzioni strutturate, con la stessa cura sartoriale.
       - title: Materiali di qualità
         description: Comfort e vestibilità impeccabile, con tessuti pregiati selezionati con cura per ogni capo.
       - title: Made in Italy
-        description: Lavoriamo conto terzi e in private label, interamente in Italia, dalla modellistica al capo finito.
+        description: Ogni capo è realizzato interamente in Italia, dalla modellistica alle finiture, anche per progetti private label.
       - title: Cura del cliente
         description: Una dedizione autentica alla soddisfazione di chi ci sceglie, dal primo schizzo alla prova finale.
   - type: stats
@@ -50,15 +50,15 @@ sections:
       to: /contatti
 ---
 
-Produzione sartoriale, dalle piccole serie alle grandi produzioni. Sedici 84 unisce la **tradizione della sartoria italiana** a una capacità produttiva scalabile, realizzando abbigliamento Made in Italy per piccole serie, medie produzioni e grandi quantitativi.
+Sedici 84 unisce la **tradizione della sartoria italiana** a una capacità produttiva flessibile e scalabile, realizzando abbigliamento Made in Italy dalle capsule collection alle produzioni strutturate.
 
-Lavoriamo **conto terzi e in private label**, affiancando brand, aziende e maison dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche per produzioni importanti.
+Collaboriamo con **brand, aziende e maison**, anche per progetti private label, affiancandoli dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche per produzioni importanti.
 
 ### In sintesi
 
 - **Produzione scalabile**  
-  Dalle piccole serie alle grandi produzioni.
-- **Conto terzi e private label**  
+  Dalle capsule collection alle produzioni strutturate.
+- **Collaborazioni sartoriali**  
   Dalla modellistica al capo finito.
 - **Cura sartoriale Made in Italy**  
   Materiali selezionati e finiture attente, a ogni volume.

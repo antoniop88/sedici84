@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { IMAGE_SIZES } from '~/utils/imageSizes'
-
 defineI18nRoute({
   paths: {
     it: '/contatti',
@@ -60,16 +58,15 @@ usePageSeo({
         class="overflow-hidden rounded-xl border border-primary-800/20 lg:grid lg:grid-cols-2 lg:items-stretch"
       >
         <div class="relative min-h-[16rem] overflow-hidden bg-muted sm:min-h-[20rem] lg:min-h-0">
-          <NuxtPicture
+          <!-- Plain img: NuxtPicture SSR emits inline onerror, blocked by script-src-attr 'none'. -->
+          <img
             src="/images/hero/slide-2.jpg"
             :alt="$t('contact.intro.imageAlt')"
-            :sizes="IMAGE_SIZES.hero"
-            format="avif,webp"
             width="800"
             height="600"
             loading="lazy"
             decoding="async"
-            class="h-full w-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover"
+            class="h-full w-full object-cover"
           />
         </div>
 

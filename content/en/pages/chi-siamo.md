@@ -1,12 +1,12 @@
 ---
 title: About us
-description: Tailoring production, from small runs to large-scale manufacturing. The story, values and atelier of Sedici 84.
+description: Sartorial craftsmanship and production capacity. Discover the story, values and Made in Italy atelier of Sedici 84.
 type: page
 sections:
   - type: hero
     eyebrow: About us
     title: The art of sewing, handed down and reinvented
-    subtitle: Tailoring production, from small runs to large-scale manufacturing. Sedici 84 unites the tradition of Italian tailoring with scalable production capacity, for brands, companies and fashion houses.
+    subtitle: Sedici 84 combines the tradition of Italian tailoring with flexible, scalable production capacity, for brands, companies and fashion houses.
     image: /images/logo/logo.png
     imageVariant: logo
   - type: features
@@ -28,11 +28,11 @@ Our story is rooted in a family tailoring tradition. In the late 1960s, building
 
 After a few years marked by significant and rewarding professional results, a deep bond with the homeland brought the family back to Puglia, where a small artisan workshop dedicated to handcrafted sartorial garments crafted entirely by hand was opened. Over time, and with admirable devotion, the tailoring craft was refined and a place was carved out in the world of Italian high fashion.
 
-With the years and the experience gained, production grew, boosted by contract work for several major fashion houses: from a small workshop it became a company of industrial scale. In the 1990s the second generation joined the family project, becoming key figures in production and management, and gave life to the new **Sedici 84**.
+With the years and the experience gained, production grew through collaborations with several major fashion houses: from a small workshop it became a company of industrial scale. In the 1990s the second generation joined the family project, becoming key figures in production and management, and gave life to the new **Sedici 84**.
 
 ## Production
 
-Tailoring production, from small runs to large-scale manufacturing. Sedici 84 unites the tradition of Italian tailoring with scalable production capacity, making Made in Italy clothing for small series, medium runs and large volumes. We work as a contract manufacturer and in private label, supporting brands, companies and fashion houses from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality of materials and attention to finishing even on substantial productions.
+Sedici 84 combines the tradition of Italian tailoring with flexible, scalable production capacity, creating Made in Italy garments from capsule collections to large-scale production. We collaborate with brands, companies and fashion houses, including on private-label projects, supporting them from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality of materials and attention to finishing even on substantial productions.
 
 Our production is rooted in the ancient tradition of Italian tailoring; scissors, needle, pin and thimble are the irreplaceable tools for meticulous work and a result of true value.
 
