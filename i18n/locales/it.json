@@ -74,7 +74,7 @@
       "success": "Messaggio inviato con successo."
     },
     "intro": {
-      "imageAlt": "Lavorazione sartoriale nell'atelier Sedici 84"
+      "imageAlt": "Lavorazione nella manifattura Sedici 84"
     },
     "info": {
       "heading": "Dove trovarci",
@@ -92,9 +92,9 @@
   },
   "collections": {
     "title": "Collezioni",
-    "lead": "Alcuni stili e lavorazioni della nostra sartoria. Uomo e donna.",
+    "lead": "Stili e lavorazioni della nostra manifattura per collezioni uomo e donna.",
     "metaTitle": "Collezioni",
-    "metaDescription": "Alcuni stili e lavorazioni della sartoria Sedici 84. Uomo e donna.",
+    "metaDescription": "Stili e lavorazioni della manifattura Sedici 84 per collezioni uomo e donna.",
     "featuredTitle": "Collezioni in evidenza",
     "viewAll": "Vedi tutte le collezioni"
   },

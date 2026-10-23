@@ -1,6 +1,6 @@
 ---
 title: About us
-description: Sartorial craftsmanship and production capacity. Discover the story, values and Made in Italy atelier of Sedici 84.
+description: Sartorial quality and production capacity. Discover the story, values and Made in Italy manufacturing expertise of Sedici 84.
 type: page
 sections:
   - type: hero
@@ -17,7 +17,7 @@ sections:
       - title: Quality
         description: Fine materials and careful workmanship, because a beautiful garment should last over time.
       - title: Artisanship
-        description: 'Every garment is born from the skilled hands of the atelier: proportions, taste and details cared for with the utmost attention.'
+        description: 'The experience of our skilled makers brings precision and sartorial care to every stage of production.'
       - title: Made in Italy
         description: Every stage, from cutting to finishing, is crafted in Italy by expert hands.
 ---
@@ -32,11 +32,11 @@ With the years and the experience gained, production grew through collaborations
 
 ## Production
 
-Sedici 84 combines the tradition of Italian tailoring with flexible, scalable production capacity, creating Made in Italy garments from capsule collections to large-scale production. We collaborate with brands, companies and fashion houses, including on private-label projects, supporting them from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality of materials and attention to finishing even on substantial productions.
+Sedici 84 combines the tradition of Italian tailoring with flexible, scalable production capacity, creating Made in Italy garments from capsule collections to large-scale production. We collaborate with brands, companies and fashion houses, including on private-label projects, supporting them from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality materials and attention to finishing across structured production volumes.
 
 Our production is rooted in the ancient tradition of Italian tailoring; scissors, needle, pin and thimble are the irreplaceable tools for meticulous work and a result of true value.
 
-The company is divided between façon and retail. The Sedici 84 style office is able to provide sartorial pattern-making for the client's requests, with a wide selection of yarns from the most prestigious houses on the world market: the finest wool, silk, satin, cotton and cashmere fabrics for your productions. Painstaking workmanship, countless flawless details and a perfect fit distinguish each of our garments. The production stages are delicate and manifold, born of ancient traditions. The use of the latest technologies, combined with the experience of skilled hands, delivers a tailoring production that aims for perfection. The unique value of every garment lies in its every smallest detail, and each single step of the process demands the utmost care in its execution.
+The company is divided between façon and retail. The Sedici 84 style office develops patterns around the needs of each collection and brand, with a wide selection of yarns from the most prestigious houses on the world market: the finest wool, silk, satin, cotton and cashmere fabrics for your productions. Painstaking workmanship, flawless details and a reliable fit distinguish our garments. The production stages are delicate and manifold, born of ancient traditions. The use of the latest technologies, combined with the experience of skilled hands, delivers organised manufacturing that preserves precision and sartorial care across structured production volumes. The value of every production lies in its details, and each step of the process demands the utmost care in its execution.
 
 ## Made in Italy
 

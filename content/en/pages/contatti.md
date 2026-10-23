@@ -1,9 +1,9 @@
 ---
 title: Contact
-description: Production projects with the same sartorial care.
+description: Collections and volume production with sartorial quality.
 type: page
 ---
 
 Every project starts with a concrete idea.
 
-Whether it is a collection, a sample garment or a line to develop, our company production offers the care of tailoring: pattern-making, selected fabrics, handcrafted workmanship and fit refined in every detail. Message us on WhatsApp or use the contacts below — we will get back to you as soon as possible.
+From sample development to manufacturing the complete collection, we support brands and fashion houses with pattern-making, selected materials, quality workmanship and a fit refined in every detail. Message us on WhatsApp or use the contacts below — we will get back to you as soon as possible.

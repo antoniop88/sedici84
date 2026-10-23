@@ -1,6 +1,6 @@
 ---
 title: Collezioni
-description: Alcuni stili e lavorazioni della sartoria Sedici 84. Uomo e donna.
+description: Stili e lavorazioni della manifattura Sedici 84 per collezioni uomo e donna.
 type: page
 categories:
   - key: all
@@ -11,7 +11,7 @@ categories:
     label: Donna
 gallery:
   - src: /images/collezioni/uomo/uomo1.jpg
-    alt: Giacca sartoriale uomo
+    alt: Giacca uomo Made in Italy
     category: uomo
   - src: /images/collezioni/uomo/uomo2.jpg
     alt: Abito completo uomo
@@ -26,7 +26,7 @@ gallery:
     alt: Abbigliamento uomo
     category: uomo
   - src: /images/collezioni/uomo/uomo6.jpg
-    alt: Capo sartoriale uomo
+    alt: Capo uomo di manifattura italiana
     category: uomo
   - src: /images/collezioni/uomo/uomo7.jpg
     alt: Collezione uomo
@@ -38,7 +38,7 @@ gallery:
     alt: Moda uomo Sedici 84
     category: uomo
   - src: /images/collezioni/uomo/uomo10.jpg
-    alt: Abito sartoriale artigianale uomo
+    alt: Abito uomo Made in Italy
     category: uomo
   - src: /images/collezioni/uomo/uomo11.jpg
     alt: Stile sartoriale uomo
@@ -74,7 +74,7 @@ gallery:
     alt: Abbigliamento donna
     category: donna
   - src: /images/collezioni/donna/donna6.jpeg
-    alt: Capo sartoriale donna
+    alt: Capo donna di manifattura italiana
     category: donna
   - src: /images/collezioni/donna/donna7.jpeg
     alt: Collezione donna
@@ -92,7 +92,7 @@ gallery:
     alt: Stile sartoriale donna
     category: donna
   - src: /images/collezioni/donna/donna12.jpeg
-    alt: Abito donna sartoriale artigianale
+    alt: Abito donna Made in Italy
     category: donna
   - src: /images/collezioni/donna/donna13.jpeg
     alt: Collezione donna
@@ -105,4 +105,4 @@ gallery:
     category: donna
 ---
 
-Ogni capo è unico e personalizzabile: tessuti, accessori e inserti vengono selezionati in base alle tue scelte. Sfoglia alcuni dei nostri stili e lavorazioni — presto arricchiremo questa galleria con nuove immagini.
+Ogni collezione può essere sviluppata secondo l'identità del brand, definendo tessuti, accessori, inserti e finiture per una produzione coerente e strutturata. Sfoglia alcuni dei nostri stili e lavorazioni — presto arricchiremo questa galleria con nuove immagini.

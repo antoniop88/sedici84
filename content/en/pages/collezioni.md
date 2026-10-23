@@ -1,6 +1,6 @@
 ---
 title: Collections
-description: A selection of styles and craftsmanship from Sedici 84 tailoring. Men and women.
+description: Styles and workmanship from Sedici 84 manufacturing for menswear and womenswear collections.
 type: page
 categories:
   - key: all
@@ -11,7 +11,7 @@ categories:
     label: Women
 gallery:
   - src: /images/collezioni/uomo/uomo1.jpg
-    alt: Men's tailored jacket
+    alt: Made in Italy men's jacket
     category: uomo
   - src: /images/collezioni/uomo/uomo2.jpg
     alt: Men's full suit
@@ -26,7 +26,7 @@ gallery:
     alt: Men's clothing
     category: uomo
   - src: /images/collezioni/uomo/uomo6.jpg
-    alt: Men's tailored garment
+    alt: Italian-made men's garment
     category: uomo
   - src: /images/collezioni/uomo/uomo7.jpg
     alt: Men's collection
@@ -38,7 +38,7 @@ gallery:
     alt: Sedici 84 men's fashion
     category: uomo
   - src: /images/collezioni/uomo/uomo10.jpg
-    alt: Men's artisan tailored suit
+    alt: Made in Italy men's suit
     category: uomo
   - src: /images/collezioni/uomo/uomo11.jpg
     alt: Men's tailoring style
@@ -74,7 +74,7 @@ gallery:
     alt: Women's clothing
     category: donna
   - src: /images/collezioni/donna/donna6.jpeg
-    alt: Women's tailored garment
+    alt: Italian-made women's garment
     category: donna
   - src: /images/collezioni/donna/donna7.jpeg
     alt: Women's collection
@@ -92,7 +92,7 @@ gallery:
     alt: Women's tailoring style
     category: donna
   - src: /images/collezioni/donna/donna12.jpeg
-    alt: Women's artisan tailored dress
+    alt: Made in Italy women's dress
     category: donna
   - src: /images/collezioni/donna/donna13.jpeg
     alt: Women's collection
@@ -105,4 +105,4 @@ gallery:
     category: donna
 ---
 
-Every garment is unique and customisable: fabrics, accessories and inserts are selected according to your choices. Browse some of our styles and craftsmanship — we will soon enrich this gallery with new images.
+Each collection can be developed around the brand's identity, defining fabrics, accessories, inserts and finishes for consistent, structured production. Browse some of our styles and workmanship — we will soon enrich this gallery with new images.

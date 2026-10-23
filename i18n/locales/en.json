@@ -74,7 +74,7 @@
       "success": "Message sent successfully."
     },
     "intro": {
-      "imageAlt": "Sartorial workmanship in the Sedici 84 atelier"
+      "imageAlt": "Workmanship at the Sedici 84 manufacturing facility"
     },
     "info": {
       "heading": "Where to find us",
@@ -92,9 +92,9 @@
   },
   "collections": {
     "title": "Collections",
-    "lead": "A selection of styles and craftsmanship from our tailoring. Men and women.",
+    "lead": "Styles and workmanship from our manufacturing for menswear and womenswear collections.",
     "metaTitle": "Collections",
-    "metaDescription": "A selection of styles and craftsmanship from Sedici 84 tailoring. Men and women.",
+    "metaDescription": "Styles and workmanship from Sedici 84 manufacturing for menswear and womenswear collections.",
     "featuredTitle": "Featured collections",
     "viewAll": "View all collections"
   },

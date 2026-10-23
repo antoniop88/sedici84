@@ -54,7 +54,7 @@ export const site = {
   name: 'Sedici 84',
   shortName: 'Sedici 84',
   description:
-    'Manifattura sartoriale Made in Italy, flessibile e scalabile. Dalla modellistica al capo finito.',
+    'Produzione Made in Italy flessibile e scalabile, con qualità sartoriale. Dalla modellistica al capo finito.',
   themeColor: '#3B332B',
   backgroundColor: '#F2EAE0',
   organization: {
