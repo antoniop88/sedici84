@@ -16,7 +16,7 @@ const facts = computed(() => props.items.filter((item) => !isFigure(item.value))
     :aria-labelledby="props.title ? titleId : undefined"
   >
     <UiContainer>
-      <div :class="props.image ? 'grid items-center gap-10 md:grid-cols-[7fr_5fr] md:gap-14' : ''">
+      <div :class="props.image ? 'grid items-start gap-10 md:grid-cols-[7fr_5fr] md:gap-14' : ''">
         <NuxtImg
           v-if="props.image"
           :src="props.image"
@@ -43,7 +43,7 @@ const facts = computed(() => props.items.filter((item) => !isFigure(item.value))
               <dt class="mt-3 text-sm uppercase tracking-[0.12em] text-primary-200">
                 {{ item.label }}
               </dt>
-              <dd class="font-display text-6xl leading-none text-accent md:text-7xl">
+              <dd class="font-display text-3xl leading-none text-accent md:text-5xl">
                 {{ item.value }}
               </dd>
             </div>

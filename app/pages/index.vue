@@ -61,7 +61,7 @@ usePageSeo({
 
     <section v-if="page.body" class="py-12 md:py-16">
       <UiContainer>
-        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+        <div class="grid items-start gap-10 md:grid-cols-2 md:gap-14">
           <div>
             <p class="mb-6 text-xs font-medium uppercase tracking-[0.24em] text-accent-ink">
               {{ $t('home.introEyebrow') }}

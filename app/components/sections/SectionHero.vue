@@ -90,7 +90,7 @@ onUnmounted(() => {
         <div class="space-y-6">
           <h1
             id="hero-title"
-            class="font-display text-4xl leading-[1.08] text-[#F7F3EC] md:text-5xl lg:text-6xl"
+            class="font-display text-[2.75rem] leading-[1.04] text-[#F7F3EC] md:text-6xl lg:text-7xl"
           >
             {{ props.title }}
           </h1>
@@ -175,7 +175,7 @@ onUnmounted(() => {
   <!-- Split hero (default) -->
   <section v-else data-no-reveal class="py-16 md:py-24" aria-labelledby="hero-title">
     <UiContainer>
-      <div class="grid items-center gap-10 md:grid-cols-2">
+      <div class="grid items-start gap-10 md:grid-cols-2">
         <div class="space-y-6">
           <p
             v-if="props.eyebrow"

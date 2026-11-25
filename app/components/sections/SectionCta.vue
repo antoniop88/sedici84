@@ -11,13 +11,13 @@ const titleId = useId()
   <section class="border-t border-neutral-200 py-12 md:py-16" :aria-labelledby="titleId">
     <UiContainer>
       <div
-        class="grid items-center gap-10"
+        class="grid items-start gap-10"
         :class="props.image ? 'md:grid-cols-[7fr_5fr] md:gap-14' : ''"
       >
         <div>
           <h2
             :id="titleId"
-            class="font-display text-4xl leading-[1.05] text-foreground md:text-6xl"
+            class="font-display text-3xl leading-[1.05] text-foreground md:text-5xl"
           >
             {{ props.title }}
           </h2>

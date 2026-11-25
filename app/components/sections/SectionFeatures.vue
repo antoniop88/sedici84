@@ -11,7 +11,7 @@ const titleId = useId()
     :aria-labelledby="props.title ? titleId : undefined"
   >
     <UiContainer>
-      <div :class="props.image ? 'grid items-center gap-10 md:grid-cols-[5fr_7fr] md:gap-14' : ''">
+      <div :class="props.image ? 'grid items-start gap-10 md:grid-cols-[5fr_7fr] md:gap-14' : ''">
         <NuxtImg
           v-if="props.image"
           :src="props.image"

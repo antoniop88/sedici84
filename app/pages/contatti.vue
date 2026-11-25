@@ -43,7 +43,7 @@ usePageSeo({
 
     <section class="py-12 md:py-16" aria-labelledby="contact-title">
       <UiContainer>
-        <div class="grid items-center gap-10 md:grid-cols-[7fr_5fr] md:gap-14">
+        <div class="grid items-start gap-10 md:grid-cols-[7fr_5fr] md:gap-14">
           <div>
             <h1
               id="contact-title"

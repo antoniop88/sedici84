@@ -53,6 +53,8 @@ export const defaultLocale = 'it' as const
 
 export const siteImages = {
   logo: '/images/logo/logo.png',
+  /** Same mark with a transparent ground, for the header and footer */
+  logoMark: '/images/logo/logo-transparent.png',
 } as const
 
 export const site = {
