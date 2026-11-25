@@ -104,13 +104,20 @@ const minimalLegalLinks = computed(() =>
           </ul>
         </nav>
 
-        <!-- The name set wide across the container -->
-        <p
-          class="mt-10 whitespace-nowrap font-display text-[clamp(3.5rem,12vw,11rem)] leading-[0.9] text-primary-100"
-          aria-hidden="true"
+        <!-- The logo, on its own light tile (the file has an ivory ground) -->
+        <NuxtLink
+          :to="localePath('/')"
+          class="mt-10 inline-flex rounded-lg bg-background p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950"
+          :aria-label="$t('header.logoLabel', { name: brand.name })"
         >
-          {{ brand.name }}
-        </p>
+          <img
+            :src="brand.logo"
+            :alt="brand.name"
+            width="144"
+            height="144"
+            class="h-28 w-auto md:h-36"
+          />
+        </NuxtLink>
 
         <div
           class="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-primary-300 md:flex-row md:flex-wrap md:items-center md:gap-x-8"
