@@ -4,7 +4,10 @@
     "about": "Chi siamo",
     "services": "Servizi",
     "collections": "Collezioni",
-    "contact": "Contatti"
+    "contact": "Contatti",
+    "men": "Uomo",
+    "women": "Donna",
+    "allCollections": "Tutte le collezioni"
   },
   "home": {
     "introEyebrow": "La produzione"
@@ -14,7 +17,8 @@
     "mainNavigation": "Navigazione principale",
     "openMenu": "Apri menu",
     "closeMenu": "Chiudi menu",
-    "mobileNavigation": "Menu di navigazione"
+    "mobileNavigation": "Menu di navigazione",
+    "cta": "Contattaci"
   },
   "footer": {
     "copyright": "© {year} {name}. Tutti i diritti riservati.",

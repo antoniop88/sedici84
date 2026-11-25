@@ -4,7 +4,10 @@
     "about": "About",
     "services": "Services",
     "collections": "Collections",
-    "contact": "Contact"
+    "contact": "Contact",
+    "men": "Men",
+    "women": "Women",
+    "allCollections": "All collections"
   },
   "home": {
     "introEyebrow": "Production"
@@ -14,7 +17,8 @@
     "mainNavigation": "Main navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "mobileNavigation": "Navigation menu"
+    "mobileNavigation": "Navigation menu",
+    "cta": "Contact us"
   },
   "footer": {
     "copyright": "© {year} {name}. All rights reserved.",

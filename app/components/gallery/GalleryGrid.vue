@@ -8,7 +8,23 @@ const props = defineProps<{
 
 const { t } = useI18n()
 
-const activeCategory = ref('all')
+const route = useRoute()
+
+// The nav dropdown links here with ?categoria=uomo|donna.
+function categoryFromQuery(): string {
+  const value = route.query.categoria
+  const key = typeof value === 'string' ? value : 'all'
+  return props.categories?.some((category) => category.key === key) ? key : 'all'
+}
+
+const activeCategory = ref(categoryFromQuery())
+
+watch(
+  () => route.query.categoria,
+  () => {
+    activeCategory.value = categoryFromQuery()
+  },
+)
 
 const categories = computed<GalleryCategory[]>(() => {
   if (props.categories?.length) return props.categories
