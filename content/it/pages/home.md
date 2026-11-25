@@ -6,7 +6,7 @@ sections:
   - type: hero
     layout: full
     eyebrow: Tradizione sartoriale dal 1960 · Valle d'Itria
-    title: Produzione moda Made in Italy per brand e maison
+    title: Produzione moda *Made in Italy* per brand e maison
     subtitle: Dalle capsule collection alle produzioni strutturate, con la stessa cura sartoriale dalla modellistica al capo finito.
     images:
       - /images/hero/slide-1.jpg

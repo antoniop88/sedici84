@@ -9,10 +9,24 @@ const props = withDefaults(defineProps<HeroSection & { priority?: boolean }>(), 
 const localePath = useLocalePath()
 const { t } = useI18n()
 
-// IPX doesn't optimize SVGs — render placeholder SVGs directly, optimize raster photos.
+// IPX doesn't optimize SVGs: render placeholder SVGs directly, optimize raster photos.
 const isSvg = computed(() => props.image?.toLowerCase().endsWith('.svg') ?? false)
 
 const isFull = computed(() => props.layout === 'full')
+
+// A title may mark one phrase as *emphasis*: it is set in italic and never
+// breaks across lines (e.g. "Produzione moda *Made in Italy* per brand").
+const titleParts = computed(() =>
+  props.title
+    .split(/(\*[^*]+\*)/)
+    .filter(Boolean)
+    .map((text) =>
+      text.startsWith('*') && text.endsWith('*')
+        ? { text: text.slice(1, -1), em: true }
+        : { text, em: false },
+    ),
+)
+const plainTitle = computed(() => props.title.replace(/\*/g, ''))
 const isLogoImage = computed(() => props.imageVariant === 'logo')
 
 // --- Full-bleed carousel: only the photos rotate, the copy stays fixed -----
@@ -90,9 +104,12 @@ onUnmounted(() => {
         <div class="space-y-6">
           <h1
             id="hero-title"
-            class="font-display text-[2.75rem] leading-[1.04] text-[#F7F3EC] md:text-6xl lg:text-7xl"
+            class="text-balance font-display text-[2.75rem] leading-[1.04] text-[#F7F3EC] md:text-6xl lg:text-7xl"
           >
-            {{ props.title }}
+            <template v-for="(part, index) in titleParts" :key="index">
+              <em v-if="part.em" class="whitespace-nowrap italic">{{ part.text }}</em>
+              <template v-else>{{ part.text }}</template>
+            </template>
           </h1>
           <p v-if="props.subtitle" class="ms-auto max-w-xl text-lg leading-relaxed text-[#EDE6D9]">
             {{ props.subtitle }}
@@ -187,7 +204,10 @@ onUnmounted(() => {
             id="hero-title"
             class="font-display text-4xl leading-[1.1] text-foreground md:text-5xl lg:text-6xl"
           >
-            {{ props.title }}
+            <template v-for="(part, index) in titleParts" :key="index">
+              <em v-if="part.em" class="whitespace-nowrap italic">{{ part.text }}</em>
+              <template v-else>{{ part.text }}</template>
+            </template>
           </h1>
           <p
             v-if="props.subtitle"
@@ -208,7 +228,7 @@ onUnmounted(() => {
           <img
             v-if="isSvg || isLogoImage"
             :src="props.image"
-            :alt="props.title"
+            :alt="plainTitle"
             width="640"
             height="480"
             :loading="props.priority ? 'eager' : 'lazy'"
@@ -222,7 +242,7 @@ onUnmounted(() => {
           <NuxtPicture
             v-else
             :src="props.image"
-            :alt="props.title"
+            :alt="plainTitle"
             :sizes="IMAGE_SIZES.hero"
             format="avif,webp"
             width="640"
