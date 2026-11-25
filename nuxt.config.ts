@@ -107,7 +107,9 @@ export default defineNuxtConfig({
         preload: true,
         global: true,
       },
-      { name: 'Instrument Sans', provider: 'google', weights: [400, 500, 600], global: true },
+      // Self-hosted in main.css: the variable file with its width axis (75-100%),
+      // which @nuxt/fonts does not declare for a family set to the google provider.
+      { name: 'Instrument Sans', provider: 'none' },
     ],
   },
   security: {

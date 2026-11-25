@@ -6,7 +6,7 @@ sections:
   - type: hero
     layout: full
     eyebrow: Sartorial tradition since 1960 · Valle d'Itria
-    title: Made in Italy fashion manufacturing for brands
+    title: '*Made in Italy* fashion manufacturing for brands'
     subtitle: From capsule collections to large-scale production, with the same sartorial care from pattern-making to the finished garment.
     images:
       - /images/hero/slide-1.jpg
