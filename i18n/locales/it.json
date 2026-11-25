@@ -78,7 +78,7 @@
       "success": "Messaggio inviato con successo."
     },
     "intro": {
-      "imageAlt": "Lavorazione nella manifattura Sedici 84"
+      "imageAlt": "Completo della collezione donna Sedici 84"
     },
     "info": {
       "heading": "Dove trovarci",
@@ -87,7 +87,9 @@
       "email": "Email",
       "hours": "Orari",
       "hoursValue": "Su appuntamento",
-      "social": "Seguici"
+      "social": "Seguici",
+      "whatsapp": "WhatsApp",
+      "openMap": "Apri la mappa"
     }
   },
   "content": {

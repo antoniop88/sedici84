@@ -12,6 +12,9 @@ const localePath = useLocalePath()
 const { brand, navigation, legalLinks } = useAppConfig()
 const currentYear = new Date().getFullYear()
 const contact = useContactLinks()
+const route = useRoute()
+// The contact page already shows the address and every way to get in touch.
+const isContactPage = computed(() => route.path === localePath('/contatti'))
 
 const studio = {
   name: 'Upstudio',
@@ -40,7 +43,7 @@ const minimalLegalLinks = computed(() =>
     <UiContainer :class="variant === 'full' ? 'pb-8 pt-16 md:pt-20' : 'py-12 md:py-16'">
       <template v-if="variant === 'full'">
         <!-- Visit: the address large, the ways to get in touch beside it -->
-        <div class="grid gap-12 lg:grid-cols-12 lg:gap-10">
+        <div v-if="!isContactPage" class="grid gap-12 lg:grid-cols-12 lg:gap-10">
           <div class="lg:col-span-7">
             <h2 class="text-xs font-medium uppercase tracking-[0.2em] text-accent">
               {{ $t('contact.info.heading') }}
@@ -89,7 +92,7 @@ const minimalLegalLinks = computed(() =>
         </div>
 
         <nav
-          class="mt-14 border-t border-white/10 pt-4"
+          :class="isContactPage ? '' : 'mt-14 border-t border-white/10 pt-4'"
           :aria-label="$t('footer.sections.navigation')"
         >
           <ul class="flex flex-wrap gap-x-8 gap-y-1">

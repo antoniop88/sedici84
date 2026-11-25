@@ -78,7 +78,7 @@
       "success": "Message sent successfully."
     },
     "intro": {
-      "imageAlt": "Workmanship at the Sedici 84 manufacturing facility"
+      "imageAlt": "An outfit from the Sedici 84 women's collection"
     },
     "info": {
       "heading": "Where to find us",
@@ -87,7 +87,9 @@
       "email": "Email",
       "hours": "Hours",
       "hoursValue": "By appointment",
-      "social": "Follow us"
+      "social": "Follow us",
+      "whatsapp": "WhatsApp",
+      "openMap": "Open the map"
     }
   },
   "content": {
