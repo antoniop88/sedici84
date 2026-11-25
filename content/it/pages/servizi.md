@@ -19,7 +19,7 @@ sections:
       - title: Modellistica
         description: L'ufficio stile sviluppa la modellistica per collezioni e produzioni, dal prototipo al capo finito.
       - title: Produzione scalabile
-        description: Dalle capsule collection alle produzioni strutturate, senza rinunciare alla qualità dei materiali e delle finiture.
+        description: Dal capo campione alle produzioni strutturate, senza rinunciare alla qualità dei materiali e delle finiture.
   - type: cta
     title: Parliamo del tuo progetto
     image: /images/collezioni/uomo/uomo2.jpg
@@ -29,6 +29,6 @@ sections:
       to: /contatti
 ---
 
-Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva flessibile e scalabile, realizzando abbigliamento Made in Italy dalle capsule collection alle produzioni strutturate.
+Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva flessibile e scalabile, realizzando abbigliamento Made in Italy dal capo campione alle produzioni strutturate.
 
 Collaboriamo con brand, aziende e maison, anche per progetti private label, affiancandoli dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche su volumi produttivi strutturati.
