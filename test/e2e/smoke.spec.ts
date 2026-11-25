@@ -18,10 +18,18 @@ test.describe('smoke', () => {
 
   test('header navigation links work', async ({ page }) => {
     await page.goto('/')
+    // Since the nav-split redesign, Contatti is the header's main button, not a nav word.
     await page
-      .getByRole('navigation', { name: /navigazione principale|main navigation/i })
-      .getByRole('link', { name: /contatti|contact/i })
+      .getByRole('banner')
+      .getByRole('link', { name: /contattaci|contact us/i })
       .click()
     await expect(page).toHaveURL(/\/contatti/)
+
+    await page.goto('/')
+    await page
+      .getByRole('navigation', { name: /navigazione principale|main navigation/i })
+      .getByRole('link', { name: /servizi|services/i })
+      .click()
+    await expect(page).toHaveURL(/\/servizi/)
   })
 })
