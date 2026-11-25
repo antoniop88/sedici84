@@ -42,6 +42,7 @@
   --color-primary: var(--color-primary-900);
   --color-secondary: var(--color-neutral-600);
   --color-accent: var(--color-primary-400);
+  --color-accent-ink: var(--color-primary-600); /* accent for text on light grounds, AA 4.5:1 */
   --color-background: #f2eae0; /* Avorio caldo — allineato al logo */
   --color-foreground: var(--color-primary-900); /* Testo scuro */
 
@@ -196,7 +197,7 @@
 
   .home-intro h3 {
     margin: 3rem 0 1.75rem;
-    color: var(--color-accent);
+    color: var(--color-accent-ink);
     font-family: var(--font-sans);
     font-size: 0.75rem;
     font-weight: 500;

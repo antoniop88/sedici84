@@ -41,7 +41,7 @@ usePageSeo({
       <ContentFallbackNotice :show="isFallback" />
 
       <header class="mb-10 max-w-prose space-y-4">
-        <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent">
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent-ink">
           {{ $t('nav.contact') }}
         </p>
         <h1 class="font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
@@ -91,13 +91,13 @@ usePageSeo({
           </h2>
           <dl class="grid gap-5 text-sm sm:grid-cols-2">
             <div>
-              <dt class="font-medium uppercase tracking-wide text-accent">
+              <dt class="font-medium uppercase tracking-wide text-accent-ink">
                 {{ $t('contact.info.address') }}
               </dt>
               <dd class="mt-1 text-muted-foreground">{{ addressLine }}</dd>
             </div>
             <div>
-              <dt class="font-medium uppercase tracking-wide text-accent">
+              <dt class="font-medium uppercase tracking-wide text-accent-ink">
                 {{ $t('contact.info.phone') }}
               </dt>
               <dd class="mt-1">
@@ -110,7 +110,7 @@ usePageSeo({
               </dd>
             </div>
             <div>
-              <dt class="font-medium uppercase tracking-wide text-accent">
+              <dt class="font-medium uppercase tracking-wide text-accent-ink">
                 {{ $t('contact.info.email') }}
               </dt>
               <dd class="mt-1">
@@ -123,7 +123,7 @@ usePageSeo({
               </dd>
             </div>
             <div>
-              <dt class="font-medium uppercase tracking-wide text-accent">
+              <dt class="font-medium uppercase tracking-wide text-accent-ink">
                 {{ $t('contact.info.hours') }}
               </dt>
               <dd class="mt-1 text-muted-foreground">{{ $t('contact.info.hoursValue') }}</dd>

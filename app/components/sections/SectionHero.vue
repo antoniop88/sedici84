@@ -214,7 +214,7 @@ onUnmounted(() => {
         <div class="space-y-6">
           <p
             v-if="props.eyebrow"
-            class="text-sm font-medium uppercase tracking-[0.2em] text-accent"
+            class="text-sm font-medium uppercase tracking-[0.2em] text-accent-ink"
           >
             {{ props.eyebrow }}
           </p>

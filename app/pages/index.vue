@@ -58,7 +58,9 @@ usePageSeo({
     <section v-if="page.body" class="py-16 md:py-20">
       <UiContainer>
         <div class="mx-auto max-w-5xl">
-          <p class="mb-8 text-center text-xs font-medium uppercase tracking-[0.24em] text-accent">
+          <p
+            class="mb-8 text-center text-xs font-medium uppercase tracking-[0.24em] text-accent-ink"
+          >
             {{ $t('home.introEyebrow') }}
           </p>
           <div class="home-intro">
@@ -78,7 +80,7 @@ usePageSeo({
       <UiContainer>
         <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div class="space-y-3">
-            <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent-ink">
               {{ $t('nav.collections') }}
             </p>
             <h2
@@ -108,7 +110,7 @@ usePageSeo({
                   {{ preview.label }}
                 </h3>
                 <span
-                  class="text-accent transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
+                  class="text-accent-ink transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
                   aria-hidden="true"
                 >
                   →
