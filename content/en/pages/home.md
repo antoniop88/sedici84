@@ -1,5 +1,5 @@
 ---
-title: Sedici 84: Made in Italy fashion manufacturing
+title: 'Sedici 84: Made in Italy fashion manufacturing'
 description: Flexible, scalable Made in Italy production with sartorial quality, from pattern-making to the finished garment.
 type: page
 sections:
