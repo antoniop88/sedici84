@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { siteImages } from '../../../config/site'
+
 withDefaults(
   defineProps<{
     variant?: 'full' | 'minimal'
@@ -21,13 +23,13 @@ const studio = {
   url: 'https://upstudioit.it',
 } as const
 
-// Full footer: light ground, centred, the logo between two hairlines.
+// Full footer: brown ground, centred, the logo tile between two hairlines.
 const lightLinkClass =
-  'inline-flex min-h-11 items-center rounded-sm text-muted-foreground transition-colors motion-reduce:transition-none hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+  'inline-flex min-h-11 items-center rounded-sm text-primary-200 transition-colors motion-reduce:transition-none hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950'
 
 const navLinkClass = `${lightLinkClass} px-2 text-sm uppercase tracking-[0.14em]`
 
-const contactLinkClass = `${lightLinkClass} underline decoration-neutral-300 underline-offset-4 hover:decoration-accent`
+const contactLinkClass = `${lightLinkClass} text-primary-50 underline decoration-white/30 underline-offset-4 hover:decoration-accent`
 
 const linkClass =
   'inline-flex min-h-11 items-center rounded-sm text-sm text-primary-200 transition-colors motion-reduce:transition-none hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950'
@@ -44,7 +46,7 @@ const minimalLegalLinks = computed(() =>
   <footer
     :class="
       variant === 'full'
-        ? 'border-t border-neutral-200 bg-background text-foreground'
+        ? 'border-t-2 border-accent bg-primary-950 text-primary-foreground'
         : 'bg-primary-950 text-primary-foreground'
     "
   >
@@ -52,21 +54,21 @@ const minimalLegalLinks = computed(() =>
       <template v-if="variant === 'full'">
         <!-- The logo centred between two hairlines, as in the header -->
         <div class="flex items-center gap-6 md:gap-10">
-          <span class="h-px flex-1 bg-neutral-300" aria-hidden="true" />
+          <span class="h-px flex-1 bg-white/20" aria-hidden="true" />
           <NuxtLink
             :to="localePath('/')"
-            class="shrink-0 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            class="shrink-0 rounded-lg bg-background p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950"
             :aria-label="$t('header.logoLabel', { name: brand.name })"
           >
             <img
-              :src="brand.logo"
+              :src="siteImages.logo"
               :alt="brand.name"
-              width="160"
-              height="160"
-              class="h-32 w-auto md:h-40"
+              width="128"
+              height="128"
+              class="h-28 w-auto md:h-32"
             />
           </NuxtLink>
-          <span class="h-px flex-1 bg-neutral-300" aria-hidden="true" />
+          <span class="h-px flex-1 bg-white/20" aria-hidden="true" />
         </div>
 
         <nav class="mt-6" :aria-label="$t('footer.sections.navigation')">
@@ -85,8 +87,8 @@ const minimalLegalLinks = computed(() =>
           class="mx-auto mt-12 grid max-w-4xl gap-10 text-center sm:grid-cols-3"
         >
           <li class="flex flex-col items-center">
-            <UiContactIcon name="pin" class="size-6 text-accent-ink" />
-            <h2 class="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-foreground">
+            <UiContactIcon name="pin" class="size-6 text-accent" />
+            <h2 class="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">
               {{ $t('contact.info.address') }}
             </h2>
             <a
@@ -99,11 +101,11 @@ const minimalLegalLinks = computed(() =>
               <span>{{ contact.street }}<br />{{ contact.cityLine }}</span>
               <span class="sr-only">{{ $t('content.externalLink') }}</span>
             </a>
-            <p class="mt-1 text-sm text-muted-foreground">{{ $t('contact.info.hoursValue') }}</p>
+            <p class="mt-1 text-sm text-primary-200">{{ $t('contact.info.hoursValue') }}</p>
           </li>
           <li class="flex flex-col items-center">
-            <UiContactIcon name="phone" class="size-6 text-accent-ink" />
-            <h2 class="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-foreground">
+            <UiContactIcon name="phone" class="size-6 text-accent" />
+            <h2 class="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">
               {{ $t('contact.info.phone') }}
             </h2>
             <a :href="contact.telUrl" :class="contactLinkClass" class="mt-1">
@@ -122,8 +124,8 @@ const minimalLegalLinks = computed(() =>
             </a>
           </li>
           <li class="flex flex-col items-center">
-            <UiContactIcon name="mail" class="size-6 text-accent-ink" />
-            <h2 class="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-foreground">
+            <UiContactIcon name="mail" class="size-6 text-accent" />
+            <h2 class="mt-3 text-xs font-medium uppercase tracking-[0.2em] text-accent">
               {{ $t('contact.info.email') }}
             </h2>
             <a :href="contact.mailUrl" :class="contactLinkClass" class="mt-1">
@@ -133,7 +135,7 @@ const minimalLegalLinks = computed(() =>
         </ul>
 
         <div
-          class="mt-12 flex flex-col items-center gap-2 border-t border-neutral-200 pt-4 text-sm text-muted-foreground md:flex-row md:flex-wrap md:justify-between md:gap-x-8"
+          class="mt-12 flex flex-col items-center gap-2 border-t border-white/10 pt-4 text-sm text-primary-300 md:flex-row md:flex-wrap md:justify-between md:gap-x-8"
         >
           <p>{{ $t('footer.copyright', { year: currentYear, name: brand.name }) }}</p>
           <i18n-t keypath="footer.credit" tag="p">
