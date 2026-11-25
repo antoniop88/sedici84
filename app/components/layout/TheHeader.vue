@@ -63,10 +63,7 @@ watch(
         : 'border-neutral-200 bg-background'
     "
   >
-    <UiContainer
-      class="flex items-center justify-between gap-4 transition-[padding] duration-300 motion-reduce:transition-none"
-      :class="isScrolled ? 'py-2' : 'py-3 md:py-4'"
-    >
+    <UiContainer class="flex items-center justify-between gap-4 py-3 md:py-4">
       <NuxtLink
         :to="localePath('/')"
         class="inline-flex items-center rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
@@ -76,8 +73,7 @@ watch(
           v-show="hasLogo"
           :src="brand.logo"
           :alt="brand.name"
-          class="h-20 w-auto transition-[height] duration-300 motion-reduce:transition-none sm:h-24 md:h-28"
-          :class="isScrolled ? '!h-16 md:!h-20' : ''"
+          class="h-20 w-auto sm:h-24 md:h-28"
           @error="hasLogo = false"
         />
         <span

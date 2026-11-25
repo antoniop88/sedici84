@@ -100,7 +100,7 @@ onUnmounted(() => {
         :class="index === active ? 'opacity-100' : 'opacity-0'"
       />
       <div
-        class="absolute inset-0 bg-gradient-to-bl from-primary-950/85 via-primary-950/50 to-primary-950/20"
+        class="absolute inset-0 bg-gradient-to-t from-primary-950/90 via-primary-950/70 to-primary-950/35 md:bg-gradient-to-l md:from-primary-950/90 md:via-primary-950/70 md:to-primary-950/25"
       />
     </div>
 
