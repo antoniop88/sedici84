@@ -7,7 +7,7 @@ const titleId = useId()
 
 <template>
   <section
-    class="border-y border-neutral-200 bg-white py-16 md:py-24"
+    class="border-y border-neutral-200 bg-white py-12 md:py-16"
     :aria-labelledby="props.title ? titleId : undefined"
   >
     <UiContainer>
@@ -21,7 +21,7 @@ const titleId = useId()
         <li
           v-for="(item, index) in props.items"
           :key="index"
-          class="group relative rounded-lg border border-neutral-200 bg-background p-6 transition-colors motion-reduce:transition-none hover:border-accent"
+          class="group relative border-t border-neutral-200 pt-6 transition-colors motion-reduce:transition-none hover:border-accent"
         >
           <span
             class="mb-4 block h-px w-8 bg-accent transition-all duration-300 group-hover:w-12 motion-reduce:transition-none"

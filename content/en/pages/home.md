@@ -48,12 +48,3 @@ sections:
 Sedici 84 combines the **tradition of Italian tailoring** with flexible, scalable production capacity, creating Made in Italy garments from capsule collections to large-scale production.
 
 We collaborate with **brands, companies and fashion houses**, including on private-label projects, supporting them from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality materials and attention to finishing across structured production volumes.
-
-### In brief
-
-- **Scalable production**  
-  From capsule collections to large-scale production.
-- **Production for brands and fashion houses**
-  From pattern-making to the finished garment.
-- **Made in Italy sartorial care**  
-  Selected materials and meticulous finishes, at every volume.

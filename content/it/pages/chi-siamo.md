@@ -7,8 +7,7 @@ sections:
     eyebrow: Chi siamo
     title: L'arte del cucito, tramandata e reinventata
     subtitle: Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva flessibile e scalabile, per brand, aziende e maison.
-    image: /images/logo/logo.png
-    imageVariant: logo
+    image: /images/hero/slide-1.jpg
   - type: features
     title: I nostri valori
     items:

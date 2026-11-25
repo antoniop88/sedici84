@@ -7,7 +7,7 @@ const titleId = useId()
 
 <template>
   <section
-    class="bg-primary-950 py-16 text-primary-foreground md:py-24"
+    class="bg-primary-950 py-12 text-primary-foreground md:py-16"
     :aria-labelledby="props.title ? titleId : undefined"
   >
     <UiContainer>

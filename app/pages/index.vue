@@ -55,17 +55,27 @@ usePageSeo({
 
     <SectionsSectionRenderer v-if="heroSections.length" :sections="heroSections" />
 
-    <section v-if="page.body" class="py-16 md:py-20">
+    <section v-if="page.body" class="py-12 md:py-16">
       <UiContainer>
-        <div class="mx-auto max-w-5xl">
-          <p
-            class="mb-8 text-center text-xs font-medium uppercase tracking-[0.24em] text-accent-ink"
-          >
-            {{ $t('home.introEyebrow') }}
-          </p>
-          <div class="home-intro">
-            <ContentRenderer :value="page" />
+        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14">
+          <div>
+            <p class="mb-6 text-xs font-medium uppercase tracking-[0.24em] text-accent-ink">
+              {{ $t('home.introEyebrow') }}
+            </p>
+            <div class="home-intro">
+              <ContentRenderer :value="page" />
+            </div>
           </div>
+          <NuxtImg
+            src="/images/hero/slide-2.jpg"
+            alt=""
+            width="800"
+            height="600"
+            sizes="100vw md:50vw"
+            loading="lazy"
+            decoding="async"
+            class="aspect-[4/3] w-full rounded-lg object-cover"
+          />
         </div>
       </UiContainer>
     </section>

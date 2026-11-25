@@ -7,8 +7,7 @@ sections:
     eyebrow: About us
     title: The art of sewing, handed down and reinvented
     subtitle: Sedici 84 combines the tradition of Italian tailoring with flexible, scalable production capacity, for brands, companies and fashion houses.
-    image: /images/logo/logo.png
-    imageVariant: logo
+    image: /images/hero/slide-1.jpg
   - type: features
     title: Our values
     items:

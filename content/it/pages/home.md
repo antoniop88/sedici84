@@ -48,12 +48,3 @@ sections:
 Sedici 84 unisce la **tradizione della sartoria italiana** a una capacità produttiva flessibile e scalabile, realizzando abbigliamento Made in Italy dalle capsule collection alle produzioni strutturate.
 
 Collaboriamo con **brand, aziende e maison**, anche per progetti private label, affiancandoli dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche su volumi produttivi strutturati.
-
-### In sintesi
-
-- **Produzione scalabile**  
-  Dalle capsule collection alle produzioni strutturate.
-- **Produzione per brand e maison**
-  Dalla modellistica al capo finito.
-- **Cura sartoriale Made in Italy**  
-  Materiali selezionati e finiture attente, a ogni volume.
