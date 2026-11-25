@@ -1,12 +1,6 @@
 <script setup lang="ts">
-import type { HeroSection, HeroSlide } from '~/types/sections'
+import type { HeroSection } from '~/types/sections'
 import { IMAGE_SIZES } from '~/utils/imageSizes'
-
-type NormalizedSlide = {
-  image: string
-  title: string
-  subtitle?: string
-}
 
 const props = withDefaults(defineProps<HeroSection & { priority?: boolean }>(), {
   priority: false,
@@ -21,35 +15,16 @@ const isSvg = computed(() => props.image?.toLowerCase().endsWith('.svg') ?? fals
 const isFull = computed(() => props.layout === 'full')
 const isLogoImage = computed(() => props.imageVariant === 'logo')
 
-function normalizeSlide(slide: HeroSlide): NormalizedSlide {
-  return {
-    image: slide.image,
-    title: slide.title ?? props.title,
-    subtitle: slide.subtitle ?? props.subtitle,
-  }
-}
-
-// --- Full-bleed carousel ----------------------------------------------------
-const slides = computed<NormalizedSlide[]>(() => {
-  if (props.slides?.length) return props.slides.map(normalizeSlide)
-  if (props.images?.length) {
-    return props.images.map((image) => ({
-      image,
-      title: props.title,
-      subtitle: props.subtitle,
-    }))
-  }
-  if (props.image) {
-    return [{ image: props.image, title: props.title, subtitle: props.subtitle }]
-  }
+// --- Full-bleed carousel: only the photos rotate, the copy stays fixed -----
+const slides = computed<string[]>(() => {
+  if (props.images?.length) return props.images
+  if (props.image) return [props.image]
   return []
 })
 
 const active = ref(0)
 const paused = ref(false)
 let timer: ReturnType<typeof setInterval> | undefined
-
-const activeSlide = computed(() => slides.value[active.value] ?? slides.value[0])
 
 function go(index: number) {
   const count = slides.value.length
@@ -91,8 +66,8 @@ onUnmounted(() => {
     <div class="absolute inset-0" aria-hidden="true">
       <img
         v-for="(slide, index) in slides"
-        :key="slide.image"
-        :src="slide.image"
+        :key="slide"
+        :src="slide"
         alt=""
         :loading="index === 0 && priority ? 'eager' : 'lazy'"
         decoding="async"
@@ -104,7 +79,7 @@ onUnmounted(() => {
       />
     </div>
 
-    <UiContainer class="relative z-10 w-full pb-24 pt-20 md:pb-32 md:pt-24">
+    <UiContainer class="relative z-10 w-full pb-12 pt-16 md:pb-16 md:pt-24">
       <div class="ms-auto max-w-2xl text-end">
         <p
           v-if="props.eyebrow"
@@ -112,33 +87,18 @@ onUnmounted(() => {
         >
           {{ props.eyebrow }}
         </p>
-        <div class="relative min-h-[10.5rem] md:min-h-[13rem] lg:min-h-[15rem]" aria-live="polite">
-          <Transition
-            mode="out-in"
-            enter-active-class="transition duration-700 ease-out motion-reduce:transition-none"
-            enter-from-class="opacity-0 translate-y-2"
-            enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition duration-500 ease-in motion-reduce:transition-none"
-            leave-from-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 -translate-y-2"
+        <div class="space-y-6">
+          <h1
+            id="hero-title"
+            class="font-display text-4xl leading-[1.08] text-[#F7F3EC] md:text-5xl lg:text-6xl"
           >
-            <div v-if="activeSlide" :key="active" class="space-y-6">
-              <h1
-                id="hero-title"
-                class="font-display text-4xl leading-[1.08] text-[#F7F3EC] md:text-6xl lg:text-7xl"
-              >
-                {{ activeSlide.title }}
-              </h1>
-              <p
-                v-if="activeSlide.subtitle"
-                class="ms-auto max-w-xl text-lg leading-relaxed text-[#EDE6D9]"
-              >
-                {{ activeSlide.subtitle }}
-              </p>
-            </div>
-          </Transition>
+            {{ props.title }}
+          </h1>
+          <p v-if="props.subtitle" class="ms-auto max-w-xl text-lg leading-relaxed text-[#EDE6D9]">
+            {{ props.subtitle }}
+          </p>
         </div>
-        <div v-if="props.cta" class="flex justify-end pt-2">
+        <div v-if="props.cta" class="flex justify-end pt-8">
           <UiButton
             :to="localePath(props.cta.to)"
             class="!bg-[#F2EAE0] !px-6 !py-3 !text-foreground hover:!bg-white"
@@ -146,65 +106,70 @@ onUnmounted(() => {
             {{ props.cta.label }}
           </UiButton>
         </div>
+        <div
+          v-if="slides.length > 1"
+          class="mt-8 flex items-center justify-end gap-1 text-[#F2EAE0]"
+          role="group"
+          :aria-label="t('gallery.controls')"
+        >
+          <button
+            type="button"
+            class="inline-flex size-11 items-center justify-center rounded-full transition-colors hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 motion-reduce:transition-none"
+            :aria-label="t('gallery.prev')"
+            @click="prev"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-5"
+              aria-hidden="true"
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <button
+            v-for="(slide, index) in slides"
+            :key="slide"
+            type="button"
+            class="group inline-flex size-11 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            :aria-label="t('gallery.counter', { current: index + 1, total: slides.length })"
+            :aria-current="index === active ? 'true' : undefined"
+            @click="go(index)"
+          >
+            <span
+              class="block h-1.5 rounded-full transition-all duration-300 motion-reduce:transition-none"
+              :class="
+                index === active ? 'w-8 bg-[#F2EAE0]' : 'w-2.5 bg-white/40 group-hover:bg-white/70'
+              "
+              aria-hidden="true"
+            />
+          </button>
+          <button
+            type="button"
+            class="inline-flex size-11 items-center justify-center rounded-full transition-colors hover:bg-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 motion-reduce:transition-none"
+            :aria-label="t('gallery.next')"
+            @click="next"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-5"
+              aria-hidden="true"
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
+        </div>
       </div>
     </UiContainer>
-
-    <!-- Controls -->
-    <div
-      v-if="slides.length > 1"
-      class="absolute inset-x-0 bottom-6 z-10 flex items-center justify-center gap-3"
-    >
-      <button
-        v-for="(slide, index) in slides"
-        :key="slide.image"
-        type="button"
-        class="h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 motion-reduce:transition-none"
-        :class="index === active ? 'w-8 bg-[#F2EAE0]' : 'w-2.5 bg-white/40 hover:bg-white/70'"
-        :aria-label="t('gallery.counter', { current: index + 1, total: slides.length })"
-        :aria-current="index === active ? 'true' : undefined"
-        @click="go(index)"
-      />
-    </div>
-    <button
-      v-if="slides.length > 1"
-      type="button"
-      class="absolute start-4 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-[#F2EAE0] backdrop-blur-sm transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 md:inline-flex"
-      :aria-label="t('gallery.prev')"
-      @click="prev"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="size-6"
-        aria-hidden="true"
-      >
-        <polyline points="15 18 9 12 15 6" />
-      </svg>
-    </button>
-    <button
-      v-if="slides.length > 1"
-      type="button"
-      class="absolute end-4 top-1/2 z-10 hidden size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-[#F2EAE0] backdrop-blur-sm transition-colors hover:bg-white/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/70 md:inline-flex"
-      :aria-label="t('gallery.next')"
-      @click="next"
-    >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.8"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="size-6"
-        aria-hidden="true"
-      >
-        <polyline points="9 18 15 12 9 6" />
-      </svg>
-    </button>
   </section>
 
   <!-- Split hero (default) -->

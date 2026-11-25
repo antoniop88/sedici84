@@ -26,12 +26,6 @@ const statItemSchema = z.object({
   label: z.string(),
 })
 
-const heroSlideSchema = z.object({
-  image: z.string(),
-  title: z.string().optional(),
-  subtitle: z.string().optional(),
-})
-
 export const heroSectionSchema = z.object({
   type: z.literal('hero'),
   layout: z.enum(['split', 'full']).optional(),
@@ -42,7 +36,6 @@ export const heroSectionSchema = z.object({
   cta: ctaSchema.optional(),
   image: z.string().optional(),
   images: z.array(z.string()).optional(),
-  slides: z.array(heroSlideSchema).optional(),
 })
 
 export const statsSectionSchema = z.object({

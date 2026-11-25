@@ -99,6 +99,7 @@
     "viewAll": "View all collections"
   },
   "gallery": {
+    "controls": "Browse photos",
     "open": "Open image",
     "close": "Close gallery",
     "prev": "Previous image",

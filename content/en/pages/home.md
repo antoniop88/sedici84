@@ -5,18 +5,13 @@ type: page
 sections:
   - type: hero
     layout: full
-    eyebrow: Made in Italy · Sartorial style and manufacturing
-    title: Sartorial style, structured production
-    slides:
-      - image: /images/hero/slide-1.jpg
-        title: Sartorial quality, production capacity
-        subtitle: Made in Italy manufacturing, from capsule collections to large-scale production, for brands, companies and fashion houses.
-      - image: /images/hero/slide-2.jpg
-        title: Craftsmanship in every detail
-        subtitle: 'Fine fabrics, meticulous details and reliable fit: consistent sartorial quality at every production volume.'
-      - image: /images/hero/slide-3.jpg
-        title: Italian tailoring tradition
-        subtitle: Scissors, needle and thread in the skilled hands of our atelier, in the heart of the Valle d'Itria.
+    eyebrow: Sartorial tradition since 1960 · Valle d'Itria
+    title: Made in Italy fashion manufacturing for brands
+    subtitle: From capsule collections to large-scale production, with the same sartorial care from pattern-making to the finished garment.
+    images:
+      - /images/hero/slide-1.jpg
+      - /images/hero/slide-2.jpg
+      - /images/hero/slide-3.jpg
     cta:
       label: Explore our services
       to: /servizi

@@ -19,12 +19,6 @@ export type TestimonialItem = {
   role?: string
 }
 
-export type HeroSlide = {
-  image: string
-  title?: string
-  subtitle?: string
-}
-
 export type HeroSection = {
   type: 'hero'
   layout?: 'split' | 'full'
@@ -35,7 +29,6 @@ export type HeroSection = {
   cta?: CtaLink
   image?: string
   images?: string[]
-  slides?: HeroSlide[]
 }
 
 export type StatItem = {

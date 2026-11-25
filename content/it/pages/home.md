@@ -5,18 +5,13 @@ type: page
 sections:
   - type: hero
     layout: full
-    eyebrow: Made in Italy · Stile sartoriale e produzione
-    title: Stile sartoriale, produzione strutturata
-    slides:
-      - image: /images/hero/slide-1.jpg
-        title: Qualità sartoriale, capacità produttiva
-        subtitle: Produzione Made in Italy, dalle capsule collection alle produzioni strutturate, per brand, aziende e maison.
-      - image: /images/hero/slide-2.jpg
-        title: Artigianalità, in ogni dettaglio
-        subtitle: 'Tessuti pregiati, dettagli curati e vestibilità affidabile: qualità sartoriale ripetibile su ogni volume produttivo.'
-      - image: /images/hero/slide-3.jpg
-        title: Tradizione sartoriale italiana
-        subtitle: Forbici, ago e filo nelle mani esperte del nostro atelier, nel cuore della Valle d'Itria.
+    eyebrow: Tradizione sartoriale dal 1960 · Valle d'Itria
+    title: Produzione moda Made in Italy per brand e maison
+    subtitle: Dalle capsule collection alle produzioni strutturate, con la stessa cura sartoriale dalla modellistica al capo finito.
+    images:
+      - /images/hero/slide-1.jpg
+      - /images/hero/slide-2.jpg
+      - /images/hero/slide-3.jpg
     cta:
       label: Scopri i servizi
       to: /servizi
