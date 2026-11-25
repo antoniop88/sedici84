@@ -9,13 +9,20 @@ withDefaults(
 )
 
 const localePath = useLocalePath()
-const { brand, navigation, legalLinks, organization } = useAppConfig()
+const { brand, navigation, legalLinks } = useAppConfig()
 const currentYear = new Date().getFullYear()
+const contact = useContactLinks()
 
 const studio = {
   name: 'Upstudio',
   url: 'https://upstudioit.it',
 } as const
+
+const contactRowClass =
+  'group flex min-h-11 items-center gap-4 rounded-sm py-1 text-primary-100 transition-colors motion-reduce:transition-none hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950'
+
+const navLinkClass =
+  'inline-flex min-h-11 items-center rounded-sm text-sm uppercase tracking-[0.14em] text-primary-200 transition-colors motion-reduce:transition-none hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950'
 
 const linkClass =
   'rounded-sm text-sm text-primary-200 transition-colors motion-reduce:transition-none hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950'
@@ -29,73 +36,91 @@ const minimalLegalLinks = computed(() =>
 </script>
 
 <template>
-  <footer class="border-t-2 border-accent bg-primary-950 text-primary-foreground">
-    <UiContainer class="py-12 md:py-16">
+  <footer class="bg-primary-950 text-primary-foreground">
+    <UiContainer :class="variant === 'full' ? 'pb-8 pt-16 md:pt-20' : 'py-12 md:py-16'">
       <template v-if="variant === 'full'">
-        <div class="mx-auto grid max-w-4xl grid-cols-1 gap-10 text-center sm:grid-cols-3 sm:gap-12">
-          <div class="flex flex-col items-center text-center">
-            <NuxtLink
-              :to="localePath('/')"
-              class="inline-flex justify-center rounded-lg border border-accent/40 bg-background p-3 shadow-[0_10px_30px_rgba(0,0,0,0.14)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950"
+        <!-- Visit: the address large, the ways to get in touch beside it -->
+        <div class="grid gap-12 lg:grid-cols-12 lg:gap-10">
+          <div class="lg:col-span-7">
+            <h2 class="text-xs font-medium uppercase tracking-[0.2em] text-accent">
+              {{ $t('contact.info.heading') }}
+            </h2>
+            <a
+              :href="contact.mapsUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group mt-5 inline-block rounded-sm font-display text-4xl leading-[1.05] text-primary-foreground transition-colors motion-reduce:transition-none hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950 md:text-5xl"
             >
-              <img :src="brand.logo" :alt="brand.name" class="h-28 w-auto md:h-32" />
-            </NuxtLink>
-            <address class="mt-6 space-y-1 text-sm not-italic text-primary-200">
-              <p>{{ organization.address.street }}</p>
-              <p>{{ organization.address.postalCode }} {{ organization.address.city }}</p>
-              <p>
-                <a
-                  :href="`mailto:${organization.email}`"
-                  class="transition-colors hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                >
-                  {{ organization.email }}
-                </a>
-              </p>
-              <p>
-                <a
-                  :href="`tel:${organization.phone.replace(/\s+/g, '')}`"
-                  class="transition-colors hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-                >
-                  {{ organization.phone }}
-                </a>
-              </p>
-            </address>
+              {{ contact.street }}<br />{{ contact.cityLine }}
+              <span class="sr-only">{{ $t('content.externalLink') }}</span>
+            </a>
+            <p class="mt-5 flex items-center gap-3 text-sm text-primary-200">
+              <UiContactIcon name="clock" class="size-5 shrink-0 text-accent" />
+              {{ $t('contact.info.hours') }}: {{ $t('contact.info.hoursValue') }}
+            </p>
           </div>
 
-          <div class="flex flex-col items-center">
-            <h2 class="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent">
-              {{ $t('footer.sections.navigation') }}
-            </h2>
-            <ul class="flex flex-col gap-2">
-              <li v-for="item in navigation" :key="item.to">
-                <NuxtLink :to="localePath(item.to)" :class="linkClass">
-                  {{ $t(item.labelKey) }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <h2 class="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-accent">
-              {{ $t('footer.sections.legal') }}
-            </h2>
-            <ul class="flex flex-col gap-2">
-              <li v-for="item in legalLinks" :key="item.to">
-                <NuxtLink :to="localePath(item.to)" :class="linkClass">
-                  {{ $t(item.labelKey) }}
-                </NuxtLink>
-              </li>
-            </ul>
-          </div>
+          <ul class="flex flex-col justify-end gap-1 lg:col-span-5">
+            <li>
+              <a
+                :href="contact.whatsappUrl.value"
+                target="_blank"
+                rel="noopener noreferrer"
+                :class="contactRowClass"
+              >
+                <UiContactIcon name="whatsapp" class="size-6 shrink-0" />
+                <span>{{ $t('contact.form.whatsapp') }}</span>
+                <span class="sr-only">{{ $t('content.externalLink') }}</span>
+              </a>
+            </li>
+            <li>
+              <a :href="contact.mailUrl" :class="contactRowClass">
+                <UiContactIcon name="mail" class="size-6 shrink-0 text-accent" />
+                <span>{{ contact.email }}</span>
+              </a>
+            </li>
+            <li>
+              <a :href="contact.telUrl" :class="contactRowClass">
+                <UiContactIcon name="phone" class="size-6 shrink-0 text-accent" />
+                <span>{{ contact.phone }}</span>
+              </a>
+            </li>
+          </ul>
         </div>
 
-        <div
-          class="mx-auto mt-12 flex max-w-4xl flex-col items-center gap-3 border-t border-white/10 pt-6 text-center sm:flex-row sm:justify-center sm:gap-8"
+        <nav
+          class="mt-14 border-t border-white/10 pt-4"
+          :aria-label="$t('footer.sections.navigation')"
         >
-          <p class="text-sm text-primary-300">
-            {{ $t('footer.copyright', { year: currentYear, name: brand.name }) }}
-          </p>
-          <i18n-t keypath="footer.credit" tag="p" class="text-sm text-primary-300">
+          <ul class="flex flex-wrap gap-x-8 gap-y-1">
+            <li v-for="item in navigation" :key="item.to">
+              <NuxtLink :to="localePath(item.to)" :class="navLinkClass">
+                {{ $t(item.labelKey) }}
+              </NuxtLink>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- The name set wide across the container -->
+        <p
+          class="mt-10 whitespace-nowrap font-display text-[clamp(3.5rem,12vw,11rem)] leading-[0.9] text-primary-100"
+          aria-hidden="true"
+        >
+          {{ brand.name }}
+        </p>
+
+        <div
+          class="mt-8 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-primary-300 md:flex-row md:flex-wrap md:items-center md:gap-x-8"
+        >
+          <p>{{ $t('footer.copyright', { year: currentYear, name: brand.name }) }}</p>
+          <ul class="flex gap-6">
+            <li v-for="item in legalLinks" :key="item.to">
+              <NuxtLink :to="localePath(item.to)" :class="linkClass">
+                {{ $t(item.labelKey) }}
+              </NuxtLink>
+            </li>
+          </ul>
+          <i18n-t keypath="footer.credit" tag="p">
             <template #studio>
               <a
                 :href="studio.url"
@@ -107,7 +132,7 @@ const minimalLegalLinks = computed(() =>
               </a>
             </template>
           </i18n-t>
-          <p class="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-primary-300">
+          <p class="flex items-center gap-2 text-xs uppercase tracking-[0.2em] md:ms-auto">
             <span class="flex h-3 w-6 overflow-hidden rounded-sm" aria-hidden="true">
               <span class="flex-1 bg-[#009246]" />
               <span class="flex-1 bg-white" />
