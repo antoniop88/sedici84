@@ -47,6 +47,7 @@ export const statsSectionSchema = z.object({
 export const featuresSectionSchema = z.object({
   type: z.literal('features'),
   title: z.string().optional(),
+  image: z.string().optional(),
   items: z.array(featureItemSchema).min(1),
 })
 

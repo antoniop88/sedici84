@@ -305,3 +305,11 @@
   filter: blur(0);
   will-change: auto;
 }
+
+/* Heading anchor links from Nuxt Content: keep them looking like headings.
+   Outside @layer base so it beats the typography plugin's link style. */
+.prose :is(h2, h3) a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}

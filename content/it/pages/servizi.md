@@ -10,6 +10,7 @@ sections:
     image: /images/hero/slide-3.jpg
   - type: features
     title: Cosa facciamo
+    image: /images/collezioni/donna/donna4.jpeg
     items:
       - title: Produzione per brand e maison
         description: Realizziamo collezioni e produzioni in quantità, con cura sartoriale in ogni passaggio.

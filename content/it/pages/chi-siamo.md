@@ -10,6 +10,7 @@ sections:
     image: /images/hero/slide-1.jpg
   - type: features
     title: I nostri valori
+    image: /images/collezioni/donna/donna10.jpeg
     items:
       - title: Tradizione
         description: Forbici, ago, spillo e ditale. La nostra produzione affonda le radici nell'antica sartoria italiana.
@@ -29,13 +30,19 @@ Trascorsi alcuni anni, caratterizzati da rilevanti e appaganti risultati profess
 
 Con gli anni e con l'esperienza maturata, le produzioni aumentano grazie alle collaborazioni con diverse grandi Maison di moda: da piccolo laboratorio nasce un'azienda a dimensione industriale. Negli anni '90, la seconda generazione entra a far parte del progetto aziendale, divenendo figure di riferimento in ambito produttivo e gestionale, e dà vita alla nuova **Sedici 84**.
 
-## La produzione
+::photo-pair{a="/images/collezioni/uomo/uomo11.jpg" b="/images/collezioni/donna/donna12.jpeg"}
+::
 
-Sedici 84 unisce la tradizione della sartoria italiana a una capacità produttiva flessibile e scalabile, realizzando abbigliamento Made in Italy dalle capsule collection alle produzioni strutturate. Collaboriamo con brand, aziende e maison, anche per progetti private label, affiancandoli dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche su volumi produttivi strutturati.
+## La produzione
 
 La produzione si fonda sull'antica tradizione della sartoria italiana; forbici, ago, spillo e ditale sono gli strumenti insostituibili per un lavoro meticoloso e un risultato di valore.
 
-La compagine aziendale si suddivide tra Façon e commercializzazione. L'ufficio stile di Sedici 84 sviluppa la modellistica sulle esigenze della collezione e del brand, con una vasta scelta di filati delle più prestigiose maison del mercato mondiale: i migliori tessuti in lana, seta, raso, cotone e cachemire per le vostre produzioni. La manifattura certosina, i numerosi e ineccepibili dettagli e la perfetta vestibilità contraddistinguono ogni nostro singolo capo. Le fasi produttive sono delicate e molteplici, nate da antiche tradizioni. L'utilizzo delle più recenti tecnologie, combinato con l'esperienza di mani esperte, dà vita a una produzione organizzata che conserva precisione e cura sartoriale anche su volumi strutturati. Il valore di ogni produzione risiede nei dettagli, e ogni singolo passaggio di lavorazione richiede la massima cura nell'esecuzione.
+La compagine aziendale si suddivide tra Façon e commercializzazione. L'ufficio stile di Sedici 84 sviluppa la modellistica sulle esigenze della collezione e del brand, con una vasta scelta di filati delle più prestigiose maison del mercato mondiale: i migliori tessuti in lana, seta, raso, cotone e cachemire per le vostre produzioni. La manifattura certosina, i numerosi e ineccepibili dettagli e la perfetta vestibilità contraddistinguono ogni nostro singolo capo.
+
+Le fasi produttive sono delicate e molteplici, nate da antiche tradizioni. L'utilizzo delle più recenti tecnologie, combinato con l'esperienza di mani esperte, dà vita a una produzione organizzata che conserva precisione e cura sartoriale anche su volumi strutturati. Il valore di ogni produzione risiede nei dettagli, e ogni singolo passaggio di lavorazione richiede la massima cura nell'esecuzione.
+
+::photo-pair{a="/images/collezioni/donna/donna9.jpeg" b="/images/collezioni/donna/donna11.jpeg"}
+::
 
 ## Il Made in Italy
 

@@ -17,6 +17,7 @@ sections:
       to: /servizi
   - type: features
     title: Why choose us
+    image: /images/collezioni/uomo/uomo3.jpg
     items:
       - title: Flexible, scalable production
         description: We create Made in Italy garments, from capsule collections to large-scale production, with the same sartorial care.

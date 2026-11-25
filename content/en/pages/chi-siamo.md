@@ -10,6 +10,7 @@ sections:
     image: /images/hero/slide-1.jpg
   - type: features
     title: Our values
+    image: /images/collezioni/donna/donna10.jpeg
     items:
       - title: Tradition
         description: Scissors, needle, pin and thimble. Our production is rooted in the ancient Italian tailoring craft.
@@ -29,13 +30,19 @@ After a few years marked by significant and rewarding professional results, a de
 
 With the years and the experience gained, production grew through collaborations with several major fashion houses: from a small workshop it became a company of industrial scale. In the 1990s the second generation joined the family project, becoming key figures in production and management, and gave life to the new **Sedici 84**.
 
-## Production
+::photo-pair{a="/images/collezioni/uomo/uomo11.jpg" b="/images/collezioni/donna/donna12.jpeg"}
+::
 
-Sedici 84 combines the tradition of Italian tailoring with flexible, scalable production capacity, creating Made in Italy garments from capsule collections to large-scale production. We collaborate with brands, companies and fashion houses, including on private-label projects, supporting them from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality materials and attention to finishing across structured production volumes.
+## Production
 
 Our production is rooted in the ancient tradition of Italian tailoring; scissors, needle, pin and thimble are the irreplaceable tools for meticulous work and a result of true value.
 
-The company is divided between façon and retail. The Sedici 84 style office develops patterns around the needs of each collection and brand, with a wide selection of yarns from the most prestigious houses on the world market: the finest wool, silk, satin, cotton and cashmere fabrics for your productions. Painstaking workmanship, flawless details and a reliable fit distinguish our garments. The production stages are delicate and manifold, born of ancient traditions. The use of the latest technologies, combined with the experience of skilled hands, delivers organised manufacturing that preserves precision and sartorial care across structured production volumes. The value of every production lies in its details, and each step of the process demands the utmost care in its execution.
+The company is divided between façon and retail. The Sedici 84 style office develops patterns around the needs of each collection and brand, with a wide selection of yarns from the most prestigious houses on the world market: the finest wool, silk, satin, cotton and cashmere fabrics for your productions. Painstaking workmanship, flawless details and a reliable fit distinguish our garments.
+
+The production stages are delicate and manifold, born of ancient traditions. The use of the latest technologies, combined with the experience of skilled hands, delivers organised manufacturing that preserves precision and sartorial care across structured production volumes. The value of every production lies in its details, and each step of the process demands the utmost care in its execution.
+
+::photo-pair{a="/images/collezioni/donna/donna9.jpeg" b="/images/collezioni/donna/donna11.jpeg"}
+::
 
 ## Made in Italy
 

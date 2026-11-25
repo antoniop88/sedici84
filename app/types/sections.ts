@@ -45,6 +45,7 @@ export type StatsSection = {
 export type FeaturesSection = {
   type: 'features'
   title?: string
+  image?: string
   items: FeatureItem[]
 }
 

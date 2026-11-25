@@ -10,6 +10,7 @@ sections:
     image: /images/hero/slide-3.jpg
   - type: features
     title: What we do
+    image: /images/collezioni/donna/donna4.jpeg
     items:
       - title: Production for brands and fashion houses
         description: We manufacture collections and volume production runs with sartorial care at every stage.

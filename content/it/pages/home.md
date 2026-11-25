@@ -17,6 +17,7 @@ sections:
       to: /servizi
   - type: features
     title: Perché sceglierci
+    image: /images/collezioni/uomo/uomo3.jpg
     items:
       - title: Produzione flessibile e scalabile
         description: Realizziamo abbigliamento Made in Italy, dalle capsule collection alle produzioni strutturate, con la stessa cura sartoriale.
