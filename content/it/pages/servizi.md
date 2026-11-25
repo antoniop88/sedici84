@@ -7,8 +7,7 @@ sections:
     eyebrow: Servizi
     title: Stile sartoriale, produzione strutturata
     subtitle: Produzione Made in Italy flessibile e scalabile, per brand, aziende e maison.
-    image: /images/logo/logo.png
-    imageVariant: logo
+    image: /images/hero/slide-3.jpg
   - type: features
     title: Cosa facciamo
     items:

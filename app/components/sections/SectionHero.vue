@@ -203,11 +203,7 @@ onUnmounted(() => {
         </div>
         <div
           v-if="props.image"
-          :class="
-            isLogoImage
-              ? 'flex items-center justify-center'
-              : 'overflow-hidden rounded-xl border border-primary-200 bg-muted p-2'
-          "
+          :class="isLogoImage ? 'flex items-center justify-center' : 'overflow-hidden rounded-lg'"
         >
           <img
             v-if="isSvg || isLogoImage"
@@ -220,7 +216,7 @@ onUnmounted(() => {
             :class="
               isLogoImage
                 ? 'mx-auto h-auto w-full max-w-xs object-contain sm:max-w-sm md:max-w-md'
-                : 'aspect-[4/3] w-full rounded-lg object-cover'
+                : 'aspect-[4/5] w-full rounded-lg object-cover'
             "
           />
           <NuxtPicture
@@ -230,12 +226,12 @@ onUnmounted(() => {
             :sizes="IMAGE_SIZES.hero"
             format="avif,webp"
             width="640"
-            height="480"
+            height="800"
             :priority="props.priority"
             :preload="props.priority"
             :loading="props.priority ? 'eager' : 'lazy'"
             decoding="async"
-            class="aspect-[4/3] w-full rounded-lg object-cover"
+            class="aspect-[4/5] w-full rounded-lg object-cover"
           />
         </div>
       </div>

@@ -7,8 +7,7 @@ sections:
     eyebrow: Services
     title: Sartorial style, structured production
     subtitle: Flexible, scalable Made in Italy manufacturing with consistent sartorial quality.
-    image: /images/logo/logo.png
-    imageVariant: logo
+    image: /images/hero/slide-3.jpg
   - type: features
     title: What we do
     items:
