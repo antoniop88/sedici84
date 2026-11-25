@@ -29,6 +29,7 @@ sections:
         description: We support clients from the initial brief through to production delivery.
   - type: stats
     title: Our experience
+    image: /images/collezioni/uomo/uomo9.jpg
     items:
       - value: '1960'
         label: The origins of the atelier
@@ -40,6 +41,7 @@ sections:
         label: For major fashion houses
   - type: cta
     title: From pattern-making to the finished garment
+    image: /images/collezioni/donna/donna13.jpeg
     description: We support brands, companies and fashion houses at every stage, from prototype to volume production.
     button:
       label: Get in touch

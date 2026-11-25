@@ -39,6 +39,7 @@ export type StatItem = {
 export type StatsSection = {
   type: 'stats'
   title?: string
+  image?: string
   items: StatItem[]
 }
 
@@ -53,6 +54,7 @@ export type CtaSection = {
   type: 'cta'
   title: string
   description?: string
+  image?: string
   button: CtaLink
 }
 

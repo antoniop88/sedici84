@@ -26,7 +26,11 @@ const isFallback = computed(() => pageResult.value?.isFallback ?? false)
 
 // Render the hero first, then the editorial intro (page body), then the rest.
 const heroSections = computed(() => page.value?.sections?.filter((s) => s.type === 'hero') ?? [])
-const otherSections = computed(() => page.value?.sections?.filter((s) => s.type !== 'hero') ?? [])
+const otherSections = computed(
+  () => page.value?.sections?.filter((s) => s.type !== 'hero' && s.type !== 'cta') ?? [],
+)
+// The close (cta) sits last, right before the footer.
+const closeSections = computed(() => page.value?.sections?.filter((s) => s.type === 'cta') ?? [])
 
 // One representative card per collection category, linking to the gallery.
 const collectionPreviews = computed(() => {
@@ -84,7 +88,7 @@ usePageSeo({
 
     <section
       v-if="collectionPreviews.length"
-      class="border-y border-neutral-200 bg-white py-16 md:py-20"
+      class="border-y border-neutral-200 bg-white py-12 md:py-16"
       aria-labelledby="featured-collections-title"
     >
       <UiContainer>
@@ -131,5 +135,7 @@ usePageSeo({
         </ul>
       </UiContainer>
     </section>
+
+    <SectionsSectionRenderer v-if="closeSections.length" :sections="closeSections" />
   </div>
 </template>

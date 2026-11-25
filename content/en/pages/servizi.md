@@ -22,6 +22,7 @@ sections:
         description: From capsule collections to large-scale production, without compromising on the quality of materials and finishing.
   - type: cta
     title: Let's talk about your project
+    image: /images/collezioni/uomo/uomo2.jpg
     description: From prototype development to volume production, we work with you with the same sartorial care.
     button:
       label: Get in touch

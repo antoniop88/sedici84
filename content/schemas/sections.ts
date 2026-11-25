@@ -41,6 +41,7 @@ export const heroSectionSchema = z.object({
 export const statsSectionSchema = z.object({
   type: z.literal('stats'),
   title: z.string().optional(),
+  image: z.string().optional(),
   items: z.array(statItemSchema).min(1),
 })
 
@@ -55,6 +56,7 @@ export const ctaSectionSchema = z.object({
   type: z.literal('cta'),
   title: z.string(),
   description: z.string().optional(),
+  image: z.string().optional(),
   button: ctaSchema,
 })
 

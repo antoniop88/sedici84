@@ -29,6 +29,7 @@ sections:
         description: Affianchiamo il cliente dal brief iniziale alla consegna della produzione.
   - type: stats
     title: La nostra esperienza
+    image: /images/collezioni/uomo/uomo9.jpg
     items:
       - value: '1960'
         label: Le origini della sartoria
@@ -40,6 +41,7 @@ sections:
         label: Per le grandi Maison di moda
   - type: cta
     title: Dalla modellistica al capo finito
+    image: /images/collezioni/donna/donna13.jpeg
     description: Affianchiamo brand, aziende e maison in ogni passaggio, dal prototipo alla produzione in quantità.
     button:
       label: Contattaci

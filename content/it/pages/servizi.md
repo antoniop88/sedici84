@@ -22,6 +22,7 @@ sections:
         description: Dalle capsule collection alle produzioni strutturate, senza rinunciare alla qualità dei materiali e delle finiture.
   - type: cta
     title: Parliamo del tuo progetto
+    image: /images/collezioni/uomo/uomo2.jpg
     description: Dallo sviluppo del prototipo alla produzione in quantità, ti affianchiamo con la stessa cura sartoriale.
     button:
       label: Contattaci
