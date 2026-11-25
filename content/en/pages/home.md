@@ -7,7 +7,7 @@ sections:
     layout: full
     eyebrow: Sartorial tradition since 1960 · Valle d'Itria
     title: '*Made in Italy* fashion manufacturing for brands'
-    subtitle: From capsule collections to large-scale production, with the same sartorial care from pattern-making to the finished garment.
+    subtitle: From the first sample to large-scale production, with the same sartorial care from pattern-making to the finished garment.
     images:
       - /images/hero/slide-1.jpg
       - /images/hero/slide-2.jpg
@@ -20,7 +20,7 @@ sections:
     image: /images/collezioni/uomo/uomo3.jpg
     items:
       - title: Flexible, scalable production
-        description: We create Made in Italy garments, from capsule collections to large-scale production, with the same sartorial care.
+        description: We create Made in Italy garments, from the first sample to large-scale production, with the same sartorial care.
       - title: Quality materials
         description: Impeccable comfort and fit, with fine fabrics carefully selected for every garment.
       - title: Made in Italy
@@ -48,6 +48,6 @@ sections:
       to: /contatti
 ---
 
-Sedici 84 combines the **tradition of Italian tailoring** with flexible, scalable production capacity, creating Made in Italy garments from capsule collections to large-scale production.
+Sedici 84 combines the **tradition of Italian tailoring** with flexible, scalable production capacity, creating Made in Italy garments from the first sample to large-scale production.
 
 We collaborate with **brands, companies and fashion houses**, including on private-label projects, supporting them from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality materials and attention to finishing across structured production volumes.

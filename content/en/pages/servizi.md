@@ -19,7 +19,7 @@ sections:
       - title: Pattern-making
         description: Our style office develops patterns for collections and production runs, from prototype to finished garment.
       - title: Scalable production
-        description: From capsule collections to large-scale production, without compromising on the quality of materials and finishing.
+        description: From the first sample to large-scale production, without compromising on the quality of materials and finishing.
   - type: cta
     title: Let's talk about your project
     image: /images/collezioni/uomo/uomo2.jpg
@@ -29,6 +29,6 @@ sections:
       to: /contatti
 ---
 
-Sedici 84 combines the tradition of Italian tailoring with flexible, scalable production capacity, creating Made in Italy garments from capsule collections to large-scale production.
+Sedici 84 combines the tradition of Italian tailoring with flexible, scalable production capacity, creating Made in Italy garments from the first sample to large-scale production.
 
 We collaborate with brands, companies and fashion houses, including on private-label projects, supporting them from pattern-making through to the finished garment. Our experience allows us to maintain sartorial care, quality materials and attention to finishing across structured production volumes.
