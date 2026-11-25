@@ -105,4 +105,4 @@ gallery:
     category: donna
 ---
 
-Each collection can be developed around the brand's identity, defining fabrics, accessories, inserts and finishes for consistent, structured production. Browse some of our styles and workmanship — we will soon enrich this gallery with new images.
+Each collection can be developed around the brand's identity, defining fabrics, accessories, inserts and finishes for consistent, structured production. Browse some of our styles and workmanship. We will soon enrich this gallery with new images.

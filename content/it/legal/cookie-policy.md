@@ -12,10 +12,10 @@ I cookie sono piccoli file di testo che i siti visitati inviano al browser dell'
 
 Il sito utilizza un banner di consenso che permette di accettare, rifiutare o personalizzare le preferenze per categoria. Di seguito le categorie e i servizi effettivamente utilizzati.
 
-| Categoria | Servizio / Tecnologia           | Tipo      | Finalità                            | Durata                                    |
-| --------- | ------------------------------- | --------- | ----------------------------------- | ----------------------------------------- |
-| Necessari | `i18n_redirected` (cookie)      | Tecnico   | Memorizza la preferenza linguistica | 1 anno                                    |
-| Analitici | Umami (self-hosted, cookieless) | Analitico | Statistiche anonime di navigazione  | Nessun cookie — attivo solo dopo consenso |
+| Categoria | Servizio / Tecnologia           | Tipo      | Finalità                            | Durata                                   |
+| --------- | ------------------------------- | --------- | ----------------------------------- | ---------------------------------------- |
+| Necessari | `i18n_redirected` (cookie)      | Tecnico   | Memorizza la preferenza linguistica | 1 anno                                   |
+| Analitici | Umami (self-hosted, cookieless) | Analitico | Statistiche anonime di navigazione  | Nessun cookie, attivo solo dopo consenso |
 
 ### Cookie necessari
 

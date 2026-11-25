@@ -46,6 +46,6 @@ The production stages are delicate and manifold, born of ancient traditions. The
 
 ## Made in Italy
 
-There are places where time seems to have stopped, where it is still the hands that dress the world. Made in Italy is born here, in these family workshops where the craft is handed down from father to child, like — and more than — a secret. A life spent between needle and thread, perfecting techniques and new cuts, to create ageless garments.
+There are places where time seems to have stopped, where it is still the hands that dress the world. Made in Italy is born here, in these family workshops where the craft is handed down from father to child, as much as, and more than, a secret. A life spent between needle and thread, perfecting techniques and new cuts, to create ageless garments.
 
 > The fashion that endures, that defies the ephemeral time of the runway, is called craftsmanship. It is called Sedici 84.

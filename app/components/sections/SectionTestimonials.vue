@@ -27,7 +27,7 @@ const titleId = useId()
             </blockquote>
             <figcaption class="mt-4 text-sm text-muted-foreground">
               <cite class="not-italic font-medium text-foreground">{{ item.author }}</cite>
-              <span v-if="item.role"> — {{ item.role }}</span>
+              <span v-if="item.role">, {{ item.role }}</span>
             </figcaption>
           </figure>
         </li>

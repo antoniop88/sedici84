@@ -10,7 +10,7 @@
     "introEyebrow": "Production"
   },
   "header": {
-    "logoLabel": "{name} — Home",
+    "logoLabel": "{name}, back to home",
     "mainNavigation": "Main navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",

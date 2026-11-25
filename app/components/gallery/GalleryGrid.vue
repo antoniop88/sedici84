@@ -106,7 +106,7 @@ onUnmounted(() => window.removeEventListener('keydown', onArrowKeys))
         <button
           type="button"
           class="group block w-full overflow-hidden rounded-lg border border-neutral-200 bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-          :aria-label="`${t('gallery.open')} — ${image.alt}`"
+          :aria-label="`${t('gallery.open')}: ${image.alt}`"
           @click="open(index)"
         >
           <img

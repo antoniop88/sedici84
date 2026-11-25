@@ -1,5 +1,5 @@
 ---
-title: Sedici 84 — Produzione moda Made in Italy
+title: Sedici 84: produzione moda Made in Italy
 description: Produzione Made in Italy flessibile e scalabile, con qualità sartoriale. Dalla modellistica al capo finito.
 type: page
 sections:
