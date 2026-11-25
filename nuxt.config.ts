@@ -45,6 +45,9 @@ export default defineNuxtConfig({
     redirectToCanonicalSiteUrl: isProduction,
   },
   image: {
+    // No runtime resizing: on the server the Nitro output ships sharp without
+    // its native libvips, so /_ipx answered 500. Serve the original files.
+    provider: 'none',
     quality: 80,
     format: ['webp'],
     densities: [1, 2],
