@@ -95,7 +95,7 @@ usePageSeo({
             </p>
             <h2
               id="featured-collections-title"
-              class="font-display text-2xl leading-tight text-foreground md:text-3xl"
+              class="font-display text-3xl leading-tight text-foreground md:text-5xl"
             >
               {{ $t('collections.featuredTitle') }}
             </h2>
@@ -116,7 +116,7 @@ usePageSeo({
                 class="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
               <div class="flex items-center justify-between p-5">
-                <h3 class="font-display text-lg font-semibold text-foreground">
+                <h3 class="font-display text-xl text-foreground">
                   {{ preview.label }}
                 </h3>
                 <span

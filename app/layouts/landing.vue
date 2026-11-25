@@ -13,7 +13,7 @@ usePageReveal()
       <UiContainer class="flex items-center justify-between gap-4 py-4">
         <NuxtLink
           :to="localePath('/')"
-          class="font-display text-lg font-semibold text-foreground transition-colors motion-reduce:transition-none hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+          class="font-display text-xl text-foreground transition-colors motion-reduce:transition-none hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           :aria-label="$t('header.logoLabel', { name: brand.name })"
         >
           {{ brand.name }}

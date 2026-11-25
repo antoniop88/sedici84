@@ -57,8 +57,8 @@
   --color-ring-offset: var(--color-background);
 
   /* Typography */
-  --font-display: 'Fraunces', ui-serif, Georgia, serif;
-  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Instrument Serif', ui-serif, Georgia, serif;
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
 
   --text-xs: 0.75rem;
   --text-xs--line-height: 1rem;
@@ -137,6 +137,11 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
+  /* Instrument Serif is set at 400 only; size and tight tracking carry headlines */
+  .font-display {
+    letter-spacing: -0.015em;
+  }
+
   /* Brand-tuned long-form typography (Tailwind Typography) */
   .prose {
     --tw-prose-body: var(--color-neutral-700);
@@ -158,15 +163,15 @@
 
   .prose :is(h2, h3) {
     font-family: var(--font-display);
-    font-weight: 600;
-    letter-spacing: -0.01em;
+    font-weight: 400;
+    letter-spacing: -0.015em;
   }
 
   .prose h2 {
     margin-top: 2.4em;
     margin-bottom: 0.9em;
-    font-size: 1.6rem;
-    line-height: 1.2;
+    font-size: 2.25rem;
+    line-height: 1.1;
   }
 
   /* Small gold rule above each section heading */

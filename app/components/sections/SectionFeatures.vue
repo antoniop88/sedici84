@@ -27,7 +27,7 @@ const titleId = useId()
           <div v-if="props.title" :class="props.image ? 'mb-10' : 'mb-12 text-center'">
             <h2
               :id="titleId"
-              class="font-display text-2xl leading-tight text-foreground md:text-3xl"
+              class="font-display text-3xl leading-tight text-foreground md:text-5xl"
             >
               {{ props.title }}
             </h2>
@@ -47,7 +47,7 @@ const titleId = useId()
               :key="index"
               class="border-t border-neutral-200 pt-5 transition-colors motion-reduce:transition-none hover:border-accent"
             >
-              <h3 class="mb-2 font-display text-lg font-semibold text-foreground">
+              <h3 class="mb-2 font-display text-xl text-foreground">
                 {{ item.title }}
               </h3>
               <p class="text-base leading-relaxed text-muted-foreground">

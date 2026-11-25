@@ -96,8 +96,15 @@ export default defineNuxtConfig({
       preload: false,
     },
     families: [
-      { name: 'Fraunces', provider: 'google', weights: [600], preload: true, global: true },
-      { name: 'Inter', provider: 'google', weights: [400, 600], global: true },
+      {
+        name: 'Instrument Serif',
+        provider: 'google',
+        weights: [400],
+        styles: ['normal', 'italic'],
+        preload: true,
+        global: true,
+      },
+      { name: 'Instrument Sans', provider: 'google', weights: [400, 500, 600], global: true },
     ],
   },
   security: {

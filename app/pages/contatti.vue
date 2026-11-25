@@ -86,7 +86,7 @@ usePageSeo({
     <UiContainer class="pb-16 md:pb-20">
       <div class="grid gap-8 lg:grid-cols-2">
         <div class="rounded-xl border border-neutral-200 bg-white p-6 md:p-8">
-          <h2 class="mb-6 font-display text-xl font-semibold text-foreground">
+          <h2 class="mb-6 font-display text-xl text-foreground">
             {{ $t('contact.info.heading') }}
           </h2>
           <dl class="grid gap-5 text-sm sm:grid-cols-2">

@@ -14,7 +14,7 @@ const titleId = useId()
     <UiContainer>
       <div>
         <div class="mx-auto mb-6 h-px w-16 bg-accent" aria-hidden="true" />
-        <h2 :id="titleId" class="font-display text-2xl leading-tight md:text-3xl">
+        <h2 :id="titleId" class="font-display text-3xl leading-tight md:text-5xl">
           {{ props.title }}
         </h2>
         <p

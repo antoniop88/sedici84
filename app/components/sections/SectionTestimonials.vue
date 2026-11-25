@@ -11,7 +11,7 @@ const titleId = useId()
       <h2
         v-if="props.title"
         :id="titleId"
-        class="mb-10 font-display text-2xl leading-tight text-foreground md:text-3xl"
+        class="mb-10 font-display text-3xl leading-tight text-foreground md:text-5xl"
       >
         {{ props.title }}
       </h2>

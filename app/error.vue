@@ -30,7 +30,7 @@ function goHome() {
   <NuxtLayout name="default">
     <UiContainer class="py-16 md:py-24">
       <div class="mx-auto max-w-lg space-y-8 text-center">
-        <p class="font-display text-6xl font-semibold text-muted-foreground/40" aria-hidden="true">
+        <p class="font-display text-6xl text-muted-foreground/40" aria-hidden="true">
           {{ statusCode }}
         </p>
 

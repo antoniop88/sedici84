@@ -76,10 +76,7 @@ watch(
           class="h-20 w-auto sm:h-24 md:h-28"
           @error="hasLogo = false"
         />
-        <span
-          v-if="!hasLogo"
-          class="font-display text-lg font-semibold tracking-wide text-foreground"
-        >
+        <span v-if="!hasLogo" class="font-display text-xl tracking-wide text-foreground">
           {{ brand.name }}
         </span>
       </NuxtLink>
@@ -153,7 +150,7 @@ watch(
             <div class="rounded-md border border-accent/30 bg-background p-1.5">
               <img v-if="hasLogo" :src="brand.logo" :alt="brand.name" class="h-16 w-auto" />
             </div>
-            <span v-if="!hasLogo" class="font-display text-lg font-semibold tracking-wide">
+            <span v-if="!hasLogo" class="font-display text-xl tracking-wide">
               {{ brand.name }}
             </span>
             <button
