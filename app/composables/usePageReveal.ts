@@ -1,18 +1,5 @@
-const REVEAL_SELECTOR = [
-  'h1',
-  'h2',
-  'h3',
-  'h4',
-  'p',
-  'li',
-  'blockquote',
-  'figure',
-  'picture',
-  'img',
-  'details',
-  'header',
-  '[data-reveal]',
-].join(',')
+// Only media fades in; text is always visible so it never depends on a script.
+const REVEAL_SELECTOR = ['figure', 'picture', 'img', '[data-reveal]'].join(',')
 
 const STAGGER_MS = 70
 const MAX_STAGGER_MS = 280
@@ -56,16 +43,21 @@ export function usePageReveal() {
     el.classList.add('reveal')
     el.style.setProperty('--reveal-delay', `${delayMs}ms`)
 
-    if (prefersReducedMotion()) {
+    // Reduced motion, no observer, or already on screen: show it right away.
+    if (
+      prefersReducedMotion() ||
+      !observer ||
+      el.getBoundingClientRect().top < window.innerHeight
+    ) {
       revealNow(el)
       return
     }
 
-    observer?.observe(el)
+    observer.observe(el)
   }
 
   function scan(root: HTMLElement) {
-    if (!observer && !prefersReducedMotion()) {
+    if (!observer && !prefersReducedMotion() && 'IntersectionObserver' in window) {
       observer = new IntersectionObserver(
         (entries) => {
           for (const entry of entries) {
