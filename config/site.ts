@@ -28,6 +28,11 @@ export type SiteNavItem = {
   labelKey: string
   to: string
   external?: boolean
+  /** Query string for a filtered landing, e.g. { categoria: 'uomo' } */
+  query?: Record<string, string>
+  /** Photo shown in the desktop dropdown panel */
+  image?: string
+  children?: SiteNavItem[]
 }
 
 export type SiteConfig = {
@@ -48,6 +53,8 @@ export const defaultLocale = 'it' as const
 
 export const siteImages = {
   logo: '/images/logo/logo.png',
+  /** Same mark with a transparent ground, for the header and footer */
+  logoMark: '/images/logo/logo-transparent.png',
 } as const
 
 export const site = {
@@ -88,7 +95,24 @@ export const site = {
     { labelKey: 'nav.home', to: '/' },
     { labelKey: 'nav.about', to: '/chi-siamo' },
     { labelKey: 'nav.services', to: '/servizi' },
-    { labelKey: 'nav.collections', to: '/collezioni' },
+    {
+      labelKey: 'nav.collections',
+      to: '/collezioni',
+      children: [
+        {
+          labelKey: 'nav.men',
+          to: '/collezioni',
+          query: { categoria: 'uomo' },
+          image: '/images/collezioni/uomo/uomo6.jpg',
+        },
+        {
+          labelKey: 'nav.women',
+          to: '/collezioni',
+          query: { categoria: 'donna' },
+          image: '/images/collezioni/donna/donna14.jpeg',
+        },
+      ],
+    },
     { labelKey: 'nav.contact', to: '/contatti' },
   ],
   legalLinks: [

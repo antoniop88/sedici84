@@ -65,10 +65,7 @@ onUnmounted(() => {
       <UiContainer>
         <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div class="max-w-2xl space-y-2">
-            <h2
-              id="cookie-consent-title"
-              class="font-display text-lg font-semibold text-foreground"
-            >
+            <h2 id="cookie-consent-title" class="font-display text-xl text-foreground">
               {{ t('consent.banner.title') }}
             </h2>
             <p

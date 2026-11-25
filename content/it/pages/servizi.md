@@ -7,10 +7,10 @@ sections:
     eyebrow: Servizi
     title: Stile sartoriale, produzione strutturata
     subtitle: Produzione Made in Italy flessibile e scalabile, per brand, aziende e maison.
-    image: /images/logo/logo.png
-    imageVariant: logo
+    image: /images/hero/slide-3.jpg
   - type: features
     title: Cosa facciamo
+    image: /images/collezioni/donna/donna4.jpeg
     items:
       - title: Produzione per brand e maison
         description: Realizziamo collezioni e produzioni in quantità, con cura sartoriale in ogni passaggio.
@@ -22,6 +22,7 @@ sections:
         description: Dalle capsule collection alle produzioni strutturate, senza rinunciare alla qualità dei materiali e delle finiture.
   - type: cta
     title: Parliamo del tuo progetto
+    image: /images/collezioni/uomo/uomo2.jpg
     description: Dallo sviluppo del prototipo alla produzione in quantità, ti affianchiamo con la stessa cura sartoriale.
     button:
       label: Contattaci

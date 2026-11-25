@@ -4,17 +4,21 @@
     "about": "About",
     "services": "Services",
     "collections": "Collections",
-    "contact": "Contact"
+    "contact": "Contact",
+    "men": "Men",
+    "women": "Women",
+    "allCollections": "All collections"
   },
   "home": {
     "introEyebrow": "Production"
   },
   "header": {
-    "logoLabel": "{name} — Home",
+    "logoLabel": "{name}, back to home",
     "mainNavigation": "Main navigation",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "mobileNavigation": "Navigation menu"
+    "mobileNavigation": "Navigation menu",
+    "cta": "Contact us"
   },
   "footer": {
     "copyright": "© {year} {name}. All rights reserved.",
@@ -74,7 +78,7 @@
       "success": "Message sent successfully."
     },
     "intro": {
-      "imageAlt": "Workmanship at the Sedici 84 manufacturing facility"
+      "imageAlt": "An outfit from the Sedici 84 women's collection"
     },
     "info": {
       "heading": "Where to find us",
@@ -83,7 +87,9 @@
       "email": "Email",
       "hours": "Hours",
       "hoursValue": "By appointment",
-      "social": "Follow us"
+      "social": "Follow us",
+      "whatsapp": "WhatsApp",
+      "openMap": "Open the map"
     }
   },
   "content": {
@@ -99,6 +105,7 @@
     "viewAll": "View all collections"
   },
   "gallery": {
+    "controls": "Browse photos",
     "open": "Open image",
     "close": "Close gallery",
     "prev": "Previous image",

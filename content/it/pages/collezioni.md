@@ -105,4 +105,4 @@ gallery:
     category: donna
 ---
 
-Ogni collezione può essere sviluppata secondo l'identità del brand, definendo tessuti, accessori, inserti e finiture per una produzione coerente e strutturata. Sfoglia alcuni dei nostri stili e lavorazioni — presto arricchiremo questa galleria con nuove immagini.
+Ogni collezione può essere sviluppata secondo l'identità del brand, definendo tessuti, accessori, inserti e finiture per una produzione coerente e strutturata. Sfoglia alcuni dei nostri stili e lavorazioni. Presto arricchiremo questa galleria con nuove immagini.

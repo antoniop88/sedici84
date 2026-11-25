@@ -8,7 +8,23 @@ const props = defineProps<{
 
 const { t } = useI18n()
 
-const activeCategory = ref('all')
+const route = useRoute()
+
+// The nav dropdown links here with ?categoria=uomo|donna.
+function categoryFromQuery(): string {
+  const value = route.query.categoria
+  const key = typeof value === 'string' ? value : 'all'
+  return props.categories?.some((category) => category.key === key) ? key : 'all'
+}
+
+const activeCategory = ref(categoryFromQuery())
+
+watch(
+  () => route.query.categoria,
+  () => {
+    activeCategory.value = categoryFromQuery()
+  },
+)
 
 const categories = computed<GalleryCategory[]>(() => {
   if (props.categories?.length) return props.categories
@@ -106,7 +122,7 @@ onUnmounted(() => window.removeEventListener('keydown', onArrowKeys))
         <button
           type="button"
           class="group block w-full overflow-hidden rounded-lg border border-neutral-200 bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-          :aria-label="`${t('gallery.open')} — ${image.alt}`"
+          :aria-label="`${t('gallery.open')}: ${image.alt}`"
           @click="open(index)"
         >
           <img

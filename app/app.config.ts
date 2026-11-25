@@ -4,7 +4,7 @@ export default defineAppConfig({
   brand: {
     name: site.name,
     shortName: site.shortName,
-    logo: siteImages.logo,
+    logo: siteImages.logoMark,
   },
   theme: {
     colors: {

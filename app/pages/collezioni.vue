@@ -44,7 +44,7 @@ usePageSeo({
       <ContentFallbackNotice :show="isFallback" />
 
       <header class="mb-10 max-w-prose space-y-4">
-        <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent">
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent-ink">
           {{ $t('nav.collections') }}
         </p>
         <h1 class="font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">

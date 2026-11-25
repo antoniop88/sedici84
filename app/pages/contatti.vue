@@ -8,12 +8,7 @@ defineI18nRoute({
 
 const { locale, t } = useI18n()
 const { queryByStem } = useContentLocale()
-const { organization } = useAppConfig()
-
-const addressLine = computed(() => {
-  const { street, postalCode, city, country } = organization.address
-  return [street, [postalCode, city].filter(Boolean).join(' '), country].filter(Boolean).join(', ')
-})
+const contact = useContactLinks()
 
 const { data: pageResult } = await useAsyncData(
   () => `page-contatti-${locale.value}`,
@@ -28,6 +23,11 @@ if (!pageResult.value?.data) {
 const page = computed(() => pageResult.value?.data)
 const isFallback = computed(() => pageResult.value?.isFallback ?? false)
 
+const cardClass =
+  'group flex h-full flex-col items-start gap-2 border-t border-neutral-200 pt-5 transition-[border-color,transform] duration-200 motion-reduce:transition-none hover:-translate-y-0.5 hover:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-4 focus-visible:ring-offset-white'
+const labelClass = 'mt-3 text-xs font-medium uppercase tracking-[0.2em] text-accent-ink'
+const valueClass = 'font-display text-2xl leading-tight text-foreground'
+
 usePageSeo({
   title: computed(() => page.value?.title ?? ''),
   description: computed(() => page.value?.description),
@@ -37,102 +37,106 @@ usePageSeo({
 
 <template>
   <div v-if="page">
-    <UiContainer class="pt-12 md:pt-16">
+    <UiContainer>
       <ContentFallbackNotice :show="isFallback" />
-
-      <header class="mb-10 max-w-prose space-y-4">
-        <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent">
-          {{ $t('nav.contact') }}
-        </p>
-        <h1 class="font-display text-3xl leading-tight text-foreground md:text-4xl lg:text-5xl">
-          {{ page.title }}
-        </h1>
-        <p v-if="page.description" class="text-lg leading-relaxed text-muted-foreground">
-          {{ page.description }}
-        </p>
-      </header>
     </UiContainer>
 
-    <UiContainer v-if="page.body" class="pb-12 md:pb-16">
-      <div
-        class="overflow-hidden rounded-xl border border-primary-800/20 lg:grid lg:grid-cols-2 lg:items-stretch"
-      >
-        <div class="relative min-h-[16rem] overflow-hidden bg-muted sm:min-h-[20rem] lg:min-h-0">
-          <!-- Plain img: NuxtPicture SSR emits inline onerror, blocked by script-src-attr 'none'. -->
+    <section class="py-12 md:py-16" aria-labelledby="contact-title">
+      <UiContainer>
+        <div class="grid items-start gap-10 md:grid-cols-[7fr_5fr] md:gap-14">
+          <div>
+            <h1
+              id="contact-title"
+              class="text-xs font-medium uppercase tracking-[0.24em] text-accent-ink"
+            >
+              {{ page.title }}
+            </h1>
+            <div
+              class="mt-5 space-y-5 [&_p]:m-0 [&_p]:text-lg [&_p]:leading-relaxed [&_p]:text-muted-foreground [&_p:first-of-type]:font-display [&_p:first-of-type]:text-4xl [&_p:first-of-type]:pb-3 [&_p:first-of-type]:leading-[1.05] [&_p:first-of-type]:text-foreground md:[&_p:first-of-type]:text-6xl"
+            >
+              <ContentRenderer :value="page" />
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <UiButton :to="contact.whatsappUrl.value" variant="primary" class="gap-3 px-6 py-3">
+                <UiContactIcon name="whatsapp" class="size-5" />
+                {{ $t('contact.form.whatsapp') }}
+              </UiButton>
+              <UiButton :to="contact.mailUrl" variant="secondary" class="gap-3 px-6 py-3">
+                <UiContactIcon name="mail" class="size-5" />
+                {{ contact.email }}
+              </UiButton>
+            </div>
+          </div>
           <img
-            src="/images/hero/slide-2.jpg"
+            src="/images/collezioni/donna/donna1.jpeg"
             :alt="$t('contact.intro.imageAlt')"
-            width="800"
-            height="600"
-            loading="lazy"
+            width="600"
+            height="750"
+            loading="eager"
             decoding="async"
-            class="h-full w-full object-cover"
+            class="aspect-[4/5] w-full rounded-lg object-cover"
           />
         </div>
+      </UiContainer>
+    </section>
 
-        <div
-          class="flex flex-col justify-center bg-primary px-8 py-10 text-primary-foreground md:px-12 md:py-16"
+    <section
+      class="border-t border-neutral-200 bg-white py-12 md:py-16"
+      aria-labelledby="contact-info"
+    >
+      <UiContainer>
+        <h2
+          id="contact-info"
+          class="font-display text-3xl leading-tight text-foreground md:text-5xl"
         >
-          <div class="mb-6 h-px w-16 bg-accent" aria-hidden="true" />
-          <div
-            class="max-w-prose space-y-5 text-base leading-relaxed [&_p]:m-0 [&_p]:text-primary-foreground/85 [&_p:first-of-type]:font-display [&_p:first-of-type]:text-2xl [&_p:first-of-type]:leading-snug [&_p:first-of-type]:text-primary-foreground md:[&_p:first-of-type]:text-[1.75rem]"
-          >
-            <ContentRenderer :value="page" />
-          </div>
-        </div>
-      </div>
-    </UiContainer>
-
-    <UiContainer class="pb-16 md:pb-20">
-      <div class="grid gap-8 lg:grid-cols-2">
-        <div class="rounded-xl border border-neutral-200 bg-white p-6 md:p-8">
-          <h2 class="mb-6 font-display text-xl font-semibold text-foreground">
-            {{ $t('contact.info.heading') }}
-          </h2>
-          <dl class="grid gap-5 text-sm sm:grid-cols-2">
-            <div>
-              <dt class="font-medium uppercase tracking-wide text-accent">
-                {{ $t('contact.info.address') }}
-              </dt>
-              <dd class="mt-1 text-muted-foreground">{{ addressLine }}</dd>
-            </div>
-            <div>
-              <dt class="font-medium uppercase tracking-wide text-accent">
-                {{ $t('contact.info.phone') }}
-              </dt>
-              <dd class="mt-1">
-                <a
-                  :href="`tel:${organization.phone.replace(/\s+/g, '')}`"
-                  class="text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                >
-                  {{ organization.phone }}
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt class="font-medium uppercase tracking-wide text-accent">
-                {{ $t('contact.info.email') }}
-              </dt>
-              <dd class="mt-1">
-                <a
-                  :href="`mailto:${organization.email}`"
-                  class="text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-                >
-                  {{ organization.email }}
-                </a>
-              </dd>
-            </div>
-            <div>
-              <dt class="font-medium uppercase tracking-wide text-accent">
-                {{ $t('contact.info.hours') }}
-              </dt>
-              <dd class="mt-1 text-muted-foreground">{{ $t('contact.info.hoursValue') }}</dd>
-            </div>
-          </dl>
-        </div>
-
-        <ContactForm />
-      </div>
-    </UiContainer>
+          {{ $t('contact.info.heading') }}
+        </h2>
+        <div class="mt-4 h-px w-16 bg-accent" aria-hidden="true" />
+        <ul class="mt-10 grid gap-x-8 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
+          <li>
+            <a
+              :href="contact.whatsappUrl.value"
+              target="_blank"
+              rel="noopener noreferrer"
+              :class="cardClass"
+            >
+              <UiContactIcon name="whatsapp" class="size-8" />
+              <span :class="labelClass">{{ $t('contact.info.whatsapp') }}</span>
+              <span :class="valueClass">{{ contact.phone }}</span>
+              <span class="sr-only">{{ $t('content.externalLink') }}</span>
+            </a>
+          </li>
+          <li>
+            <a :href="contact.mailUrl" :class="cardClass">
+              <UiContactIcon name="mail" class="size-8 text-accent-ink" />
+              <span :class="labelClass">{{ $t('contact.info.email') }}</span>
+              <span :class="valueClass">{{ contact.email }}</span>
+            </a>
+          </li>
+          <li>
+            <a :href="contact.telUrl" :class="cardClass">
+              <UiContactIcon name="phone" class="size-8 text-accent-ink" />
+              <span :class="labelClass">{{ $t('contact.info.phone') }}</span>
+              <span :class="valueClass">{{ contact.phone }}</span>
+            </a>
+          </li>
+          <li>
+            <a :href="contact.mapsUrl" target="_blank" rel="noopener noreferrer" :class="cardClass">
+              <UiContactIcon name="pin" class="size-8 text-accent-ink" />
+              <span :class="labelClass">{{ $t('contact.info.address') }}</span>
+              <span :class="valueClass">{{ contact.street }}<br />{{ contact.cityLine }}</span>
+              <span class="text-sm text-accent-ink underline underline-offset-4">
+                {{ $t('contact.info.openMap') }}
+              </span>
+              <span class="sr-only">{{ $t('content.externalLink') }}</span>
+            </a>
+          </li>
+        </ul>
+        <p class="mt-10 flex items-center gap-3 text-base text-muted-foreground">
+          <UiContactIcon name="clock" class="size-5 shrink-0 text-accent-ink" />
+          {{ $t('contact.info.hours') }}: {{ $t('contact.info.hoursValue') }}
+        </p>
+      </UiContainer>
+    </section>
   </div>
 </template>

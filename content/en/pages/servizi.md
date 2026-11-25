@@ -7,10 +7,10 @@ sections:
     eyebrow: Services
     title: Sartorial style, structured production
     subtitle: Flexible, scalable Made in Italy manufacturing with consistent sartorial quality.
-    image: /images/logo/logo.png
-    imageVariant: logo
+    image: /images/hero/slide-3.jpg
   - type: features
     title: What we do
+    image: /images/collezioni/donna/donna4.jpeg
     items:
       - title: Production for brands and fashion houses
         description: We manufacture collections and volume production runs with sartorial care at every stage.
@@ -22,6 +22,7 @@ sections:
         description: From capsule collections to large-scale production, without compromising on the quality of materials and finishing.
   - type: cta
     title: Let's talk about your project
+    image: /images/collezioni/uomo/uomo2.jpg
     description: From prototype development to volume production, we work with you with the same sartorial care.
     button:
       label: Get in touch

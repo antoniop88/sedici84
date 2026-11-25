@@ -1,27 +1,23 @@
 ---
-title: Sedici 84 — Produzione moda Made in Italy
+title: 'Sedici 84: produzione moda Made in Italy'
 description: Produzione Made in Italy flessibile e scalabile, con qualità sartoriale. Dalla modellistica al capo finito.
 type: page
 sections:
   - type: hero
     layout: full
-    eyebrow: Made in Italy · Stile sartoriale e produzione
-    title: Stile sartoriale, produzione strutturata
-    slides:
-      - image: /images/hero/slide-1.jpg
-        title: Qualità sartoriale, capacità produttiva
-        subtitle: Produzione Made in Italy, dalle capsule collection alle produzioni strutturate, per brand, aziende e maison.
-      - image: /images/hero/slide-2.jpg
-        title: Artigianalità, in ogni dettaglio
-        subtitle: 'Tessuti pregiati, dettagli curati e vestibilità affidabile: qualità sartoriale ripetibile su ogni volume produttivo.'
-      - image: /images/hero/slide-3.jpg
-        title: Tradizione sartoriale italiana
-        subtitle: Forbici, ago e filo nelle mani esperte del nostro atelier, nel cuore della Valle d'Itria.
+    eyebrow: Tradizione sartoriale dal 1960 · Valle d'Itria
+    title: Produzione moda Made in Italy per brand e maison
+    subtitle: Dalle capsule collection alle produzioni strutturate, con la stessa cura sartoriale dalla modellistica al capo finito.
+    images:
+      - /images/hero/slide-1.jpg
+      - /images/hero/slide-2.jpg
+      - /images/hero/slide-3.jpg
     cta:
       label: Scopri i servizi
       to: /servizi
   - type: features
     title: Perché sceglierci
+    image: /images/collezioni/uomo/uomo3.jpg
     items:
       - title: Produzione flessibile e scalabile
         description: Realizziamo abbigliamento Made in Italy, dalle capsule collection alle produzioni strutturate, con la stessa cura sartoriale.
@@ -33,6 +29,7 @@ sections:
         description: Affianchiamo il cliente dal brief iniziale alla consegna della produzione.
   - type: stats
     title: La nostra esperienza
+    image: /images/collezioni/uomo/uomo9.jpg
     items:
       - value: '1960'
         label: Le origini della sartoria
@@ -44,6 +41,7 @@ sections:
         label: Per le grandi Maison di moda
   - type: cta
     title: Dalla modellistica al capo finito
+    image: /images/collezioni/donna/donna13.jpeg
     description: Affianchiamo brand, aziende e maison in ogni passaggio, dal prototipo alla produzione in quantità.
     button:
       label: Contattaci
@@ -53,12 +51,3 @@ sections:
 Sedici 84 unisce la **tradizione della sartoria italiana** a una capacità produttiva flessibile e scalabile, realizzando abbigliamento Made in Italy dalle capsule collection alle produzioni strutturate.
 
 Collaboriamo con **brand, aziende e maison**, anche per progetti private label, affiancandoli dalla modellistica alla realizzazione del capo finito. La nostra esperienza ci permette di mantenere cura sartoriale, qualità dei materiali e attenzione alle finiture anche su volumi produttivi strutturati.
-
-### In sintesi
-
-- **Produzione scalabile**  
-  Dalle capsule collection alle produzioni strutturate.
-- **Produzione per brand e maison**
-  Dalla modellistica al capo finito.
-- **Cura sartoriale Made in Italy**  
-  Materiali selezionati e finiture attente, a ogni volume.

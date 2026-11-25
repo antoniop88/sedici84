@@ -26,7 +26,11 @@ const isFallback = computed(() => pageResult.value?.isFallback ?? false)
 
 // Render the hero first, then the editorial intro (page body), then the rest.
 const heroSections = computed(() => page.value?.sections?.filter((s) => s.type === 'hero') ?? [])
-const otherSections = computed(() => page.value?.sections?.filter((s) => s.type !== 'hero') ?? [])
+const otherSections = computed(
+  () => page.value?.sections?.filter((s) => s.type !== 'hero' && s.type !== 'cta') ?? [],
+)
+// The close (cta) sits last, right before the footer.
+const closeSections = computed(() => page.value?.sections?.filter((s) => s.type === 'cta') ?? [])
 
 // One representative card per collection category, linking to the gallery.
 const collectionPreviews = computed(() => {
@@ -55,15 +59,27 @@ usePageSeo({
 
     <SectionsSectionRenderer v-if="heroSections.length" :sections="heroSections" />
 
-    <section v-if="page.body" class="py-16 md:py-20">
+    <section v-if="page.body" class="py-12 md:py-16">
       <UiContainer>
-        <div class="mx-auto max-w-5xl">
-          <p class="mb-8 text-center text-xs font-medium uppercase tracking-[0.24em] text-accent">
-            {{ $t('home.introEyebrow') }}
-          </p>
-          <div class="home-intro">
-            <ContentRenderer :value="page" />
+        <div class="grid items-start gap-10 md:grid-cols-2 md:gap-14">
+          <div>
+            <p class="mb-6 text-xs font-medium uppercase tracking-[0.24em] text-accent-ink">
+              {{ $t('home.introEyebrow') }}
+            </p>
+            <div class="home-intro">
+              <ContentRenderer :value="page" />
+            </div>
           </div>
+          <NuxtImg
+            src="/images/hero/slide-2.jpg"
+            alt=""
+            width="800"
+            height="600"
+            sizes="100vw md:50vw"
+            loading="lazy"
+            decoding="async"
+            class="aspect-[4/3] w-full rounded-lg object-cover"
+          />
         </div>
       </UiContainer>
     </section>
@@ -72,18 +88,18 @@ usePageSeo({
 
     <section
       v-if="collectionPreviews.length"
-      class="border-y border-neutral-200 bg-white py-16 md:py-20"
+      class="border-y border-neutral-200 bg-white py-12 md:py-16"
       aria-labelledby="featured-collections-title"
     >
       <UiContainer>
         <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
           <div class="space-y-3">
-            <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p class="text-sm font-medium uppercase tracking-[0.2em] text-accent-ink">
               {{ $t('nav.collections') }}
             </p>
             <h2
               id="featured-collections-title"
-              class="font-display text-2xl leading-tight text-foreground md:text-3xl"
+              class="font-display text-3xl leading-tight text-foreground md:text-5xl"
             >
               {{ $t('collections.featuredTitle') }}
             </h2>
@@ -104,11 +120,11 @@ usePageSeo({
                 class="aspect-[3/4] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
               />
               <div class="flex items-center justify-between p-5">
-                <h3 class="font-display text-lg font-semibold text-foreground">
+                <h3 class="font-display text-xl text-foreground">
                   {{ preview.label }}
                 </h3>
                 <span
-                  class="text-accent transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
+                  class="text-accent-ink transition-transform group-hover:translate-x-1 motion-reduce:transition-none"
                   aria-hidden="true"
                 >
                   →
@@ -119,5 +135,7 @@ usePageSeo({
         </ul>
       </UiContainer>
     </section>
+
+    <SectionsSectionRenderer v-if="closeSections.length" :sections="closeSections" />
   </div>
 </template>

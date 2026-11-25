@@ -86,6 +86,19 @@ function handleKeydown(event: KeyboardEvent, index: number) {
           </span>
           <span>{{ $t(item.labelKey) }}</span>
         </NuxtLink>
+        <ul
+          v-if="orientation === 'vertical' && item.children?.length"
+          class="flex flex-col border-b border-white/10 py-2 ps-9"
+        >
+          <li v-for="child in item.children" :key="child.labelKey">
+            <NuxtLink
+              :to="localePath({ path: child.to, query: child.query })"
+              class="flex min-h-11 items-center text-lg text-primary-200 transition-colors hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent motion-reduce:transition-none"
+            >
+              {{ $t(child.labelKey) }}
+            </NuxtLink>
+          </li>
+        </ul>
       </li>
     </ul>
   </nav>

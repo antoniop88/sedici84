@@ -12,10 +12,10 @@ Cookies are small text files that visited websites send to the user's browser, w
 
 The site uses a consent banner that allows you to accept, reject, or customize preferences by category. Below are the categories and services actually used.
 
-| Category  | Service / Technology            | Type      | Purpose                         | Duration                              |
-| --------- | ------------------------------- | --------- | ------------------------------- | ------------------------------------- |
-| Necessary | `i18n_redirected` (cookie)      | Technical | Stores language preference      | 1 year                                |
-| Analytics | Umami (self-hosted, cookieless) | Analytics | Anonymous navigation statistics | No cookie — active only after consent |
+| Category  | Service / Technology            | Type      | Purpose                         | Duration                             |
+| --------- | ------------------------------- | --------- | ------------------------------- | ------------------------------------ |
+| Necessary | `i18n_redirected` (cookie)      | Technical | Stores language preference      | 1 year                               |
+| Analytics | Umami (self-hosted, cookieless) | Analytics | Anonymous navigation statistics | No cookie, active only after consent |
 
 ### Necessary cookies
 
